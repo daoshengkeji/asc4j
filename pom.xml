@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.asc4j</groupId>
+	<artifactId>asc4j</artifactId>
+	<version>0.1-SNAPSHOT</version>
+
+	<name>App Store Connect API</name>
+
+	<description>Apple App Store Connect API
+
+This library implements a JAX-RS Client for accessing Apple's App Store Connect API.  The data model and base service classes were derived from the &lt;a href=&quot;https://github.com/TheGeekPharaoh/AppStoreConnectAPI-openapi&quot;&gt;AppStoreConnectAPI OpenAPI Spec&lt;/a&gt; definition.</description>
+
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+			<comments>A business-friendly OSS license</comments>
+		</license>
+	</licenses>
+
+	<properties>
+		<maven.compiler.target>11</maven.compiler.target>
+		<maven.compiler.source>11</maven.compiler.source>
+		<endorsed.dirs>${project.build.dir}/endorsed</endorsed.dirs>
+
+		<version.compiler-plugin>3.8.1</version.compiler-plugin>
+		<version.surefire-plugin>2.22.1</version.surefire-plugin>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${version.compiler-plugin}</version>
+				<configuration>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${version.surefire-plugin}</version>
+				<configuration>
+					<systemProperties>
+						<java.util.logging.manager>org.jboss.logmanager.LogManager
+						</java.util.logging.manager>
+					</systemProperties>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
