@@ -23,8 +23,6 @@ import net.odyssi.asc4j.model.BundleIdUpdateRequest;
 @Path("/bundleIds")
 public interface BundleIdsResource {
 
-	// TODO Produces
-
 	/**
 	 * Find and list bundle IDs that are registered to your team.
 	 * 
