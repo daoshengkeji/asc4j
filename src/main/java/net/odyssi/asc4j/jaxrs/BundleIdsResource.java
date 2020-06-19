@@ -9,6 +9,7 @@ import javax.ws.rs.PATCH;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -29,6 +30,8 @@ public interface BundleIdsResource {
 	 * 
 	 * @return The service response
 	 */
+	@Path("/")
+	@Produces({ MediaType.APPLICATION_JSON })
 	@GET
 	public Response getBundleIDs(@QueryParam("fields[bundleIds]") List<String> fieldsBundleIds,
 			@QueryParam("fields[profiles]") List<String> fieldsProfiles,
@@ -46,7 +49,9 @@ public interface BundleIdsResource {
 	 * 
 	 * @return The service response
 	 */
+	@Path("/")
 	@POST
+	@Produces({ MediaType.APPLICATION_JSON })
 	@Consumes({ MediaType.APPLICATION_JSON })
 	public Response createBundleID(BundleIdCreateRequest data);
 
@@ -57,6 +62,7 @@ public interface BundleIdsResource {
 	 */
 	@Path("/{bundleIdentifier}")
 	@GET
+	@Produces({ MediaType.APPLICATION_JSON })
 	public Response getBundleID(@PathParam("bundleIdentifier") String bundleIdentifier,
 			@QueryParam("fields[bundleIds]") List<String> fieldsBundleIds,
 			@QueryParam("fields[profiles]") List<String> fieldsProfiles, @QueryParam("include") List<String> include,
@@ -79,6 +85,7 @@ public interface BundleIdsResource {
 	 */
 	@Path("/{bundleIdentifier}")
 	@PATCH
+	@Produces({ MediaType.APPLICATION_JSON })
 	@Consumes({ MediaType.APPLICATION_JSON })
 	public Response updateBundleID(@PathParam("bundleIdentifier") String bundleIdentifier, BundleIdUpdateRequest data);
 
@@ -89,6 +96,7 @@ public interface BundleIdsResource {
 	 */
 	@Path("/{bundleIdentifier}/relationships/profiles")
 	@GET
+	@Produces({ MediaType.APPLICATION_JSON })
 	public Response getBundleIDProfileIDs(@PathParam("bundleIdentifier") String bundleIdentifier,
 			@QueryParam("limit") Integer limit);
 
@@ -99,6 +107,7 @@ public interface BundleIdsResource {
 	 */
 	@Path("/{bundleIdentifier}/profiles")
 	@GET
+	@Produces({ MediaType.APPLICATION_JSON })
 	public Response getBundleIDProfiles(@PathParam("bundleIdentifier") String bundleIdentifier,
 			@QueryParam("limit") Integer limit, @QueryParam("fields[profiles]") List<String> fieldsProfiles);
 
@@ -110,6 +119,7 @@ public interface BundleIdsResource {
 	 */
 	@Path("/{bundleIdentifier}/relationships/bundleIdCapabilities")
 	@GET
+	@Produces({ MediaType.APPLICATION_JSON })
 	public Response getBundleIDCapabilityIDs(@PathParam("bundleIdentifier") String bundleIdentifier,
 			@QueryParam("limit") Integer limit);
 
@@ -120,6 +130,7 @@ public interface BundleIdsResource {
 	 */
 	@Path("/{bundleIdentifier}/bundleIdCapabilities")
 	@GET
+	@Produces({ MediaType.APPLICATION_JSON })
 	public Response getBundleIDCapabilities(@PathParam("bundleIdentifier") String bundleIdentifier,
 			@QueryParam("limit") Integer limit,
 			@QueryParam("fields[bundleIdCapabilities]") List<String> fieldsBundleIdCapabilities);
