@@ -28,7 +28,7 @@ public interface BundleIdsResource {
 	 * 
 	 * @return The service response
 	 */
-	@Path("/")
+	@Path("")
 	@Produces({ MediaType.APPLICATION_JSON })
 	@GET
 	public Response getBundleIDs(@QueryParam("fields[bundleIds]") List<String> fieldsBundleIds,
@@ -47,7 +47,7 @@ public interface BundleIdsResource {
 	 * 
 	 * @return The service response
 	 */
-	@Path("/")
+	@Path("")
 	@POST
 	@Produces({ MediaType.APPLICATION_JSON })
 	@Consumes({ MediaType.APPLICATION_JSON })

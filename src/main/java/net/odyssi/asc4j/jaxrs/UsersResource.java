@@ -53,7 +53,7 @@ public interface UsersResource {
 	 *
 	 * @return The service response
 	 */
-	@Path("/")
+	@Path("")
 	@GET
 	@Produces({ MediaType.APPLICATION_JSON })
 	public Response getUsers(@QueryParam("fields[apps]") List<String> fieldsApps,

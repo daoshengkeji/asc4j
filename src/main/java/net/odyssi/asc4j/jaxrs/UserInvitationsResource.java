@@ -26,7 +26,7 @@ public interface UserInvitationsResource {
 	 * 
 	 * @return The service response
 	 */
-	@Path("/")
+	@Path("")
 	@GET
 	@Produces({ MediaType.APPLICATION_JSON })
 	public Response getInvitedUsers(@QueryParam("fields[apps]") List<String> fieldsApps,
@@ -41,7 +41,7 @@ public interface UserInvitationsResource {
 	 * 
 	 * @return The service response
 	 */
-	@Path("/")
+	@Path("")
 	@POST
 	@Produces({ MediaType.APPLICATION_JSON })
 	@Consumes({ MediaType.APPLICATION_JSON })

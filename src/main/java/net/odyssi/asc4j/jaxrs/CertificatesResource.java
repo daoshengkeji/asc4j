@@ -26,7 +26,7 @@ public interface CertificatesResource {
 	 * 
 	 * @return The service response
 	 */
-	@Path("/")
+	@Path("")
 	@GET
 	@Produces({ MediaType.APPLICATION_JSON })
 	public Response getCertificates(@QueryParam("fields[certificates]") List<String> fieldsCertificates,
@@ -41,7 +41,7 @@ public interface CertificatesResource {
 	 * 
 	 * @return The service response
 	 */
-	@Path("/")
+	@Path("")
 	@POST
 	@Produces({ MediaType.APPLICATION_JSON })
 	@Consumes({ MediaType.APPLICATION_JSON })

@@ -27,7 +27,7 @@ public interface DevicesResource {
 	 * 
 	 * @return The service response
 	 */
-	@Path("/")
+	@Path("")
 	@GET
 	@Produces({ MediaType.APPLICATION_JSON })
 	public Response getDevices(@QueryParam("fields[devices]") List<String> fieldsDevices,
@@ -42,7 +42,7 @@ public interface DevicesResource {
 	 * 
 	 * @return The service response
 	 */
-	@Path("/")
+	@Path("")
 	@POST
 	@Produces({ MediaType.APPLICATION_JSON })
 	@Consumes({ MediaType.APPLICATION_JSON })
