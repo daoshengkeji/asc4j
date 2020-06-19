@@ -27,4 +27,39 @@ public class DocumentLinks {
 		this.self = self;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((self == null) ? 0 : self.hashCode());
+		return result;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		DocumentLinks other = (DocumentLinks) obj;
+		if (self == null) {
+			if (other.self != null)
+				return false;
+		} else if (!self.equals(other.self))
+			return false;
+		return true;
+	}
+
 }

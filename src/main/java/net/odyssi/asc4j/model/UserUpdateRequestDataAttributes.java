@@ -52,4 +52,51 @@ public class UserUpdateRequestDataAttributes {
 		this.roles = roles;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((allAppsVisible == null) ? 0 : allAppsVisible.hashCode());
+		result = prime * result + ((provisioningAllowed == null) ? 0 : provisioningAllowed.hashCode());
+		result = prime * result + ((roles == null) ? 0 : roles.hashCode());
+		return result;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		UserUpdateRequestDataAttributes other = (UserUpdateRequestDataAttributes) obj;
+		if (allAppsVisible == null) {
+			if (other.allAppsVisible != null)
+				return false;
+		} else if (!allAppsVisible.equals(other.allAppsVisible))
+			return false;
+		if (provisioningAllowed == null) {
+			if (other.provisioningAllowed != null)
+				return false;
+		} else if (!provisioningAllowed.equals(other.provisioningAllowed))
+			return false;
+		if (roles == null) {
+			if (other.roles != null)
+				return false;
+		} else if (!roles.equals(other.roles))
+			return false;
+		return true;
+	}
+
 }

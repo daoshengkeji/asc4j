@@ -62,4 +62,57 @@ public class AppAttributes {
 		this.sku = sku;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((bundleId == null) ? 0 : bundleId.hashCode());
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((primaryLocale == null) ? 0 : primaryLocale.hashCode());
+		result = prime * result + ((sku == null) ? 0 : sku.hashCode());
+		return result;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		AppAttributes other = (AppAttributes) obj;
+		if (bundleId == null) {
+			if (other.bundleId != null)
+				return false;
+		} else if (!bundleId.equals(other.bundleId))
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		if (primaryLocale == null) {
+			if (other.primaryLocale != null)
+				return false;
+		} else if (!primaryLocale.equals(other.primaryLocale))
+			return false;
+		if (sku == null) {
+			if (other.sku != null)
+				return false;
+		} else if (!sku.equals(other.sku))
+			return false;
+		return true;
+	}
+
 }

@@ -62,4 +62,57 @@ public class PagedDocumentLinks {
 		this.self = self;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((first == null) ? 0 : first.hashCode());
+		result = prime * result + ((next == null) ? 0 : next.hashCode());
+		result = prime * result + ((related == null) ? 0 : related.hashCode());
+		result = prime * result + ((self == null) ? 0 : self.hashCode());
+		return result;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		PagedDocumentLinks other = (PagedDocumentLinks) obj;
+		if (first == null) {
+			if (other.first != null)
+				return false;
+		} else if (!first.equals(other.first))
+			return false;
+		if (next == null) {
+			if (other.next != null)
+				return false;
+		} else if (!next.equals(other.next))
+			return false;
+		if (related == null) {
+			if (other.related != null)
+				return false;
+		} else if (!related.equals(other.related))
+			return false;
+		if (self == null) {
+			if (other.self != null)
+				return false;
+		} else if (!self.equals(other.self))
+			return false;
+		return true;
+	}
+
 }

@@ -41,4 +41,45 @@ public class BundleIdsResponse extends BaseServiceResponse {
 	public void setIncluded(List<Object> included) {
 		this.included = included;
 	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + ((data == null) ? 0 : data.hashCode());
+		result = prime * result + ((included == null) ? 0 : included.hashCode());
+		return result;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!super.equals(obj))
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		BundleIdsResponse other = (BundleIdsResponse) obj;
+		if (data == null) {
+			if (other.data != null)
+				return false;
+		} else if (!data.equals(other.data))
+			return false;
+		if (included == null) {
+			if (other.included != null)
+				return false;
+		} else if (!included.equals(other.included))
+			return false;
+		return true;
+	}
 }

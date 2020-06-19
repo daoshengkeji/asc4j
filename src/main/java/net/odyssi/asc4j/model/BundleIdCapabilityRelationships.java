@@ -25,4 +25,39 @@ public class BundleIdCapabilityRelationships {
 		this.bundleId = bundleId;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((bundleId == null) ? 0 : bundleId.hashCode());
+		return result;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		BundleIdCapabilityRelationships other = (BundleIdCapabilityRelationships) obj;
+		if (bundleId == null) {
+			if (other.bundleId != null)
+				return false;
+		} else if (!bundleId.equals(other.bundleId))
+			return false;
+		return true;
+	}
+
 }

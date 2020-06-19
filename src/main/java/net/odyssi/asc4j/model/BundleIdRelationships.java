@@ -37,4 +37,45 @@ public class BundleIdRelationships {
 		this.profiles = profiles;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((bundleIdCapabilities == null) ? 0 : bundleIdCapabilities.hashCode());
+		result = prime * result + ((profiles == null) ? 0 : profiles.hashCode());
+		return result;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		BundleIdRelationships other = (BundleIdRelationships) obj;
+		if (bundleIdCapabilities == null) {
+			if (other.bundleIdCapabilities != null)
+				return false;
+		} else if (!bundleIdCapabilities.equals(other.bundleIdCapabilities))
+			return false;
+		if (profiles == null) {
+			if (other.profiles != null)
+				return false;
+		} else if (!profiles.equals(other.profiles))
+			return false;
+		return true;
+	}
+
 }

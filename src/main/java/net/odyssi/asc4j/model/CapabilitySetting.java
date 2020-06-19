@@ -182,4 +182,69 @@ public class CapabilitySetting {
 		this.visible = visible;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((allowedInstances == null) ? 0 : allowedInstances.hashCode());
+		result = prime * result + ((description == null) ? 0 : description.hashCode());
+		result = prime * result + ((enabledByDefault == null) ? 0 : enabledByDefault.hashCode());
+		result = prime * result + ((key == null) ? 0 : key.hashCode());
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((options == null) ? 0 : options.hashCode());
+		result = prime * result + ((visible == null) ? 0 : visible.hashCode());
+		return result;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		CapabilitySetting other = (CapabilitySetting) obj;
+		if (allowedInstances != other.allowedInstances)
+			return false;
+		if (description == null) {
+			if (other.description != null)
+				return false;
+		} else if (!description.equals(other.description))
+			return false;
+		if (enabledByDefault == null) {
+			if (other.enabledByDefault != null)
+				return false;
+		} else if (!enabledByDefault.equals(other.enabledByDefault))
+			return false;
+		if (key != other.key)
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		if (options == null) {
+			if (other.options != null)
+				return false;
+		} else if (!options.equals(other.options))
+			return false;
+		if (visible == null) {
+			if (other.visible != null)
+				return false;
+		} else if (!visible.equals(other.visible))
+			return false;
+		return true;
+	}
+
 }

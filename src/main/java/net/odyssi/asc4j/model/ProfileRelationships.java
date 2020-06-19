@@ -49,4 +49,51 @@ public class ProfileRelationships {
 		this.devices = devices;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((bundleId == null) ? 0 : bundleId.hashCode());
+		result = prime * result + ((certificates == null) ? 0 : certificates.hashCode());
+		result = prime * result + ((devices == null) ? 0 : devices.hashCode());
+		return result;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ProfileRelationships other = (ProfileRelationships) obj;
+		if (bundleId == null) {
+			if (other.bundleId != null)
+				return false;
+		} else if (!bundleId.equals(other.bundleId))
+			return false;
+		if (certificates == null) {
+			if (other.certificates != null)
+				return false;
+		} else if (!certificates.equals(other.certificates))
+			return false;
+		if (devices == null) {
+			if (other.devices != null)
+				return false;
+		} else if (!devices.equals(other.devices))
+			return false;
+		return true;
+	}
+
 }

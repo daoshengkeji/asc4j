@@ -99,4 +99,75 @@ public class AppRelationships {
 		this.preReleaseVersions = preReleaseVersions;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((betaAppLocalizations == null) ? 0 : betaAppLocalizations.hashCode());
+		result = prime * result + ((betaAppReviewDetail == null) ? 0 : betaAppReviewDetail.hashCode());
+		result = prime * result + ((betaGroups == null) ? 0 : betaGroups.hashCode());
+		result = prime * result + ((betaLicenseAgreement == null) ? 0 : betaLicenseAgreement.hashCode());
+		result = prime * result + ((betaTesters == null) ? 0 : betaTesters.hashCode());
+		result = prime * result + ((builds == null) ? 0 : builds.hashCode());
+		result = prime * result + ((preReleaseVersions == null) ? 0 : preReleaseVersions.hashCode());
+		return result;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		AppRelationships other = (AppRelationships) obj;
+		if (betaAppLocalizations == null) {
+			if (other.betaAppLocalizations != null)
+				return false;
+		} else if (!betaAppLocalizations.equals(other.betaAppLocalizations))
+			return false;
+		if (betaAppReviewDetail == null) {
+			if (other.betaAppReviewDetail != null)
+				return false;
+		} else if (!betaAppReviewDetail.equals(other.betaAppReviewDetail))
+			return false;
+		if (betaGroups == null) {
+			if (other.betaGroups != null)
+				return false;
+		} else if (!betaGroups.equals(other.betaGroups))
+			return false;
+		if (betaLicenseAgreement == null) {
+			if (other.betaLicenseAgreement != null)
+				return false;
+		} else if (!betaLicenseAgreement.equals(other.betaLicenseAgreement))
+			return false;
+		if (betaTesters == null) {
+			if (other.betaTesters != null)
+				return false;
+		} else if (!betaTesters.equals(other.betaTesters))
+			return false;
+		if (builds == null) {
+			if (other.builds != null)
+				return false;
+		} else if (!builds.equals(other.builds))
+			return false;
+		if (preReleaseVersions == null) {
+			if (other.preReleaseVersions != null)
+				return false;
+		} else if (!preReleaseVersions.equals(other.preReleaseVersions))
+			return false;
+		return true;
+	}
+
 }

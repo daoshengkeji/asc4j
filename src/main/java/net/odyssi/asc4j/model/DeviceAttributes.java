@@ -142,4 +142,66 @@ public class DeviceAttributes {
 		this.udid = udid;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((addedDate == null) ? 0 : addedDate.hashCode());
+		result = prime * result + ((deviceClass == null) ? 0 : deviceClass.hashCode());
+		result = prime * result + ((model == null) ? 0 : model.hashCode());
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((platform == null) ? 0 : platform.hashCode());
+		result = prime * result + ((status == null) ? 0 : status.hashCode());
+		result = prime * result + ((udid == null) ? 0 : udid.hashCode());
+		return result;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		DeviceAttributes other = (DeviceAttributes) obj;
+		if (addedDate == null) {
+			if (other.addedDate != null)
+				return false;
+		} else if (!addedDate.equals(other.addedDate))
+			return false;
+		if (deviceClass != other.deviceClass)
+			return false;
+		if (model == null) {
+			if (other.model != null)
+				return false;
+		} else if (!model.equals(other.model))
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		if (platform != other.platform)
+			return false;
+		if (status != other.status)
+			return false;
+		if (udid == null) {
+			if (other.udid != null)
+				return false;
+		} else if (!udid.equals(other.udid))
+			return false;
+		return true;
+	}
+
 }
