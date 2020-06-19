@@ -11,6 +11,8 @@ import org.jboss.resteasy.client.jaxrs.ResteasyWebTarget;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import net.odyssi.asc4j.jaxrs.filters.TokenAuthenticationClientRequestFilter;
+
 /**
  * A factory class that creates JAX-RS client proxy instances for interacting
  * with the App Store Connect API
@@ -53,14 +55,13 @@ public class ServiceProxyFactory {
 	 * Creates a JAX-RS client proxy instance for the given proxy class
 	 * 
 	 * @param proxyClass The client proxy class
+	 * @param token      The App Store Connect token (JWT) used for authorization
 	 * @return The client proxy
 	 */
-	public <T> T createServiceProxy(Class<T> proxyClass) {
+	public <T> T createServiceProxy(Class<T> proxyClass, String token) {
 		if (logger.isDebugEnabled()) {
 			logger.debug("createServiceProxy(Class<T>) - start"); //$NON-NLS-1$
 		}
-
-		// TODO Need authorization header
 
 		if (logger.isDebugEnabled()) {
 			logger.debug("createServiceProxy(Class<T>) - Generating API client proxy... - proxyClass={}", proxyClass); //$NON-NLS-1$
@@ -69,6 +70,8 @@ public class ServiceProxyFactory {
 		Client client = ClientBuilder.newClient();
 		WebTarget target = client.target(ASC4JConstants.API_ENDPOINT);
 		ResteasyWebTarget webTarget = (ResteasyWebTarget) target;
+
+		webTarget.register(new TokenAuthenticationClientRequestFilter(token));
 
 		T clientProxy = webTarget.proxy(proxyClass);
 
