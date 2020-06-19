@@ -8,6 +8,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -20,14 +21,14 @@ import net.odyssi.asc4j.model.ProfileCreateRequest;
 @Path("/profiles")
 public interface ProfilesResource {
 
-	// TODO Produces
-
 	/**
 	 * Find and list provisioning profiles and download their data.
 	 * 
 	 * @return The service response
 	 */
+	@Path("/")
 	@GET
+	@Produces({ MediaType.APPLICATION_JSON })
 	public Response getProfiles(@QueryParam("fields[certificates]") List<String> fieldsCertificates,
 			@QueryParam("fields[devices]") List<String> fieldsDevices,
 			@QueryParam("fields[profiles]") List<String> fieldsProfiles,
@@ -44,7 +45,9 @@ public interface ProfilesResource {
 	 * 
 	 * @return The service response
 	 */
+	@Path("/")
 	@POST
+	@Produces({ MediaType.APPLICATION_JSON })
 	@Consumes({ MediaType.APPLICATION_JSON })
 	public Response createProfile(ProfileCreateRequest data);
 
@@ -55,6 +58,7 @@ public interface ProfilesResource {
 	 */
 	@Path("/{profileIdentifier}")
 	@GET
+	@Produces({ MediaType.APPLICATION_JSON })
 	public Response getProfile(@PathParam("profileIdentifier") String profileIdentifier,
 			@QueryParam("fields[certificates]") List<String> fieldsCertificates,
 			@QueryParam("fields[devices]") List<String> fieldsDevices,
@@ -71,6 +75,7 @@ public interface ProfilesResource {
 	 */
 	@Path("/{profileIdentifier}")
 	@DELETE
+	@Produces({ MediaType.APPLICATION_JSON })
 	public Response deleteProfile(@PathParam("profileIdentifier") String profileIdentifier);
 
 	/**
@@ -80,6 +85,7 @@ public interface ProfilesResource {
 	 */
 	@Path("/{profileIdentifier}/bundleId")
 	@GET
+	@Produces({ MediaType.APPLICATION_JSON })
 	public Response getProfileBundleID(@PathParam("profileIdentifier") String profileIdentifier,
 			@QueryParam("fieldsbundleIds") List<String> fieldsbundleIds);
 
@@ -91,6 +97,7 @@ public interface ProfilesResource {
 	 */
 	@Path("/{profileIdentifier}/relationships/bundleId")
 	@GET
+	@Produces({ MediaType.APPLICATION_JSON })
 	public Response getProfileBundleResourceID(@PathParam("profileIdentifier") String profileIdentifier);
 
 	/**
@@ -101,6 +108,7 @@ public interface ProfilesResource {
 	 */
 	@Path("/{profileIdentifier}/certificates")
 	@GET
+	@Produces({ MediaType.APPLICATION_JSON })
 	public Response getProfileCertificates(@PathParam("profileIdentifier") String profileIdentifier,
 			@QueryParam("limit") Integer limit, @QueryParam("fields[certificates]") List<String> fieldsCertificates);
 
@@ -112,6 +120,7 @@ public interface ProfilesResource {
 	 */
 	@Path("/{profileIdentifier}/relationships/certificates")
 	@GET
+	@Produces({ MediaType.APPLICATION_JSON })
 	public Response getProfileCertificateIDs(@PathParam("profileIdentifier") String profileIdentifier);
 
 	/**
@@ -121,6 +130,7 @@ public interface ProfilesResource {
 	 */
 	@Path("/{profileIdentifier}/devices")
 	@GET
+	@Produces({ MediaType.APPLICATION_JSON })
 	public Response getProfileDevices(@PathParam("profileIdentifier") String profileIdentifier,
 			@QueryParam("limit") Integer limit, @QueryParam("fields[devices]") List<String> fieldsDevices);
 
@@ -132,6 +142,7 @@ public interface ProfilesResource {
 	 */
 	@Path("/{profileIdentifier}/relationships/devices")
 	@GET
+	@Produces({ MediaType.APPLICATION_JSON })
 	public Response getProfileDeviceResourceIDs(@PathParam("profileIdentifier") String profileIdentifier,
 			@QueryParam("limit") Integer limit);
 }
