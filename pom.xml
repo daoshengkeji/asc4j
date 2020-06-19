@@ -2,7 +2,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.asc4j</groupId>
+	<groupId>net.odyssi</groupId>
 	<artifactId>asc4j</artifactId>
 	<version>0.1-SNAPSHOT</version>
 
@@ -26,9 +26,28 @@ This library implements a JAX-RS Client for accessing Apple's App Store Connect 
 		<maven.compiler.source>11</maven.compiler.source>
 		<endorsed.dirs>${project.build.dir}/endorsed</endorsed.dirs>
 
+		<version.jackson>2.9.8</version.jackson>
+		<version.jaxrs>1.0.2.Final</version.jaxrs>
+
 		<version.compiler-plugin>3.8.1</version.compiler-plugin>
 		<version.surefire-plugin>2.22.1</version.surefire-plugin>
 	</properties>
+
+	<dependencies>
+		<!-- Jackson Dependencies -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>${version.jackson}</version>
+		</dependency>
+
+		<!-- JAX-RS Spec Dependencies -->
+		<dependency>
+			<groupId>org.jboss.spec.javax.ws.rs</groupId>
+			<artifactId>jboss-jaxrs-api_2.1_spec</artifactId>
+			<version>${version.jaxrs}</version>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<plugins>
