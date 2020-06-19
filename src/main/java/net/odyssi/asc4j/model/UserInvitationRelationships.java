@@ -17,12 +17,35 @@ public class UserInvitationRelationships {
 	@JsonPropertyDescription("")
 	private UserInvitationRelationshipsVisibleApps visibleApps;
 
-	public UserInvitationRelationshipsVisibleApps getVisibleApps() {
-		return this.visibleApps;
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		UserInvitationRelationships other = (UserInvitationRelationships) obj;
+		if (this.visibleApps == null) {
+			if (other.visibleApps != null) {
+				return false;
+			}
+		} else if (!this.visibleApps.equals(other.visibleApps)) {
+			return false;
+		}
+		return true;
 	}
 
-	public void setVisibleApps(UserInvitationRelationshipsVisibleApps visibleApps) {
-		this.visibleApps = visibleApps;
+	public UserInvitationRelationshipsVisibleApps getVisibleApps() {
+		return this.visibleApps;
 	}
 
 	/*
@@ -34,30 +57,22 @@ public class UserInvitationRelationships {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((visibleApps == null) ? 0 : visibleApps.hashCode());
+		result = prime * result + (this.visibleApps == null ? 0 : this.visibleApps.hashCode());
 		return result;
+	}
+
+	public void setVisibleApps(UserInvitationRelationshipsVisibleApps visibleApps) {
+		this.visibleApps = visibleApps;
 	}
 
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see java.lang.Object#equals(java.lang.Object)
+	 * @see java.lang.Object#toString()
 	 */
 	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		UserInvitationRelationships other = (UserInvitationRelationships) obj;
-		if (visibleApps == null) {
-			if (other.visibleApps != null)
-				return false;
-		} else if (!visibleApps.equals(other.visibleApps))
-			return false;
-		return true;
+	public String toString() {
+		return "UserInvitationRelationships [visibleApps=" + this.visibleApps + "]";
 	}
 
 }

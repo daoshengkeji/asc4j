@@ -86,6 +86,63 @@ public class DeviceAttributes {
 	@JsonPropertyDescription("")
 	private String udid;
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		DeviceAttributes other = (DeviceAttributes) obj;
+		if (this.addedDate == null) {
+			if (other.addedDate != null) {
+				return false;
+			}
+		} else if (!this.addedDate.equals(other.addedDate)) {
+			return false;
+		}
+		if (this.deviceClass != other.deviceClass) {
+			return false;
+		}
+		if (this.model == null) {
+			if (other.model != null) {
+				return false;
+			}
+		} else if (!this.model.equals(other.model)) {
+			return false;
+		}
+		if (this.name == null) {
+			if (other.name != null) {
+				return false;
+			}
+		} else if (!this.name.equals(other.name)) {
+			return false;
+		}
+		if (this.platform != other.platform) {
+			return false;
+		}
+		if (this.status != other.status) {
+			return false;
+		}
+		if (this.udid == null) {
+			if (other.udid != null) {
+				return false;
+			}
+		} else if (!this.udid.equals(other.udid)) {
+			return false;
+		}
+		return true;
+	}
+
 	public Date getAddedDate() {
 		return this.addedDate;
 	}
@@ -112,6 +169,25 @@ public class DeviceAttributes {
 
 	public String getUdid() {
 		return this.udid;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (this.addedDate == null ? 0 : this.addedDate.hashCode());
+		result = prime * result + (this.deviceClass == null ? 0 : this.deviceClass.hashCode());
+		result = prime * result + (this.model == null ? 0 : this.model.hashCode());
+		result = prime * result + (this.name == null ? 0 : this.name.hashCode());
+		result = prime * result + (this.platform == null ? 0 : this.platform.hashCode());
+		result = prime * result + (this.status == null ? 0 : this.status.hashCode());
+		result = prime * result + (this.udid == null ? 0 : this.udid.hashCode());
+		return result;
 	}
 
 	public void setAddedDate(Date addedDate) {
@@ -145,63 +221,13 @@ public class DeviceAttributes {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see java.lang.Object#hashCode()
+	 * @see java.lang.Object#toString()
 	 */
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((addedDate == null) ? 0 : addedDate.hashCode());
-		result = prime * result + ((deviceClass == null) ? 0 : deviceClass.hashCode());
-		result = prime * result + ((model == null) ? 0 : model.hashCode());
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		result = prime * result + ((platform == null) ? 0 : platform.hashCode());
-		result = prime * result + ((status == null) ? 0 : status.hashCode());
-		result = prime * result + ((udid == null) ? 0 : udid.hashCode());
-		return result;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		DeviceAttributes other = (DeviceAttributes) obj;
-		if (addedDate == null) {
-			if (other.addedDate != null)
-				return false;
-		} else if (!addedDate.equals(other.addedDate))
-			return false;
-		if (deviceClass != other.deviceClass)
-			return false;
-		if (model == null) {
-			if (other.model != null)
-				return false;
-		} else if (!model.equals(other.model))
-			return false;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
-		if (platform != other.platform)
-			return false;
-		if (status != other.status)
-			return false;
-		if (udid == null) {
-			if (other.udid != null)
-				return false;
-		} else if (!udid.equals(other.udid))
-			return false;
-		return true;
+	public String toString() {
+		return "DeviceAttributes [addedDate=" + this.addedDate + ", deviceClass=" + this.deviceClass + ", model="
+				+ this.model + ", name=" + this.name + ", platform=" + this.platform + ", status=" + this.status
+				+ ", udid=" + this.udid + "]";
 	}
 
 }

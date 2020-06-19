@@ -17,12 +17,35 @@ public class BundleIdCapabilityRelationships {
 	@JsonPropertyDescription("")
 	private BundleId bundleId;
 
-	public BundleId getBundleId() {
-		return this.bundleId;
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		BundleIdCapabilityRelationships other = (BundleIdCapabilityRelationships) obj;
+		if (this.bundleId == null) {
+			if (other.bundleId != null) {
+				return false;
+			}
+		} else if (!this.bundleId.equals(other.bundleId)) {
+			return false;
+		}
+		return true;
 	}
 
-	public void setBundleId(BundleId bundleId) {
-		this.bundleId = bundleId;
+	public BundleId getBundleId() {
+		return this.bundleId;
 	}
 
 	/*
@@ -34,30 +57,22 @@ public class BundleIdCapabilityRelationships {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((bundleId == null) ? 0 : bundleId.hashCode());
+		result = prime * result + (this.bundleId == null ? 0 : this.bundleId.hashCode());
 		return result;
+	}
+
+	public void setBundleId(BundleId bundleId) {
+		this.bundleId = bundleId;
 	}
 
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see java.lang.Object#equals(java.lang.Object)
+	 * @see java.lang.Object#toString()
 	 */
 	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		BundleIdCapabilityRelationships other = (BundleIdCapabilityRelationships) obj;
-		if (bundleId == null) {
-			if (other.bundleId != null)
-				return false;
-		} else if (!bundleId.equals(other.bundleId))
-			return false;
-		return true;
+	public String toString() {
+		return "BundleIdCapabilityRelationships [bundleId=" + this.bundleId + "]";
 	}
 
 }

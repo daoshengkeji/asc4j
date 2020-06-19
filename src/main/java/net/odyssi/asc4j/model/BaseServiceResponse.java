@@ -21,12 +21,60 @@ public abstract class BaseServiceResponse {
 	@JsonPropertyDescription("Paging information for data responses.")
 	private PagingInformation meta;
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		BaseServiceResponse other = (BaseServiceResponse) obj;
+		if (this.links == null) {
+			if (other.links != null) {
+				return false;
+			}
+		} else if (!this.links.equals(other.links)) {
+			return false;
+		}
+		if (this.meta == null) {
+			if (other.meta != null) {
+				return false;
+			}
+		} else if (!this.meta.equals(other.meta)) {
+			return false;
+		}
+		return true;
+	}
+
 	public PagedDocumentLinks getLinks() {
 		return this.links;
 	}
 
 	public PagingInformation getMeta() {
 		return this.meta;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (this.links == null ? 0 : this.links.hashCode());
+		result = prime * result + (this.meta == null ? 0 : this.meta.hashCode());
+		return result;
 	}
 
 	public void setLinks(PagedDocumentLinks links) {
@@ -40,42 +88,11 @@ public abstract class BaseServiceResponse {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see java.lang.Object#hashCode()
+	 * @see java.lang.Object#toString()
 	 */
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((links == null) ? 0 : links.hashCode());
-		result = prime * result + ((meta == null) ? 0 : meta.hashCode());
-		return result;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		BaseServiceResponse other = (BaseServiceResponse) obj;
-		if (links == null) {
-			if (other.links != null)
-				return false;
-		} else if (!links.equals(other.links))
-			return false;
-		if (meta == null) {
-			if (other.meta != null)
-				return false;
-		} else if (!meta.equals(other.meta))
-			return false;
-		return true;
+	public String toString() {
+		return "BaseServiceResponse [links=" + this.links + ", meta=" + this.meta + "]";
 	}
 
 }

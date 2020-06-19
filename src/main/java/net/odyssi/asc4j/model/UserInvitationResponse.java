@@ -29,6 +29,47 @@ public class UserInvitationResponse {
 	@JsonPropertyDescription("Self-links to documents that can contain information for one or more resources.")
 	private DocumentLinks links;
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		UserInvitationResponse other = (UserInvitationResponse) obj;
+		if (this.data == null) {
+			if (other.data != null) {
+				return false;
+			}
+		} else if (!this.data.equals(other.data)) {
+			return false;
+		}
+		if (this.included == null) {
+			if (other.included != null) {
+				return false;
+			}
+		} else if (!this.included.equals(other.included)) {
+			return false;
+		}
+		if (this.links == null) {
+			if (other.links != null) {
+				return false;
+			}
+		} else if (!this.links.equals(other.links)) {
+			return false;
+		}
+		return true;
+	}
+
 	public UserInvitation getData() {
 		return this.data;
 	}
@@ -39,6 +80,21 @@ public class UserInvitationResponse {
 
 	public DocumentLinks getLinks() {
 		return this.links;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (this.data == null ? 0 : this.data.hashCode());
+		result = prime * result + (this.included == null ? 0 : this.included.hashCode());
+		result = prime * result + (this.links == null ? 0 : this.links.hashCode());
+		return result;
 	}
 
 	public void setData(UserInvitation data) {
@@ -56,48 +112,12 @@ public class UserInvitationResponse {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see java.lang.Object#hashCode()
+	 * @see java.lang.Object#toString()
 	 */
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((data == null) ? 0 : data.hashCode());
-		result = prime * result + ((included == null) ? 0 : included.hashCode());
-		result = prime * result + ((links == null) ? 0 : links.hashCode());
-		return result;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		UserInvitationResponse other = (UserInvitationResponse) obj;
-		if (data == null) {
-			if (other.data != null)
-				return false;
-		} else if (!data.equals(other.data))
-			return false;
-		if (included == null) {
-			if (other.included != null)
-				return false;
-		} else if (!included.equals(other.included))
-			return false;
-		if (links == null) {
-			if (other.links != null)
-				return false;
-		} else if (!links.equals(other.links))
-			return false;
-		return true;
+	public String toString() {
+		return "UserInvitationResponse [data=" + this.data + ", included=" + this.included + ", links=" + this.links
+				+ "]";
 	}
 
 }

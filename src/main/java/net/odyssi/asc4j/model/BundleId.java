@@ -24,12 +24,60 @@ public class BundleId extends ResourceObject {
 	@JsonPropertyDescription("Navigational links to related data and included resource types and IDs.")
 	private BundleIdRelationships relationships;
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		BundleId other = (BundleId) obj;
+		if (this.attributes == null) {
+			if (other.attributes != null) {
+				return false;
+			}
+		} else if (!this.attributes.equals(other.attributes)) {
+			return false;
+		}
+		if (this.relationships == null) {
+			if (other.relationships != null) {
+				return false;
+			}
+		} else if (!this.relationships.equals(other.relationships)) {
+			return false;
+		}
+		return true;
+	}
+
 	public BundleIdAttributes getAttributes() {
 		return this.attributes;
 	}
 
 	public BundleIdRelationships getRelationships() {
 		return this.relationships;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (this.attributes == null ? 0 : this.attributes.hashCode());
+		result = prime * result + (this.relationships == null ? 0 : this.relationships.hashCode());
+		return result;
 	}
 
 	public void setAttributes(BundleIdAttributes attributes) {
@@ -43,42 +91,11 @@ public class BundleId extends ResourceObject {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see java.lang.Object#hashCode()
+	 * @see java.lang.Object#toString()
 	 */
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((attributes == null) ? 0 : attributes.hashCode());
-		result = prime * result + ((relationships == null) ? 0 : relationships.hashCode());
-		return result;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		BundleId other = (BundleId) obj;
-		if (attributes == null) {
-			if (other.attributes != null)
-				return false;
-		} else if (!attributes.equals(other.attributes))
-			return false;
-		if (relationships == null) {
-			if (other.relationships != null)
-				return false;
-		} else if (!relationships.equals(other.relationships))
-			return false;
-		return true;
+	public String toString() {
+		return "BundleId [attributes=" + this.attributes + ", relationships=" + this.relationships + "]";
 	}
 
 	// TODO attrs/relationships

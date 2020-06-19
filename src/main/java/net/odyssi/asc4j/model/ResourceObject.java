@@ -25,6 +25,47 @@ public class ResourceObject {
 	@JsonPropertyDescription("The resource type.")
 	private String type;
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		ResourceObject other = (ResourceObject) obj;
+		if (this.id == null) {
+			if (other.id != null) {
+				return false;
+			}
+		} else if (!this.id.equals(other.id)) {
+			return false;
+		}
+		if (this.links == null) {
+			if (other.links != null) {
+				return false;
+			}
+		} else if (!this.links.equals(other.links)) {
+			return false;
+		}
+		if (this.type == null) {
+			if (other.type != null) {
+				return false;
+			}
+		} else if (!this.type.equals(other.type)) {
+			return false;
+		}
+		return true;
+	}
+
 	public String getId() {
 		return this.id;
 	}
@@ -35,6 +76,21 @@ public class ResourceObject {
 
 	public String getType() {
 		return this.type;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (this.id == null ? 0 : this.id.hashCode());
+		result = prime * result + (this.links == null ? 0 : this.links.hashCode());
+		result = prime * result + (this.type == null ? 0 : this.type.hashCode());
+		return result;
 	}
 
 	public void setId(String id) {
@@ -52,48 +108,11 @@ public class ResourceObject {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see java.lang.Object#hashCode()
+	 * @see java.lang.Object#toString()
 	 */
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((links == null) ? 0 : links.hashCode());
-		result = prime * result + ((type == null) ? 0 : type.hashCode());
-		return result;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		ResourceObject other = (ResourceObject) obj;
-		if (id == null) {
-			if (other.id != null)
-				return false;
-		} else if (!id.equals(other.id))
-			return false;
-		if (links == null) {
-			if (other.links != null)
-				return false;
-		} else if (!links.equals(other.links))
-			return false;
-		if (type == null) {
-			if (other.type != null)
-				return false;
-		} else if (!type.equals(other.type))
-			return false;
-		return true;
+	public String toString() {
+		return "ResourceObject [id=" + this.id + ", links=" + this.links + ", type=" + this.type + "]";
 	}
 
 }

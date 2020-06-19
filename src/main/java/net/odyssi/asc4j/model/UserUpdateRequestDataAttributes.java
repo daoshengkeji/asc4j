@@ -28,6 +28,47 @@ public class UserUpdateRequestDataAttributes {
 	@JsonPropertyDescription("Assigned user roles that determine the user's access to sections of App Store Connect and tasks they can perform.")
 	private List<UserRole> roles = new ArrayList<UserRole>();
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		UserUpdateRequestDataAttributes other = (UserUpdateRequestDataAttributes) obj;
+		if (this.allAppsVisible == null) {
+			if (other.allAppsVisible != null) {
+				return false;
+			}
+		} else if (!this.allAppsVisible.equals(other.allAppsVisible)) {
+			return false;
+		}
+		if (this.provisioningAllowed == null) {
+			if (other.provisioningAllowed != null) {
+				return false;
+			}
+		} else if (!this.provisioningAllowed.equals(other.provisioningAllowed)) {
+			return false;
+		}
+		if (this.roles == null) {
+			if (other.roles != null) {
+				return false;
+			}
+		} else if (!this.roles.equals(other.roles)) {
+			return false;
+		}
+		return true;
+	}
+
 	public Boolean getAllAppsVisible() {
 		return this.allAppsVisible;
 	}
@@ -38,6 +79,21 @@ public class UserUpdateRequestDataAttributes {
 
 	public List<UserRole> getRoles() {
 		return this.roles;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (this.allAppsVisible == null ? 0 : this.allAppsVisible.hashCode());
+		result = prime * result + (this.provisioningAllowed == null ? 0 : this.provisioningAllowed.hashCode());
+		result = prime * result + (this.roles == null ? 0 : this.roles.hashCode());
+		return result;
 	}
 
 	public void setAllAppsVisible(Boolean allAppsVisible) {
@@ -55,48 +111,12 @@ public class UserUpdateRequestDataAttributes {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see java.lang.Object#hashCode()
+	 * @see java.lang.Object#toString()
 	 */
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((allAppsVisible == null) ? 0 : allAppsVisible.hashCode());
-		result = prime * result + ((provisioningAllowed == null) ? 0 : provisioningAllowed.hashCode());
-		result = prime * result + ((roles == null) ? 0 : roles.hashCode());
-		return result;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		UserUpdateRequestDataAttributes other = (UserUpdateRequestDataAttributes) obj;
-		if (allAppsVisible == null) {
-			if (other.allAppsVisible != null)
-				return false;
-		} else if (!allAppsVisible.equals(other.allAppsVisible))
-			return false;
-		if (provisioningAllowed == null) {
-			if (other.provisioningAllowed != null)
-				return false;
-		} else if (!provisioningAllowed.equals(other.provisioningAllowed))
-			return false;
-		if (roles == null) {
-			if (other.roles != null)
-				return false;
-		} else if (!roles.equals(other.roles))
-			return false;
-		return true;
+	public String toString() {
+		return "UserUpdateRequestDataAttributes [allAppsVisible=" + this.allAppsVisible + ", provisioningAllowed="
+				+ this.provisioningAllowed + ", roles=" + this.roles + "]";
 	}
 
 }

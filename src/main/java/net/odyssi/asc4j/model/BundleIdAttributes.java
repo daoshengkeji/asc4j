@@ -29,6 +29,50 @@ public class BundleIdAttributes {
 	@JsonPropertyDescription("")
 	private String seedId;
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		BundleIdAttributes other = (BundleIdAttributes) obj;
+		if (this.identifier == null) {
+			if (other.identifier != null) {
+				return false;
+			}
+		} else if (!this.identifier.equals(other.identifier)) {
+			return false;
+		}
+		if (this.name == null) {
+			if (other.name != null) {
+				return false;
+			}
+		} else if (!this.name.equals(other.name)) {
+			return false;
+		}
+		if (this.platform != other.platform) {
+			return false;
+		}
+		if (this.seedId == null) {
+			if (other.seedId != null) {
+				return false;
+			}
+		} else if (!this.seedId.equals(other.seedId)) {
+			return false;
+		}
+		return true;
+	}
+
 	public String getIdentifier() {
 		return this.identifier;
 	}
@@ -43,6 +87,22 @@ public class BundleIdAttributes {
 
 	public String getSeedId() {
 		return this.seedId;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (this.identifier == null ? 0 : this.identifier.hashCode());
+		result = prime * result + (this.name == null ? 0 : this.name.hashCode());
+		result = prime * result + (this.platform == null ? 0 : this.platform.hashCode());
+		result = prime * result + (this.seedId == null ? 0 : this.seedId.hashCode());
+		return result;
 	}
 
 	public void setIdentifier(String identifier) {
@@ -64,51 +124,12 @@ public class BundleIdAttributes {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see java.lang.Object#hashCode()
+	 * @see java.lang.Object#toString()
 	 */
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((identifier == null) ? 0 : identifier.hashCode());
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		result = prime * result + ((platform == null) ? 0 : platform.hashCode());
-		result = prime * result + ((seedId == null) ? 0 : seedId.hashCode());
-		return result;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		BundleIdAttributes other = (BundleIdAttributes) obj;
-		if (identifier == null) {
-			if (other.identifier != null)
-				return false;
-		} else if (!identifier.equals(other.identifier))
-			return false;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
-		if (platform != other.platform)
-			return false;
-		if (seedId == null) {
-			if (other.seedId != null)
-				return false;
-		} else if (!seedId.equals(other.seedId))
-			return false;
-		return true;
+	public String toString() {
+		return "BundleIdAttributes [identifier=" + this.identifier + ", name=" + this.name + ", platform="
+				+ this.platform + ", seedId=" + this.seedId + "]";
 	}
 
 }

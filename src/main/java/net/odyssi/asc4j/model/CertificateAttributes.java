@@ -44,6 +44,67 @@ public class CertificateAttributes {
 	@JsonPropertyDescription("")
 	private String serialNumber;
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		CertificateAttributes other = (CertificateAttributes) obj;
+		if (this.certificateContent == null) {
+			if (other.certificateContent != null) {
+				return false;
+			}
+		} else if (!this.certificateContent.equals(other.certificateContent)) {
+			return false;
+		}
+		if (this.certificateType != other.certificateType) {
+			return false;
+		}
+		if (this.displayName == null) {
+			if (other.displayName != null) {
+				return false;
+			}
+		} else if (!this.displayName.equals(other.displayName)) {
+			return false;
+		}
+		if (this.expirationDate == null) {
+			if (other.expirationDate != null) {
+				return false;
+			}
+		} else if (!this.expirationDate.equals(other.expirationDate)) {
+			return false;
+		}
+		if (this.name == null) {
+			if (other.name != null) {
+				return false;
+			}
+		} else if (!this.name.equals(other.name)) {
+			return false;
+		}
+		if (this.platform != other.platform) {
+			return false;
+		}
+		if (this.serialNumber == null) {
+			if (other.serialNumber != null) {
+				return false;
+			}
+		} else if (!this.serialNumber.equals(other.serialNumber)) {
+			return false;
+		}
+		return true;
+	}
+
 	public String getCertificateContent() {
 		return this.certificateContent;
 	}
@@ -70,6 +131,25 @@ public class CertificateAttributes {
 
 	public String getSerialNumber() {
 		return this.serialNumber;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (this.certificateContent == null ? 0 : this.certificateContent.hashCode());
+		result = prime * result + (this.certificateType == null ? 0 : this.certificateType.hashCode());
+		result = prime * result + (this.displayName == null ? 0 : this.displayName.hashCode());
+		result = prime * result + (this.expirationDate == null ? 0 : this.expirationDate.hashCode());
+		result = prime * result + (this.name == null ? 0 : this.name.hashCode());
+		result = prime * result + (this.platform == null ? 0 : this.platform.hashCode());
+		result = prime * result + (this.serialNumber == null ? 0 : this.serialNumber.hashCode());
+		return result;
 	}
 
 	public void setCertificateContent(String certificateContent) {
@@ -103,66 +183,13 @@ public class CertificateAttributes {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see java.lang.Object#hashCode()
+	 * @see java.lang.Object#toString()
 	 */
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((certificateContent == null) ? 0 : certificateContent.hashCode());
-		result = prime * result + ((certificateType == null) ? 0 : certificateType.hashCode());
-		result = prime * result + ((displayName == null) ? 0 : displayName.hashCode());
-		result = prime * result + ((expirationDate == null) ? 0 : expirationDate.hashCode());
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		result = prime * result + ((platform == null) ? 0 : platform.hashCode());
-		result = prime * result + ((serialNumber == null) ? 0 : serialNumber.hashCode());
-		return result;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		CertificateAttributes other = (CertificateAttributes) obj;
-		if (certificateContent == null) {
-			if (other.certificateContent != null)
-				return false;
-		} else if (!certificateContent.equals(other.certificateContent))
-			return false;
-		if (certificateType != other.certificateType)
-			return false;
-		if (displayName == null) {
-			if (other.displayName != null)
-				return false;
-		} else if (!displayName.equals(other.displayName))
-			return false;
-		if (expirationDate == null) {
-			if (other.expirationDate != null)
-				return false;
-		} else if (!expirationDate.equals(other.expirationDate))
-			return false;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
-		if (platform != other.platform)
-			return false;
-		if (serialNumber == null) {
-			if (other.serialNumber != null)
-				return false;
-		} else if (!serialNumber.equals(other.serialNumber))
-			return false;
-		return true;
+	public String toString() {
+		return "CertificateAttributes [certificateContent=" + this.certificateContent + ", certificateType="
+				+ this.certificateType + ", displayName=" + this.displayName + ", expirationDate=" + this.expirationDate
+				+ ", name=" + this.name + ", platform=" + this.platform + ", serialNumber=" + this.serialNumber + "]";
 	}
 
 }

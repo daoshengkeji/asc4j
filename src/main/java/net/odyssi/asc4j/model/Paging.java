@@ -22,12 +22,60 @@ public class Paging {
 	@JsonPropertyDescription("The total number of resources matching your request.")
 	private Integer total;
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		Paging other = (Paging) obj;
+		if (this.limit == null) {
+			if (other.limit != null) {
+				return false;
+			}
+		} else if (!this.limit.equals(other.limit)) {
+			return false;
+		}
+		if (this.total == null) {
+			if (other.total != null) {
+				return false;
+			}
+		} else if (!this.total.equals(other.total)) {
+			return false;
+		}
+		return true;
+	}
+
 	public Integer getLimit() {
 		return this.limit;
 	}
 
 	public Integer getTotal() {
 		return this.total;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (this.limit == null ? 0 : this.limit.hashCode());
+		result = prime * result + (this.total == null ? 0 : this.total.hashCode());
+		return result;
 	}
 
 	public void setLimit(Integer limit) {
@@ -41,42 +89,11 @@ public class Paging {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see java.lang.Object#hashCode()
+	 * @see java.lang.Object#toString()
 	 */
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((limit == null) ? 0 : limit.hashCode());
-		result = prime * result + ((total == null) ? 0 : total.hashCode());
-		return result;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Paging other = (Paging) obj;
-		if (limit == null) {
-			if (other.limit != null)
-				return false;
-		} else if (!limit.equals(other.limit))
-			return false;
-		if (total == null) {
-			if (other.total != null)
-				return false;
-		} else if (!total.equals(other.total))
-			return false;
-		return true;
+	public String toString() {
+		return "Paging [limit=" + this.limit + ", total=" + this.total + "]";
 	}
 
 }

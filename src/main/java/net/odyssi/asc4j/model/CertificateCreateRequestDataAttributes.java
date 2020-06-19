@@ -21,12 +21,56 @@ public class CertificateCreateRequestDataAttributes {
 	@JsonPropertyDescription("")
 	private String csrContent;
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		CertificateCreateRequestDataAttributes other = (CertificateCreateRequestDataAttributes) obj;
+		if (this.certificateType != other.certificateType) {
+			return false;
+		}
+		if (this.csrContent == null) {
+			if (other.csrContent != null) {
+				return false;
+			}
+		} else if (!this.csrContent.equals(other.csrContent)) {
+			return false;
+		}
+		return true;
+	}
+
 	public CertificateType getCertificateType() {
 		return this.certificateType;
 	}
 
 	public String getCsrContent() {
 		return this.csrContent;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (this.certificateType == null ? 0 : this.certificateType.hashCode());
+		result = prime * result + (this.csrContent == null ? 0 : this.csrContent.hashCode());
+		return result;
 	}
 
 	public void setCertificateType(CertificateType certificateType) {
@@ -40,39 +84,12 @@ public class CertificateCreateRequestDataAttributes {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see java.lang.Object#hashCode()
+	 * @see java.lang.Object#toString()
 	 */
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((certificateType == null) ? 0 : certificateType.hashCode());
-		result = prime * result + ((csrContent == null) ? 0 : csrContent.hashCode());
-		return result;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		CertificateCreateRequestDataAttributes other = (CertificateCreateRequestDataAttributes) obj;
-		if (certificateType != other.certificateType)
-			return false;
-		if (csrContent == null) {
-			if (other.csrContent != null)
-				return false;
-		} else if (!csrContent.equals(other.csrContent))
-			return false;
-		return true;
+	public String toString() {
+		return "CertificateCreateRequestDataAttributes [certificateType=" + this.certificateType + ", csrContent="
+				+ this.csrContent + "]";
 	}
 
 }

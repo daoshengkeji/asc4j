@@ -19,12 +19,35 @@ public class AppPagedRelationshipsType extends AppRelationshipsType {
 	@JsonPropertyDescription("")
 	private PagingInformation meta;
 
-	public PagingInformation getMeta() {
-		return this.meta;
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		AppPagedRelationshipsType other = (AppPagedRelationshipsType) obj;
+		if (this.meta == null) {
+			if (other.meta != null) {
+				return false;
+			}
+		} else if (!this.meta.equals(other.meta)) {
+			return false;
+		}
+		return true;
 	}
 
-	public void setMeta(PagingInformation meta) {
-		this.meta = meta;
+	public PagingInformation getMeta() {
+		return this.meta;
 	}
 
 	/*
@@ -36,30 +59,22 @@ public class AppPagedRelationshipsType extends AppRelationshipsType {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((meta == null) ? 0 : meta.hashCode());
+		result = prime * result + (this.meta == null ? 0 : this.meta.hashCode());
 		return result;
+	}
+
+	public void setMeta(PagingInformation meta) {
+		this.meta = meta;
 	}
 
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see java.lang.Object#equals(java.lang.Object)
+	 * @see java.lang.Object#toString()
 	 */
 	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		AppPagedRelationshipsType other = (AppPagedRelationshipsType) obj;
-		if (meta == null) {
-			if (other.meta != null)
-				return false;
-		} else if (!meta.equals(other.meta))
-			return false;
-		return true;
+	public String toString() {
+		return "AppPagedRelationshipsType [meta=" + this.meta + "]";
 	}
 
 }

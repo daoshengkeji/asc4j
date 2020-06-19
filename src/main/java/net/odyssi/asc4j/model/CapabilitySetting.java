@@ -126,6 +126,67 @@ public class CapabilitySetting {
 	@JsonPropertyDescription("")
 	private Boolean visible;
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		CapabilitySetting other = (CapabilitySetting) obj;
+		if (this.allowedInstances != other.allowedInstances) {
+			return false;
+		}
+		if (this.description == null) {
+			if (other.description != null) {
+				return false;
+			}
+		} else if (!this.description.equals(other.description)) {
+			return false;
+		}
+		if (this.enabledByDefault == null) {
+			if (other.enabledByDefault != null) {
+				return false;
+			}
+		} else if (!this.enabledByDefault.equals(other.enabledByDefault)) {
+			return false;
+		}
+		if (this.key != other.key) {
+			return false;
+		}
+		if (this.name == null) {
+			if (other.name != null) {
+				return false;
+			}
+		} else if (!this.name.equals(other.name)) {
+			return false;
+		}
+		if (this.options == null) {
+			if (other.options != null) {
+				return false;
+			}
+		} else if (!this.options.equals(other.options)) {
+			return false;
+		}
+		if (this.visible == null) {
+			if (other.visible != null) {
+				return false;
+			}
+		} else if (!this.visible.equals(other.visible)) {
+			return false;
+		}
+		return true;
+	}
+
 	public CapabilitySetting.AllowedInstances getAllowedInstances() {
 		return this.allowedInstances;
 	}
@@ -152,6 +213,25 @@ public class CapabilitySetting {
 
 	public Boolean getVisible() {
 		return this.visible;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (this.allowedInstances == null ? 0 : this.allowedInstances.hashCode());
+		result = prime * result + (this.description == null ? 0 : this.description.hashCode());
+		result = prime * result + (this.enabledByDefault == null ? 0 : this.enabledByDefault.hashCode());
+		result = prime * result + (this.key == null ? 0 : this.key.hashCode());
+		result = prime * result + (this.name == null ? 0 : this.name.hashCode());
+		result = prime * result + (this.options == null ? 0 : this.options.hashCode());
+		result = prime * result + (this.visible == null ? 0 : this.visible.hashCode());
+		return result;
 	}
 
 	public void setAllowedInstances(CapabilitySetting.AllowedInstances allowedInstances) {
@@ -185,66 +265,13 @@ public class CapabilitySetting {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see java.lang.Object#hashCode()
+	 * @see java.lang.Object#toString()
 	 */
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((allowedInstances == null) ? 0 : allowedInstances.hashCode());
-		result = prime * result + ((description == null) ? 0 : description.hashCode());
-		result = prime * result + ((enabledByDefault == null) ? 0 : enabledByDefault.hashCode());
-		result = prime * result + ((key == null) ? 0 : key.hashCode());
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		result = prime * result + ((options == null) ? 0 : options.hashCode());
-		result = prime * result + ((visible == null) ? 0 : visible.hashCode());
-		return result;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		CapabilitySetting other = (CapabilitySetting) obj;
-		if (allowedInstances != other.allowedInstances)
-			return false;
-		if (description == null) {
-			if (other.description != null)
-				return false;
-		} else if (!description.equals(other.description))
-			return false;
-		if (enabledByDefault == null) {
-			if (other.enabledByDefault != null)
-				return false;
-		} else if (!enabledByDefault.equals(other.enabledByDefault))
-			return false;
-		if (key != other.key)
-			return false;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
-		if (options == null) {
-			if (other.options != null)
-				return false;
-		} else if (!options.equals(other.options))
-			return false;
-		if (visible == null) {
-			if (other.visible != null)
-				return false;
-		} else if (!visible.equals(other.visible))
-			return false;
-		return true;
+	public String toString() {
+		return "CapabilitySetting [allowedInstances=" + this.allowedInstances + ", description=" + this.description
+				+ ", enabledByDefault=" + this.enabledByDefault + ", key=" + this.key + ", name=" + this.name
+				+ ", options=" + this.options + ", visible=" + this.visible + "]";
 	}
 
 }

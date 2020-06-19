@@ -30,6 +30,54 @@ public class PagedDocumentLinks {
 	@JsonPropertyDescription("The link that produced the current document.")
 	private String self;
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		PagedDocumentLinks other = (PagedDocumentLinks) obj;
+		if (this.first == null) {
+			if (other.first != null) {
+				return false;
+			}
+		} else if (!this.first.equals(other.first)) {
+			return false;
+		}
+		if (this.next == null) {
+			if (other.next != null) {
+				return false;
+			}
+		} else if (!this.next.equals(other.next)) {
+			return false;
+		}
+		if (this.related == null) {
+			if (other.related != null) {
+				return false;
+			}
+		} else if (!this.related.equals(other.related)) {
+			return false;
+		}
+		if (this.self == null) {
+			if (other.self != null) {
+				return false;
+			}
+		} else if (!this.self.equals(other.self)) {
+			return false;
+		}
+		return true;
+	}
+
 	public String getFirst() {
 		return this.first;
 	}
@@ -44,6 +92,22 @@ public class PagedDocumentLinks {
 
 	public String getSelf() {
 		return this.self;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (this.first == null ? 0 : this.first.hashCode());
+		result = prime * result + (this.next == null ? 0 : this.next.hashCode());
+		result = prime * result + (this.related == null ? 0 : this.related.hashCode());
+		result = prime * result + (this.self == null ? 0 : this.self.hashCode());
+		return result;
 	}
 
 	public void setFirst(String first) {
@@ -65,54 +129,12 @@ public class PagedDocumentLinks {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see java.lang.Object#hashCode()
+	 * @see java.lang.Object#toString()
 	 */
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((first == null) ? 0 : first.hashCode());
-		result = prime * result + ((next == null) ? 0 : next.hashCode());
-		result = prime * result + ((related == null) ? 0 : related.hashCode());
-		result = prime * result + ((self == null) ? 0 : self.hashCode());
-		return result;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		PagedDocumentLinks other = (PagedDocumentLinks) obj;
-		if (first == null) {
-			if (other.first != null)
-				return false;
-		} else if (!first.equals(other.first))
-			return false;
-		if (next == null) {
-			if (other.next != null)
-				return false;
-		} else if (!next.equals(other.next))
-			return false;
-		if (related == null) {
-			if (other.related != null)
-				return false;
-		} else if (!related.equals(other.related))
-			return false;
-		if (self == null) {
-			if (other.self != null)
-				return false;
-		} else if (!self.equals(other.self))
-			return false;
-		return true;
+	public String toString() {
+		return "PagedDocumentLinks [first=" + this.first + ", next=" + this.next + ", related=" + this.related
+				+ ", self=" + this.self + "]";
 	}
 
 }

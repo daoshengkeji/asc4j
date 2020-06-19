@@ -74,12 +74,56 @@ public class BundleIdCapabilityAttributes {
 	@JsonPropertyDescription("")
 	private List<CapabilitySetting> settings = new ArrayList<CapabilitySetting>();
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		BundleIdCapabilityAttributes other = (BundleIdCapabilityAttributes) obj;
+		if (this.capabilityType != other.capabilityType) {
+			return false;
+		}
+		if (this.settings == null) {
+			if (other.settings != null) {
+				return false;
+			}
+		} else if (!this.settings.equals(other.settings)) {
+			return false;
+		}
+		return true;
+	}
+
 	public BundleIdCapabilityAttributes.CapabilityType getCapabilityType() {
 		return this.capabilityType;
 	}
 
 	public List<CapabilitySetting> getSettings() {
 		return this.settings;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#hashCode()
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (this.capabilityType == null ? 0 : this.capabilityType.hashCode());
+		result = prime * result + (this.settings == null ? 0 : this.settings.hashCode());
+		return result;
 	}
 
 	public void setCapabilityType(BundleIdCapabilityAttributes.CapabilityType capabilityType) {
@@ -93,39 +137,12 @@ public class BundleIdCapabilityAttributes {
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see java.lang.Object#hashCode()
+	 * @see java.lang.Object#toString()
 	 */
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((capabilityType == null) ? 0 : capabilityType.hashCode());
-		result = prime * result + ((settings == null) ? 0 : settings.hashCode());
-		return result;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		BundleIdCapabilityAttributes other = (BundleIdCapabilityAttributes) obj;
-		if (capabilityType != other.capabilityType)
-			return false;
-		if (settings == null) {
-			if (other.settings != null)
-				return false;
-		} else if (!settings.equals(other.settings))
-			return false;
-		return true;
+	public String toString() {
+		return "BundleIdCapabilityAttributes [capabilityType=" + this.capabilityType + ", settings=" + this.settings
+				+ "]";
 	}
 
 }

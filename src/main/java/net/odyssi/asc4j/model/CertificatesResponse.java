@@ -22,12 +22,35 @@ public class CertificatesResponse extends BaseServiceResponse {
 	@JsonPropertyDescription("The resource data")
 	private List<Certificate> data;
 
-	public List<Certificate> getData() {
-		return this.data;
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (!super.equals(obj)) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		CertificatesResponse other = (CertificatesResponse) obj;
+		if (this.data == null) {
+			if (other.data != null) {
+				return false;
+			}
+		} else if (!this.data.equals(other.data)) {
+			return false;
+		}
+		return true;
 	}
 
-	public void setData(List<Certificate> data) {
-		this.data = data;
+	public List<Certificate> getData() {
+		return this.data;
 	}
 
 	/*
@@ -39,30 +62,22 @@ public class CertificatesResponse extends BaseServiceResponse {
 	public int hashCode() {
 		final int prime = 31;
 		int result = super.hashCode();
-		result = prime * result + ((data == null) ? 0 : data.hashCode());
+		result = prime * result + (this.data == null ? 0 : this.data.hashCode());
 		return result;
+	}
+
+	public void setData(List<Certificate> data) {
+		this.data = data;
 	}
 
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see java.lang.Object#equals(java.lang.Object)
+	 * @see java.lang.Object#toString()
 	 */
 	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (!super.equals(obj))
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		CertificatesResponse other = (CertificatesResponse) obj;
-		if (data == null) {
-			if (other.data != null)
-				return false;
-		} else if (!data.equals(other.data))
-			return false;
-		return true;
+	public String toString() {
+		return "CertificatesResponse [data=" + this.data + "]";
 	}
 
 }

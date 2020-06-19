@@ -156,69 +156,98 @@ public class ProfileAttributes {
 	/*
 	 * (non-Javadoc)
 	 *
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		ProfileAttributes other = (ProfileAttributes) obj;
+		if (this.createdDate == null) {
+			if (other.createdDate != null) {
+				return false;
+			}
+		} else if (!this.createdDate.equals(other.createdDate)) {
+			return false;
+		}
+		if (this.expirationDate == null) {
+			if (other.expirationDate != null) {
+				return false;
+			}
+		} else if (!this.expirationDate.equals(other.expirationDate)) {
+			return false;
+		}
+		if (this.name == null) {
+			if (other.name != null) {
+				return false;
+			}
+		} else if (!this.name.equals(other.name)) {
+			return false;
+		}
+		if (this.platform != other.platform) {
+			return false;
+		}
+		if (this.profileContent == null) {
+			if (other.profileContent != null) {
+				return false;
+			}
+		} else if (!this.profileContent.equals(other.profileContent)) {
+			return false;
+		}
+		if (this.profileState != other.profileState) {
+			return false;
+		}
+		if (this.profileType != other.profileType) {
+			return false;
+		}
+		if (this.uuid == null) {
+			if (other.uuid != null) {
+				return false;
+			}
+		} else if (!this.uuid.equals(other.uuid)) {
+			return false;
+		}
+		return true;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
 	 * @see java.lang.Object#hashCode()
 	 */
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((createdDate == null) ? 0 : createdDate.hashCode());
-		result = prime * result + ((expirationDate == null) ? 0 : expirationDate.hashCode());
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		result = prime * result + ((platform == null) ? 0 : platform.hashCode());
-		result = prime * result + ((profileContent == null) ? 0 : profileContent.hashCode());
-		result = prime * result + ((profileState == null) ? 0 : profileState.hashCode());
-		result = prime * result + ((profileType == null) ? 0 : profileType.hashCode());
-		result = prime * result + ((uuid == null) ? 0 : uuid.hashCode());
+		result = prime * result + (this.createdDate == null ? 0 : this.createdDate.hashCode());
+		result = prime * result + (this.expirationDate == null ? 0 : this.expirationDate.hashCode());
+		result = prime * result + (this.name == null ? 0 : this.name.hashCode());
+		result = prime * result + (this.platform == null ? 0 : this.platform.hashCode());
+		result = prime * result + (this.profileContent == null ? 0 : this.profileContent.hashCode());
+		result = prime * result + (this.profileState == null ? 0 : this.profileState.hashCode());
+		result = prime * result + (this.profileType == null ? 0 : this.profileType.hashCode());
+		result = prime * result + (this.uuid == null ? 0 : this.uuid.hashCode());
 		return result;
 	}
 
 	/*
 	 * (non-Javadoc)
 	 *
-	 * @see java.lang.Object#equals(java.lang.Object)
+	 * @see java.lang.Object#toString()
 	 */
 	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		ProfileAttributes other = (ProfileAttributes) obj;
-		if (createdDate == null) {
-			if (other.createdDate != null)
-				return false;
-		} else if (!createdDate.equals(other.createdDate))
-			return false;
-		if (expirationDate == null) {
-			if (other.expirationDate != null)
-				return false;
-		} else if (!expirationDate.equals(other.expirationDate))
-			return false;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
-		if (platform != other.platform)
-			return false;
-		if (profileContent == null) {
-			if (other.profileContent != null)
-				return false;
-		} else if (!profileContent.equals(other.profileContent))
-			return false;
-		if (profileState != other.profileState)
-			return false;
-		if (profileType != other.profileType)
-			return false;
-		if (uuid == null) {
-			if (other.uuid != null)
-				return false;
-		} else if (!uuid.equals(other.uuid))
-			return false;
-		return true;
+	public String toString() {
+		return "ProfileAttributes [createdDate=" + this.createdDate + ", expirationDate=" + this.expirationDate
+				+ ", name=" + this.name + ", platform=" + this.platform + ", profileContent=" + this.profileContent
+				+ ", profileState=" + this.profileState + ", profileType=" + this.profileType + ", uuid=" + this.uuid
+				+ "]";
 	}
 
 }
