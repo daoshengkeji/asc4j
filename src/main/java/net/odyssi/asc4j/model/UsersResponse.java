@@ -18,28 +18,28 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 })
 public class UsersResponse extends BaseServiceResponse {
 
+	@JsonProperty("data")
+	@JsonPropertyDescription("")
+	private List<User> data;
+
 	@JsonProperty("included")
 	@JsonPropertyDescription("")
 	private List<App> included;
 
-	@JsonProperty("data")
-	@JsonPropertyDescription("")
-	private List<User> user;
+	public List<User> getData() {
+		return this.data;
+	}
 
 	public List<App> getIncluded() {
 		return this.included;
 	}
 
-	public List<User> getUser() {
-		return this.user;
+	public void setData(List<User> data) {
+		this.data = data;
 	}
 
 	public void setIncluded(List<App> included) {
 		this.included = included;
-	}
-
-	public void setUser(List<User> user) {
-		this.user = user;
 	}
 
 }
