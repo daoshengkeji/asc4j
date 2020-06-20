@@ -22,8 +22,30 @@ import net.odyssi.asc4j.model.CertificateCreateRequest;
 public interface CertificatesResource {
 
 	/**
+	 * Create a new certificate using a certificate signing request.
+	 *
+	 * @return The service response
+	 */
+	@Path("")
+	@POST
+	@Produces({ MediaType.APPLICATION_JSON })
+	@Consumes({ MediaType.APPLICATION_JSON })
+	public Response createCertificate(CertificateCreateRequest data);
+
+	/**
+	 * Get information about a certificate and download the certificate data.
+	 *
+	 * @return The service response
+	 */
+	@Path("/{certificateIdentifier}")
+	@GET
+	@Produces({ MediaType.APPLICATION_JSON })
+	public Response getCertificate(@PathParam("certificateIdentifier") String certificateIdentifier,
+			@QueryParam("fields[certificates]") List<String> fieldsCertificates);
+
+	/**
 	 * Find and list certificates and download their data.
-	 * 
+	 *
 	 * @return The service response
 	 */
 	@Path("")
@@ -37,30 +59,8 @@ public interface CertificatesResource {
 			@QueryParam("filter[displayName]") List<String> filterDisplayName);
 
 	/**
-	 * Create a new certificate using a certificate signing request.
-	 * 
-	 * @return The service response
-	 */
-	@Path("")
-	@POST
-	@Produces({ MediaType.APPLICATION_JSON })
-	@Consumes({ MediaType.APPLICATION_JSON })
-	public Response createCertificate(CertificateCreateRequest data);
-
-	/**
-	 * Get information about a certificate and download the certificate data.
-	 * 
-	 * @return The service response
-	 */
-	@Path("/{certificateIdentifier}")
-	@GET
-	@Produces({ MediaType.APPLICATION_JSON })
-	public Response getCertificate(@PathParam("certificateIdentifier") String certificateIdentifier,
-			@QueryParam("fields[certificates]") List<String> fieldsCertificates);
-
-	/**
 	 * Revoke a lost, stolen, compromised, or expiring signing certificate.
-	 * 
+	 *
 	 * @return The service response
 	 */
 	@Path("/{certificateIdentifier}")

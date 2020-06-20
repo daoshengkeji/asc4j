@@ -16,7 +16,7 @@ public interface FinanceReportsResource {
 
 	/**
 	 * Download finance reports filtered by your specified criteria.
-	 * 
+	 *
 	 * @return The service response
 	 */
 	@GET

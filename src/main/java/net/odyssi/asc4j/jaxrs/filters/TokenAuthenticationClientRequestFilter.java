@@ -1,21 +1,21 @@
 /**
- * 
+ *
  */
 package net.odyssi.asc4j.jaxrs.filters;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
 import javax.ws.rs.client.ClientRequestContext;
 import javax.ws.rs.client.ClientRequestFilter;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * A JAX-RS {@link ClientRequestFilter} used to insert an authorization header
  * into outgoing requests. This header will include the JWT generated using the
  * registration details from App Store Connect.
- * 
+ *
  *
  */
 public class TokenAuthenticationClientRequestFilter implements ClientRequestFilter {
@@ -25,9 +25,9 @@ public class TokenAuthenticationClientRequestFilter implements ClientRequestFilt
 	 */
 	private static final Logger logger = LoggerFactory.getLogger(TokenAuthenticationClientRequestFilter.class);
 
-	private String token = null;
-
 	private String AUTHORIZATION_HEADER = "Authorization";
+
+	private String token = null;
 
 	private String TOKEN_PREFIX = "Bearer ";
 
@@ -48,7 +48,7 @@ public class TokenAuthenticationClientRequestFilter implements ClientRequestFilt
 			logger.debug("filter(ClientRequestContext) - start"); //$NON-NLS-1$
 		}
 
-		if (token == null || token.isBlank()) {
+		if (this.token == null || this.token.isBlank()) {
 			logger.warn(
 					"filter(ClientRequestContext) - No authorization token provided or token is blank.  Call will likely fail."); //$NON-NLS-1$
 		}
@@ -57,7 +57,7 @@ public class TokenAuthenticationClientRequestFilter implements ClientRequestFilt
 			logger.debug("filter(ClientRequestContext) - Adding token Authorization header to outgoing request..."); //$NON-NLS-1$
 		}
 
-		requestContext.getHeaders().add(AUTHORIZATION_HEADER, TOKEN_PREFIX + token);
+		requestContext.getHeaders().add(this.AUTHORIZATION_HEADER, this.TOKEN_PREFIX + this.token);
 
 		if (logger.isDebugEnabled()) {
 			logger.debug("filter(ClientRequestContext) - Authorization header added to outgoing request."); //$NON-NLS-1$

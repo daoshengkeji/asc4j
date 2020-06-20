@@ -315,12 +315,16 @@ class TokenUtilTest {
 			assertNotNull(key);
 			token = TokenUtil.generateToken(getIssuerID(), getKeyID(), key);
 		} catch (IOException | NoSuchAlgorithmException | InvalidKeySpecException e) {
+			logger.error("testGenerateTokenStringStringPrivateKey()", e); //$NON-NLS-1$
+
 			fail(e.getMessage());
 		} finally {
 			if (inStream != null) {
 				try {
 					inStream.close();
 				} catch (IOException e) {
+					logger.error("testGenerateTokenStringStringPrivateKey()", e); //$NON-NLS-1$
+
 					fail(e.getMessage());
 				}
 			}

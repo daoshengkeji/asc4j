@@ -22,8 +22,18 @@ import net.odyssi.asc4j.model.UserInvitationCreateRequest;
 public interface UserInvitationsResource {
 
 	/**
+	 * Cancel a pending invitation for a user to join your team.
+	 *
+	 * @return The service response
+	 */
+	@Path("/{invitationIdentifier}")
+	@DELETE
+	@Produces({ MediaType.APPLICATION_JSON })
+	public Response cancelUserInvitation(@PathParam("invitationIdentifier") String invitationIdentifier);
+
+	/**
 	 * Get a list of pending invitations to join your team.
-	 * 
+	 *
 	 * @return The service response
 	 */
 	@Path("")
@@ -37,19 +47,8 @@ public interface UserInvitationsResource {
 			@QueryParam("limit[visibleApps]") Integer limitVisibleApps);
 
 	/**
-	 * Invite a user with assigned user roles to join your team.
-	 * 
-	 * @return The service response
-	 */
-	@Path("")
-	@POST
-	@Produces({ MediaType.APPLICATION_JSON })
-	@Consumes({ MediaType.APPLICATION_JSON })
-	public Response inviteUser(UserInvitationCreateRequest data);
-
-	/**
 	 * Get information about a pending invitation to join your team.
-	 * 
+	 *
 	 * @return The service response
 	 */
 	@Path("/{invitationIdentifier}")
@@ -60,18 +59,20 @@ public interface UserInvitationsResource {
 			@QueryParam("include") List<String> include, @QueryParam("limit[visibleApps]") Integer limitVisibleApps);
 
 	/**
-	 * Cancel a pending invitation for a user to join your team.
-	 * 
+	 * Get a list of app resource IDs that will be visible to a user with a pending
+	 * invitation.
+	 *
 	 * @return The service response
 	 */
-	@Path("/{invitationIdentifier}")
-	@DELETE
+	@Path("/{invitationIdentifier}/relationships/visibleApps")
+	@GET
 	@Produces({ MediaType.APPLICATION_JSON })
-	public Response cancelUserInvitation(@PathParam("invitationIdentifier") String invitationIdentifier);
+	public Response getUserInvitationVisibleAppIDs(@QueryParam("limit") Integer limit,
+			@PathParam("invitationIdentifier") String invitationIdentifier);
 
 	/**
 	 * Get a list of apps that will be visible to a user with a pending invitation.
-	 * 
+	 *
 	 * @return The service response
 	 */
 	@Path("/{invitationIdentifier}/visibleApps")
@@ -81,14 +82,13 @@ public interface UserInvitationsResource {
 			@QueryParam("limit") Integer limit, @QueryParam("fields[apps]") List<String> fieldsApps);
 
 	/**
-	 * Get a list of app resource IDs that will be visible to a user with a pending
-	 * invitation.
-	 * 
+	 * Invite a user with assigned user roles to join your team.
+	 *
 	 * @return The service response
 	 */
-	@Path("/{invitationIdentifier}/relationships/visibleApps")
-	@GET
+	@Path("")
+	@POST
 	@Produces({ MediaType.APPLICATION_JSON })
-	public Response getUserInvitationVisibleAppIDs(@QueryParam("limit") Integer limit,
-			@PathParam("invitationIdentifier") String invitationIdentifier);
+	@Consumes({ MediaType.APPLICATION_JSON })
+	public Response inviteUser(UserInvitationCreateRequest data);
 }

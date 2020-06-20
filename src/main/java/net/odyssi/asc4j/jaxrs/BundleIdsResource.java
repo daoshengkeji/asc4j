@@ -24,8 +24,88 @@ import net.odyssi.asc4j.model.BundleIdUpdateRequest;
 public interface BundleIdsResource {
 
 	/**
+	 * Register a new bundle ID for app development.
+	 *
+	 * @return The service response
+	 */
+	@Path("")
+	@POST
+	@Produces({ MediaType.APPLICATION_JSON })
+	@Consumes({ MediaType.APPLICATION_JSON })
+	public Response createBundleID(BundleIdCreateRequest data);
+
+	/**
+	 * Delete a bundle ID that is used for app development.
+	 *
+	 * @return The service response
+	 */
+	@Path("/{bundleIdentifier}")
+	@DELETE
+	public Response deleteBundleID(@PathParam("bundleIdentifier") String bundleIdentifier);
+
+	/**
+	 * Get information about a specific bundle ID.
+	 *
+	 * @return The service response
+	 */
+	@Path("/{bundleIdentifier}")
+	@GET
+	@Produces({ MediaType.APPLICATION_JSON })
+	public Response getBundleID(@PathParam("bundleIdentifier") String bundleIdentifier,
+			@QueryParam("fields[bundleIds]") List<String> fieldsBundleIds,
+			@QueryParam("fields[profiles]") List<String> fieldsProfiles, @QueryParam("include") List<String> include,
+			@QueryParam("limit[profiles]") List<Integer> limitProfiles,
+			@QueryParam("fields[bundleIdCapabilities]") List<String> fieldsBundleIdCapabilities);
+
+	/**
+	 * Get a list of all capabilities for a specific bundle ID.
+	 *
+	 * @return The service response
+	 */
+	@Path("/{bundleIdentifier}/bundleIdCapabilities")
+	@GET
+	@Produces({ MediaType.APPLICATION_JSON })
+	public Response getBundleIDCapabilities(@PathParam("bundleIdentifier") String bundleIdentifier,
+			@QueryParam("limit") Integer limit,
+			@QueryParam("fields[bundleIdCapabilities]") List<String> fieldsBundleIdCapabilities);
+
+	/**
+	 * Get the resource IDs for all capabilities associated with a specific bundle
+	 * ID.
+	 *
+	 * @return The service response
+	 */
+	@Path("/{bundleIdentifier}/relationships/bundleIdCapabilities")
+	@GET
+	@Produces({ MediaType.APPLICATION_JSON })
+	public Response getBundleIDCapabilityIDs(@PathParam("bundleIdentifier") String bundleIdentifier,
+			@QueryParam("limit") Integer limit);
+
+	/**
+	 * Get the resource IDs for all profiles associated with a specific bundle ID.
+	 *
+	 * @return The service response
+	 */
+	@Path("/{bundleIdentifier}/relationships/profiles")
+	@GET
+	@Produces({ MediaType.APPLICATION_JSON })
+	public Response getBundleIDProfileIDs(@PathParam("bundleIdentifier") String bundleIdentifier,
+			@QueryParam("limit") Integer limit);
+
+	/**
+	 * Get a list of all profiles for a specific bundle ID.
+	 *
+	 * @return The service response
+	 */
+	@Path("/{bundleIdentifier}/profiles")
+	@GET
+	@Produces({ MediaType.APPLICATION_JSON })
+	public Response getBundleIDProfiles(@PathParam("bundleIdentifier") String bundleIdentifier,
+			@QueryParam("limit") Integer limit, @QueryParam("fields[profiles]") List<String> fieldsProfiles);
+
+	/**
 	 * Find and list bundle IDs that are registered to your team.
-	 * 
+	 *
 	 * @return The service response
 	 */
 	@Path("")
@@ -43,42 +123,8 @@ public interface BundleIdsResource {
 			@QueryParam("fields[bundleIdCapabilities]") List<String> fieldsBundleIdCapabilities);
 
 	/**
-	 * Register a new bundle ID for app development.
-	 * 
-	 * @return The service response
-	 */
-	@Path("")
-	@POST
-	@Produces({ MediaType.APPLICATION_JSON })
-	@Consumes({ MediaType.APPLICATION_JSON })
-	public Response createBundleID(BundleIdCreateRequest data);
-
-	/**
-	 * Get information about a specific bundle ID.
-	 * 
-	 * @return The service response
-	 */
-	@Path("/{bundleIdentifier}")
-	@GET
-	@Produces({ MediaType.APPLICATION_JSON })
-	public Response getBundleID(@PathParam("bundleIdentifier") String bundleIdentifier,
-			@QueryParam("fields[bundleIds]") List<String> fieldsBundleIds,
-			@QueryParam("fields[profiles]") List<String> fieldsProfiles, @QueryParam("include") List<String> include,
-			@QueryParam("limit[profiles]") List<Integer> limitProfiles,
-			@QueryParam("fields[bundleIdCapabilities]") List<String> fieldsBundleIdCapabilities);
-
-	/**
-	 * Delete a bundle ID that is used for app development.
-	 * 
-	 * @return The service response
-	 */
-	@Path("/{bundleIdentifier}")
-	@DELETE
-	public Response deleteBundleID(@PathParam("bundleIdentifier") String bundleIdentifier);
-
-	/**
 	 * Update a specific bundle ID’s name.
-	 * 
+	 *
 	 * @return The service response
 	 */
 	@Path("/{bundleIdentifier}")
@@ -86,50 +132,4 @@ public interface BundleIdsResource {
 	@Produces({ MediaType.APPLICATION_JSON })
 	@Consumes({ MediaType.APPLICATION_JSON })
 	public Response updateBundleID(@PathParam("bundleIdentifier") String bundleIdentifier, BundleIdUpdateRequest data);
-
-	/**
-	 * Get the resource IDs for all profiles associated with a specific bundle ID.
-	 * 
-	 * @return The service response
-	 */
-	@Path("/{bundleIdentifier}/relationships/profiles")
-	@GET
-	@Produces({ MediaType.APPLICATION_JSON })
-	public Response getBundleIDProfileIDs(@PathParam("bundleIdentifier") String bundleIdentifier,
-			@QueryParam("limit") Integer limit);
-
-	/**
-	 * Get a list of all profiles for a specific bundle ID.
-	 * 
-	 * @return The service response
-	 */
-	@Path("/{bundleIdentifier}/profiles")
-	@GET
-	@Produces({ MediaType.APPLICATION_JSON })
-	public Response getBundleIDProfiles(@PathParam("bundleIdentifier") String bundleIdentifier,
-			@QueryParam("limit") Integer limit, @QueryParam("fields[profiles]") List<String> fieldsProfiles);
-
-	/**
-	 * Get the resource IDs for all capabilities associated with a specific bundle
-	 * ID.
-	 * 
-	 * @return The service response
-	 */
-	@Path("/{bundleIdentifier}/relationships/bundleIdCapabilities")
-	@GET
-	@Produces({ MediaType.APPLICATION_JSON })
-	public Response getBundleIDCapabilityIDs(@PathParam("bundleIdentifier") String bundleIdentifier,
-			@QueryParam("limit") Integer limit);
-
-	/**
-	 * Get a list of all capabilities for a specific bundle ID.
-	 * 
-	 * @return The service response
-	 */
-	@Path("/{bundleIdentifier}/bundleIdCapabilities")
-	@GET
-	@Produces({ MediaType.APPLICATION_JSON })
-	public Response getBundleIDCapabilities(@PathParam("bundleIdentifier") String bundleIdentifier,
-			@QueryParam("limit") Integer limit,
-			@QueryParam("fields[bundleIdCapabilities]") List<String> fieldsBundleIdCapabilities);
 }

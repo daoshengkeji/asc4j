@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package net.odyssi.asc4j.util;
 

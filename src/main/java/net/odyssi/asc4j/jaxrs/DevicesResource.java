@@ -23,8 +23,30 @@ import net.odyssi.asc4j.model.DeviceUpdateRequest;
 public interface DevicesResource {
 
 	/**
+	 * Register a new device for app development.
+	 *
+	 * @return The service response
+	 */
+	@Path("")
+	@POST
+	@Produces({ MediaType.APPLICATION_JSON })
+	@Consumes({ MediaType.APPLICATION_JSON })
+	public Response createDevice(DeviceCreateRequest data);
+
+	/**
+	 * Get information for a specific device registered to your team.
+	 *
+	 * @return The service response
+	 */
+	@Path("/{deviceIdentifier}")
+	@GET
+	@Produces({ MediaType.APPLICATION_JSON })
+	public Response getDevice(@PathParam("deviceIdentifier") String deviceIdentifier,
+			@QueryParam("fields[devices]") List<String> fieldsDevices);
+
+	/**
 	 * Find and list devices registered to your team.
-	 * 
+	 *
 	 * @return The service response
 	 */
 	@Path("")
@@ -38,30 +60,8 @@ public interface DevicesResource {
 			@QueryParam("sort") List<String> sort);
 
 	/**
-	 * Register a new device for app development.
-	 * 
-	 * @return The service response
-	 */
-	@Path("")
-	@POST
-	@Produces({ MediaType.APPLICATION_JSON })
-	@Consumes({ MediaType.APPLICATION_JSON })
-	public Response createDevice(DeviceCreateRequest data);
-
-	/**
-	 * Get information for a specific device registered to your team.
-	 * 
-	 * @return The service response
-	 */
-	@Path("/{deviceIdentifier}")
-	@GET
-	@Produces({ MediaType.APPLICATION_JSON })
-	public Response getDevice(@PathParam("deviceIdentifier") String deviceIdentifier,
-			@QueryParam("fields[devices]") List<String> fieldsDevices);
-
-	/**
 	 * Update the name or status of a specific device.
-	 * 
+	 *
 	 * @return The service response
 	 */
 	@Path("/{deviceIdentifier}")

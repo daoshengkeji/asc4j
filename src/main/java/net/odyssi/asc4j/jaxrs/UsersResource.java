@@ -25,7 +25,7 @@ public interface UsersResource {
 
 	/**
 	 * Give a user on your team access to one or more apps.
-	 * 
+	 *
 	 * @return The service response
 	 */
 	@Path("/{userIdentifier}/relationships/visibleApps")
@@ -38,7 +38,7 @@ public interface UsersResource {
 	/**
 	 * Get information about a user on your team, such as name, roles, and app
 	 * visibility.
-	 * 
+	 *
 	 * @return The service response
 	 */
 	@Path("/{userIdentifier}")
@@ -65,7 +65,7 @@ public interface UsersResource {
 
 	/**
 	 * Get a list of app resource IDs to which a user on your team has access.
-	 * 
+	 *
 	 * @return The service response
 	 */
 	@Path("/{userIdentifier}/relationships/visibleApps")
@@ -76,7 +76,7 @@ public interface UsersResource {
 
 	/**
 	 * Get a list of apps that a user on your team can view.
-	 * 
+	 *
 	 * @return The service response
 	 */
 	@Path("/{userIdentifier}/visibleApps")
@@ -87,7 +87,7 @@ public interface UsersResource {
 
 	/**
 	 * Remove a user from your team.
-	 * 
+	 *
 	 * @return The service response
 	 */
 	@Path("/{userIdentifier}")
@@ -97,7 +97,7 @@ public interface UsersResource {
 
 	/**
 	 * Remove a user on your team’s access to one or more apps.
-	 * 
+	 *
 	 * @return The service response
 	 */
 	@Path("/{userIdentifier}/relationships/visibleApps")
@@ -109,7 +109,7 @@ public interface UsersResource {
 
 	/**
 	 * Change a user's role, app visibility information, or other account details.
-	 * 
+	 *
 	 * @return The service response
 	 */
 	@Path("/{userIdentifier}")
@@ -120,7 +120,7 @@ public interface UsersResource {
 
 	/**
 	 * Replace the list of apps a user on your team can see.
-	 * 
+	 *
 	 * @return The service response
 	 */
 	@Path("/{userIdentifier}/relationships/visibleApps")

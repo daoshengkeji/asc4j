@@ -40,7 +40,7 @@ public class TokenUtil {
 
 	/**
 	 * Decodes the PEM-encoded string
-	 * 
+	 *
 	 * @param pem The PEM-encoded string
 	 * @return The decoded string
 	 * @throws IOException
