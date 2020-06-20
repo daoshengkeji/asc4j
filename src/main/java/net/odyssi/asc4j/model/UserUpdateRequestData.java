@@ -2,8 +2,6 @@
 package net.odyssi.asc4j.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 /**
@@ -13,15 +11,8 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({
 
 })
-public class UserUpdateRequestData extends ResourceObjectData {
-
-	@JsonProperty("attributes")
-	@JsonPropertyDescription("")
-	private UserUpdateRequestDataAttributes attributes;
-
-	@JsonProperty("relationships")
-	@JsonPropertyDescription("The types and IDs of the related data to update.")
-	private UserUpdateRequestDataRelationships relationships;
+public class UserUpdateRequestData
+		extends AttributedResourceObject<UserUpdateRequestDataAttributes, UserUpdateRequestDataRelationships> {
 
 	/*
 	 * (non-Javadoc)
@@ -39,30 +30,7 @@ public class UserUpdateRequestData extends ResourceObjectData {
 		if (getClass() != obj.getClass()) {
 			return false;
 		}
-		UserUpdateRequestData other = (UserUpdateRequestData) obj;
-		if (this.attributes == null) {
-			if (other.attributes != null) {
-				return false;
-			}
-		} else if (!this.attributes.equals(other.attributes)) {
-			return false;
-		}
-		if (this.relationships == null) {
-			if (other.relationships != null) {
-				return false;
-			}
-		} else if (!this.relationships.equals(other.relationships)) {
-			return false;
-		}
 		return true;
-	}
-
-	public UserUpdateRequestDataAttributes getAttributes() {
-		return this.attributes;
-	}
-
-	public UserUpdateRequestDataRelationships getRelationships() {
-		return this.relationships;
 	}
 
 	/*
@@ -72,19 +40,7 @@ public class UserUpdateRequestData extends ResourceObjectData {
 	 */
 	@Override
 	public int hashCode() {
-		final int prime = 31;
-		int result = super.hashCode();
-		result = prime * result + (this.attributes == null ? 0 : this.attributes.hashCode());
-		result = prime * result + (this.relationships == null ? 0 : this.relationships.hashCode());
-		return result;
-	}
-
-	public void setAttributes(UserUpdateRequestDataAttributes attributes) {
-		this.attributes = attributes;
-	}
-
-	public void setRelationships(UserUpdateRequestDataRelationships relationships) {
-		this.relationships = relationships;
+		return super.hashCode();
 	}
 
 	/*
@@ -94,9 +50,7 @@ public class UserUpdateRequestData extends ResourceObjectData {
 	 */
 	@Override
 	public String toString() {
-		return "UserUpdateRequestData [attributes=" + this.attributes + ", relationships=" + this.relationships + "]";
+		return "UserUpdateRequestData [toString()=" + super.toString() + "]";
 	}
-
-	// TODO attrs/relationships
 
 }

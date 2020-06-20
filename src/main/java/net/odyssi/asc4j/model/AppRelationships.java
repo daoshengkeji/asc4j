@@ -13,7 +13,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({ "betaLicenseAgreement", "preReleaseVersions", "betaAppLocalizations", "betaGroups", "betaTesters",
 		"builds", "betaAppReviewDetail" })
-public class AppRelationships {
+public class AppRelationships implements RelationshipObject {
 
 	@JsonProperty("betaAppLocalizations")
 	@JsonPropertyDescription("")

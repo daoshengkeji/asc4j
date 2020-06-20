@@ -2,8 +2,6 @@
 package net.odyssi.asc4j.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 /**
@@ -14,15 +12,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({
 
 })
-public class BundleId extends ResourceObject {
-
-	@JsonProperty("attributes")
-	@JsonPropertyDescription("The resource's attributes")
-	private BundleIdAttributes attributes;
-
-	@JsonProperty("relationships")
-	@JsonPropertyDescription("Navigational links to related data and included resource types and IDs.")
-	private BundleIdRelationships relationships;
+public class BundleId extends AttributedResourceObject<BundleIdAttributes, BundleIdRelationships> {
 
 	/*
 	 * (non-Javadoc)
@@ -34,36 +24,13 @@ public class BundleId extends ResourceObject {
 		if (this == obj) {
 			return true;
 		}
-		if (obj == null) {
+		if (!super.equals(obj)) {
 			return false;
 		}
 		if (getClass() != obj.getClass()) {
 			return false;
 		}
-		BundleId other = (BundleId) obj;
-		if (this.attributes == null) {
-			if (other.attributes != null) {
-				return false;
-			}
-		} else if (!this.attributes.equals(other.attributes)) {
-			return false;
-		}
-		if (this.relationships == null) {
-			if (other.relationships != null) {
-				return false;
-			}
-		} else if (!this.relationships.equals(other.relationships)) {
-			return false;
-		}
 		return true;
-	}
-
-	public BundleIdAttributes getAttributes() {
-		return this.attributes;
-	}
-
-	public BundleIdRelationships getRelationships() {
-		return this.relationships;
 	}
 
 	/*
@@ -73,19 +40,7 @@ public class BundleId extends ResourceObject {
 	 */
 	@Override
 	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + (this.attributes == null ? 0 : this.attributes.hashCode());
-		result = prime * result + (this.relationships == null ? 0 : this.relationships.hashCode());
-		return result;
-	}
-
-	public void setAttributes(BundleIdAttributes attributes) {
-		this.attributes = attributes;
-	}
-
-	public void setRelationships(BundleIdRelationships relationships) {
-		this.relationships = relationships;
+		return super.hashCode();
 	}
 
 	/*
@@ -95,8 +50,7 @@ public class BundleId extends ResourceObject {
 	 */
 	@Override
 	public String toString() {
-		return "BundleId [attributes=" + this.attributes + ", relationships=" + this.relationships + "]";
+		return "BundleId [toString()=" + super.toString() + "]";
 	}
 
-	// TODO attrs/relationships
 }

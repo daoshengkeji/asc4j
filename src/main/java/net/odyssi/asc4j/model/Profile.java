@@ -2,8 +2,6 @@
 package net.odyssi.asc4j.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 /**
@@ -14,15 +12,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({
 
 })
-public class Profile extends ResourceObject {
-
-	@JsonProperty("attributes")
-	@JsonPropertyDescription("The resource's attributes")
-	private ProfileAttributes attributes;
-
-	@JsonProperty("relationships")
-	@JsonPropertyDescription("Navigational links to related data and included resource types and IDs.")
-	private ProfileRelationships relationships;
+public class Profile extends AttributedResourceObject<ProfileAttributes, ProfileRelationships> {
 
 	/*
 	 * (non-Javadoc)
@@ -34,36 +24,13 @@ public class Profile extends ResourceObject {
 		if (this == obj) {
 			return true;
 		}
-		if (obj == null) {
+		if (!super.equals(obj)) {
 			return false;
 		}
 		if (getClass() != obj.getClass()) {
 			return false;
 		}
-		Profile other = (Profile) obj;
-		if (this.attributes == null) {
-			if (other.attributes != null) {
-				return false;
-			}
-		} else if (!this.attributes.equals(other.attributes)) {
-			return false;
-		}
-		if (this.relationships == null) {
-			if (other.relationships != null) {
-				return false;
-			}
-		} else if (!this.relationships.equals(other.relationships)) {
-			return false;
-		}
 		return true;
-	}
-
-	public ProfileAttributes getAttributes() {
-		return this.attributes;
-	}
-
-	public ProfileRelationships getRelationships() {
-		return this.relationships;
 	}
 
 	/*
@@ -73,19 +40,7 @@ public class Profile extends ResourceObject {
 	 */
 	@Override
 	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + (this.attributes == null ? 0 : this.attributes.hashCode());
-		result = prime * result + (this.relationships == null ? 0 : this.relationships.hashCode());
-		return result;
-	}
-
-	public void setAttributes(ProfileAttributes attributes) {
-		this.attributes = attributes;
-	}
-
-	public void setRelationships(ProfileRelationships relationships) {
-		this.relationships = relationships;
+		return super.hashCode();
 	}
 
 	/*
@@ -95,8 +50,7 @@ public class Profile extends ResourceObject {
 	 */
 	@Override
 	public String toString() {
-		return "Profile [attributes=" + this.attributes + ", relationships=" + this.relationships + "]";
+		return "Profile [toString()=" + super.toString() + "]";
 	}
 
-	// TODO attrs/relationships
 }

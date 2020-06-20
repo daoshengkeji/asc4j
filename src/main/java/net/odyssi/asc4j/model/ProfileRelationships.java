@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({ "certificates", "devices", "bundleId" })
-public class ProfileRelationships {
+public class ProfileRelationships implements RelationshipObject {
 
 	@JsonProperty("bundleId")
 	@JsonPropertyDescription("")

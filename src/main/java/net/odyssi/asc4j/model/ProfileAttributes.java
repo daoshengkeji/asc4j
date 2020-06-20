@@ -18,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({ "name", "platform", "profileContent", "uuid", "createdDate", "profileState", "profileType",
 		"expirationDate" })
-public class ProfileAttributes {
+public class ProfileAttributes implements AttributesObject {
 
 	public enum ProfileState {
 

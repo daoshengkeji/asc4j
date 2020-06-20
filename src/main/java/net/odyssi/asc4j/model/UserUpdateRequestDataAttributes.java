@@ -14,7 +14,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({ "allAppsVisible", "provisioningAllowed", "roles" })
-public class UserUpdateRequestDataAttributes {
+public class UserUpdateRequestDataAttributes implements AttributesObject {
 
 	@JsonProperty("allAppsVisible")
 	@JsonPropertyDescription("Assigned user roles that determine the user's access to sections of App Store Connect and tasks they can perform.")

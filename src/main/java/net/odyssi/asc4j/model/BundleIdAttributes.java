@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({ "identifier", "name", "platform", "seedId" })
-public class BundleIdAttributes {
+public class BundleIdAttributes implements AttributesObject {
 
 	@JsonProperty("identifier")
 	@JsonPropertyDescription("")

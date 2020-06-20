@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({ "visibleApps" })
-public class UserUpdateRequestDataRelationships {
+public class UserUpdateRequestDataRelationships implements RelationshipObject {
 
 	@JsonProperty("visibleApps")
 	@JsonPropertyDescription("")

@@ -18,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({ "capabilityType", "settings" })
-public class BundleIdCapabilityAttributes {
+public class BundleIdCapabilityAttributes implements AttributesObject {
 
 	public enum CapabilityType {
 

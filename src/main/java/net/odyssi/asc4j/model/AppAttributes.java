@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({ "bundleId", "name", "primaryLocale", "sku" })
-public class AppAttributes {
+public class AppAttributes implements AttributesObject {
 
 	@JsonProperty("bundleId")
 	@JsonPropertyDescription("The bundle ID for your app. This ID must match the one you use in Xcode. The bundle ID cannot be changed after you upload your first build.")
