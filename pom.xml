@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.odyssi</groupId>
 	<artifactId>asc4j</artifactId>
-	<version>0.1-SNAPSHOT</version>
+	<version>1.0-FINAL</version>
 
 	<name>App Store Connect API</name>
 
