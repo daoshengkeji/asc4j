@@ -30,7 +30,7 @@ A JUnit test for the TokenUtil class – used to generate the authentication tok
 ```
 test.issuerID=<THE ISSUER ID>
 test.keyID=<THE KEY ID>
-test.keyFile=<THE PATH TO YOUR PKCS#8-ENCODED KEY FILE>
+test.keyFile=<THE NAME OF YOUR PKCS#8-ENCODED KEY FILE ON THE CLASSPATH>
 ```
 
 #### Maven Build
