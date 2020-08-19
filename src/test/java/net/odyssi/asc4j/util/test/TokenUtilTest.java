@@ -9,10 +9,10 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
+import java.net.URL;
 import java.security.KeyFactory;
 import java.security.NoSuchAlgorithmException;
 import java.security.PrivateKey;
@@ -183,14 +183,11 @@ class TokenUtilTest {
 			logger.debug("testGenerateTokenStringStringByteArray() - start"); //$NON-NLS-1$
 		}
 
-		File keyFile = new File(getKeyFile());
-		assertNotNull(keyFile);
-		assertTrue(keyFile.exists());
+		InputStream inStream = Thread.currentThread().getContextClassLoader().getResourceAsStream(getKeyFile());
+		assertNotNull(inStream);
 
-		FileInputStream inStream = null;
 		String token = null;
 		try {
-			inStream = new FileInputStream(keyFile);
 			byte[] keyData = inStream.readAllBytes();
 			token = TokenUtil.generateToken(getIssuerID(), getKeyID(), keyData);
 		} catch (IOException e) {
@@ -227,7 +224,10 @@ class TokenUtilTest {
 			logger.debug("testGenerateTokenStringStringFile() - start"); //$NON-NLS-1$
 		}
 
-		File keyFile = new File(getKeyFile());
+		URL keyFileURL = Thread.currentThread().getContextClassLoader().getResource(getKeyFile());
+		assertNotNull(keyFileURL);
+
+		File keyFile = new File(keyFileURL.toExternalForm().replace("file:", ""));
 		assertNotNull(keyFile);
 		assertTrue(keyFile.exists());
 
@@ -258,14 +258,11 @@ class TokenUtilTest {
 			logger.debug("testGenerateTokenStringStringInputStream() - start"); //$NON-NLS-1$
 		}
 
-		File keyFile = new File(getKeyFile());
-		assertNotNull(keyFile);
-		assertTrue(keyFile.exists());
+		InputStream inStream = Thread.currentThread().getContextClassLoader().getResourceAsStream(getKeyFile());
+		assertNotNull(inStream);
 
-		FileInputStream inStream = null;
 		String token = null;
 		try {
-			inStream = new FileInputStream(keyFile);
 			token = TokenUtil.generateToken(getIssuerID(), getKeyID(), inStream);
 		} catch (IOException e) {
 			logger.error("testGenerateTokenStringStringInputStream()", e); //$NON-NLS-1$
@@ -301,14 +298,11 @@ class TokenUtilTest {
 			logger.debug("testGenerateTokenStringStringPrivateKey() - start"); //$NON-NLS-1$
 		}
 
-		File keyFile = new File(getKeyFile());
-		assertNotNull(keyFile);
-		assertTrue(keyFile.exists());
+		InputStream inStream = Thread.currentThread().getContextClassLoader().getResourceAsStream(getKeyFile());
+		assertNotNull(inStream);
 
-		FileInputStream inStream = null;
 		String token = null;
 		try {
-			inStream = new FileInputStream(keyFile);
 			byte[] keyData = inStream.readAllBytes();
 
 			PrivateKey key = generatePrivateKey(keyData);
@@ -348,9 +342,13 @@ class TokenUtilTest {
 			logger.debug("testGenerateTokenStringStringString() - start"); //$NON-NLS-1$
 		}
 
+		URL keyFileURL = Thread.currentThread().getContextClassLoader().getResource(getKeyFile());
+		assertNotNull(keyFileURL);
+
 		String token = null;
 		try {
-			token = TokenUtil.generateToken(getIssuerID(), getKeyID(), getKeyFile());
+			token = TokenUtil.generateToken(getIssuerID(), getKeyID(),
+					keyFileURL.toExternalForm().replace("file:", ""));
 		} catch (IOException e) {
 			logger.error("testGenerateTokenStringStringString()", e); //$NON-NLS-1$
 
