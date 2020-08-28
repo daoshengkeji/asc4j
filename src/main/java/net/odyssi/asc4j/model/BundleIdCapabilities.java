@@ -15,7 +15,7 @@ public class BundleIdCapabilities {
 	@JsonProperty("data")
 	private List<Datum__1> data = new ArrayList<Datum__1>();
 	@JsonProperty("links")
-	private Links__1 links;
+	private Links links;
 	@JsonProperty("meta")
 	private PagingInformation meta;
 
@@ -25,7 +25,7 @@ public class BundleIdCapabilities {
 	}
 
 	@JsonProperty("links")
-	public Links__1 getLinks() {
+	public Links getLinks() {
 		return this.links;
 	}
 
@@ -40,7 +40,7 @@ public class BundleIdCapabilities {
 	}
 
 	@JsonProperty("links")
-	public void setLinks(Links__1 links) {
+	public void setLinks(Links links) {
 		this.links = links;
 	}
 

@@ -15,7 +15,7 @@ public class PreReleaseVersions {
 	@JsonProperty("data")
 	private List<Datum__2> data = new ArrayList<Datum__2>();
 	@JsonProperty("links")
-	private Links__2 links;
+	private Links links;
 	@JsonProperty("meta")
 	private PagingInformation meta;
 
@@ -25,7 +25,7 @@ public class PreReleaseVersions {
 	}
 
 	@JsonProperty("links")
-	public Links__2 getLinks() {
+	public Links getLinks() {
 		return this.links;
 	}
 
@@ -40,7 +40,7 @@ public class PreReleaseVersions {
 	}
 
 	@JsonProperty("links")
-	public void setLinks(Links__2 links) {
+	public void setLinks(Links links) {
 		this.links = links;
 	}
 

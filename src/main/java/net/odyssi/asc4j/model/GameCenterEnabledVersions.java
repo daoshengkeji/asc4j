@@ -15,7 +15,7 @@ public class GameCenterEnabledVersions {
 	@JsonProperty("data")
 	private List<Datum__9> data = new ArrayList<Datum__9>();
 	@JsonProperty("links")
-	private Links__13 links;
+	private Links links;
 	@JsonProperty("meta")
 	private PagingInformation meta;
 
@@ -25,7 +25,7 @@ public class GameCenterEnabledVersions {
 	}
 
 	@JsonProperty("links")
-	public Links__13 getLinks() {
+	public Links getLinks() {
 		return this.links;
 	}
 
@@ -40,7 +40,7 @@ public class GameCenterEnabledVersions {
 	}
 
 	@JsonProperty("links")
-	public void setLinks(Links__13 links) {
+	public void setLinks(Links links) {
 		this.links = links;
 	}
 

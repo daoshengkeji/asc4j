@@ -12,7 +12,7 @@ public class AppStoreVersionSubmission {
 	@JsonProperty("data")
 	private Data__6 data;
 	@JsonProperty("links")
-	private Links__7 links;
+	private Links links;
 
 	@JsonProperty("data")
 	public Data__6 getData() {
@@ -20,7 +20,7 @@ public class AppStoreVersionSubmission {
 	}
 
 	@JsonProperty("links")
-	public Links__7 getLinks() {
+	public Links getLinks() {
 		return this.links;
 	}
 
@@ -30,7 +30,7 @@ public class AppStoreVersionSubmission {
 	}
 
 	@JsonProperty("links")
-	public void setLinks(Links__7 links) {
+	public void setLinks(Links links) {
 		this.links = links;
 	}
 

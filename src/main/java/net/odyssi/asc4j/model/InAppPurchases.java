@@ -15,7 +15,7 @@ public class InAppPurchases {
 	@JsonProperty("data")
 	private List<Datum__8> data = new ArrayList<Datum__8>();
 	@JsonProperty("links")
-	private Links__12 links;
+	private Links links;
 	@JsonProperty("meta")
 	private PagingInformation meta;
 
@@ -25,7 +25,7 @@ public class InAppPurchases {
 	}
 
 	@JsonProperty("links")
-	public Links__12 getLinks() {
+	public Links getLinks() {
 		return this.links;
 	}
 
@@ -40,7 +40,7 @@ public class InAppPurchases {
 	}
 
 	@JsonProperty("links")
-	public void setLinks(Links__12 links) {
+	public void setLinks(Links links) {
 		this.links = links;
 	}
 

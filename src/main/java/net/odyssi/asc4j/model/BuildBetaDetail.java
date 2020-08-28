@@ -12,7 +12,7 @@ public class BuildBetaDetail {
 	@JsonProperty("data")
 	private Data__4 data;
 	@JsonProperty("links")
-	private Links__6 links;
+	private Links links;
 
 	@JsonProperty("data")
 	public Data__4 getData() {
@@ -20,7 +20,7 @@ public class BuildBetaDetail {
 	}
 
 	@JsonProperty("links")
-	public Links__6 getLinks() {
+	public Links getLinks() {
 		return this.links;
 	}
 
@@ -30,7 +30,7 @@ public class BuildBetaDetail {
 	}
 
 	@JsonProperty("links")
-	public void setLinks(Links__6 links) {
+	public void setLinks(Links links) {
 		this.links = links;
 	}
 

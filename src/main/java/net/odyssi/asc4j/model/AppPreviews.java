@@ -15,7 +15,7 @@ public class AppPreviews {
 	@JsonProperty("data")
 	private List<Datum> data = new ArrayList<Datum>();
 	@JsonProperty("links")
-	private Links__1 links;
+	private Links links;
 	@JsonProperty("meta")
 	private PagingInformation meta;
 
@@ -25,7 +25,7 @@ public class AppPreviews {
 	}
 
 	@JsonProperty("links")
-	public Links__1 getLinks() {
+	public Links getLinks() {
 		return this.links;
 	}
 
@@ -40,7 +40,7 @@ public class AppPreviews {
 	}
 
 	@JsonProperty("links")
-	public void setLinks(Links__1 links) {
+	public void setLinks(Links links) {
 		this.links = links;
 	}
 

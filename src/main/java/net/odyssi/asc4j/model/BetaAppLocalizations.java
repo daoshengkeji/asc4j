@@ -15,7 +15,7 @@ public class BetaAppLocalizations {
 	@JsonProperty("data")
 	private List<Datum__3> data = new ArrayList<Datum__3>();
 	@JsonProperty("links")
-	private Links__3 links;
+	private Links links;
 	@JsonProperty("meta")
 	private PagingInformation meta;
 
@@ -25,7 +25,7 @@ public class BetaAppLocalizations {
 	}
 
 	@JsonProperty("links")
-	public Links__3 getLinks() {
+	public Links getLinks() {
 		return this.links;
 	}
 
@@ -40,7 +40,7 @@ public class BetaAppLocalizations {
 	}
 
 	@JsonProperty("links")
-	public void setLinks(Links__3 links) {
+	public void setLinks(Links links) {
 		this.links = links;
 	}
 

@@ -12,7 +12,7 @@ public class Parent {
 	@JsonProperty("data")
 	private Data data;
 	@JsonProperty("links")
-	private Links__1 links;
+	private Links links;
 
 	@JsonProperty("data")
 	public Data getData() {
@@ -20,7 +20,7 @@ public class Parent {
 	}
 
 	@JsonProperty("links")
-	public Links__1 getLinks() {
+	public Links getLinks() {
 		return this.links;
 	}
 
@@ -30,7 +30,7 @@ public class Parent {
 	}
 
 	@JsonProperty("links")
-	public void setLinks(Links__1 links) {
+	public void setLinks(Links links) {
 		this.links = links;
 	}
 

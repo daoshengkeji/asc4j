@@ -12,7 +12,7 @@ public class PreOrder {
 	@JsonProperty("data")
 	private Data__3 data;
 	@JsonProperty("links")
-	private Links__9 links;
+	private Links links;
 
 	@JsonProperty("data")
 	public Data__3 getData() {
@@ -20,7 +20,7 @@ public class PreOrder {
 	}
 
 	@JsonProperty("links")
-	public Links__9 getLinks() {
+	public Links getLinks() {
 		return this.links;
 	}
 
@@ -30,7 +30,7 @@ public class PreOrder {
 	}
 
 	@JsonProperty("links")
-	public void setLinks(Links__9 links) {
+	public void setLinks(Links links) {
 		this.links = links;
 	}
 
