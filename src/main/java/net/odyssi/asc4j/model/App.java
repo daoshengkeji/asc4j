@@ -2,55 +2,36 @@
 package net.odyssi.asc4j.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-/**
- * The data structure that represents the resource.
- *
- */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
+@JsonPropertyOrder({ "links", "data" })
+public class App {
 
-})
-public class App extends AttributedResourceObject<AppAttributes, AppRelationships> {
+	@JsonProperty("data")
+	private Data data;
+	@JsonProperty("links")
+	private Links__1 links;
 
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) {
-			return true;
-		}
-		if (!super.equals(obj)) {
-			return false;
-		}
-		if (getClass() != obj.getClass()) {
-			return false;
-		}
-		return true;
+	@JsonProperty("data")
+	public Data getData() {
+		return this.data;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see java.lang.Object#hashCode()
-	 */
-	@Override
-	public int hashCode() {
-		return super.hashCode();
+	@JsonProperty("links")
+	public Links__1 getLinks() {
+		return this.links;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see java.lang.Object#toString()
-	 */
-	@Override
-	public String toString() {
-		return "App [toString()=" + super.toString() + "]";
+	@JsonProperty("data")
+	public void setData(Data data) {
+		this.data = data;
+	}
+
+	@JsonProperty("links")
+	public void setLinks(Links__1 links) {
+		this.links = links;
 	}
 
 }

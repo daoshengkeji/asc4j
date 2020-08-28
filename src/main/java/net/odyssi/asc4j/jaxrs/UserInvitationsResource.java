@@ -1,3 +1,6 @@
+/**
+ *
+ */
 package net.odyssi.asc4j.jaxrs;
 
 import java.util.List;
@@ -10,85 +13,66 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
 
+import net.odyssi.asc4j.model.AppsResponse;
 import net.odyssi.asc4j.model.UserInvitationCreateRequest;
+import net.odyssi.asc4j.model.UserInvitationResponse;
+import net.odyssi.asc4j.model.UserInvitationsResponse;
 
 /**
- * A JAX-RS interface. An implementation of this interface must be provided.
+ * @author sdnakhla
+ *
  */
-@Path("/userInvitations")
 public interface UserInvitationsResource {
 
 	/**
 	 * Cancel a pending invitation for a user to join your team.
-	 *
-	 * @return The service response
 	 */
-	@Path("/{invitationIdentifier}")
+	@Path("/userInvitations/{id}")
 	@DELETE
-	@Produces({ MediaType.APPLICATION_JSON })
-	public Response cancelUserInvitation(@PathParam("invitationIdentifier") String invitationIdentifier);
-
-	/**
-	 * Get a list of pending invitations to join your team.
-	 *
-	 * @return The service response
-	 */
-	@Path("")
-	@GET
-	@Produces({ MediaType.APPLICATION_JSON })
-	public Response getInvitedUsers(@QueryParam("fields[apps]") List<String> fieldsApps,
-			@QueryParam("fields[users]") List<String> fieldsUsers, @QueryParam("include") List<String> include,
-			@QueryParam("sort") List<String> sort, @QueryParam("filter[roles]") List<String> filterRoles,
-			@QueryParam("filter[visibleApps]") List<String> filterVisibleApps,
-			@QueryParam("filter[username]") List<String> filterUsername, @QueryParam("limit") Integer limit,
-			@QueryParam("limit[visibleApps]") Integer limitVisibleApps);
-
-	/**
-	 * Get information about a pending invitation to join your team.
-	 *
-	 * @return The service response
-	 */
-	@Path("/{invitationIdentifier}")
-	@GET
-	@Produces({ MediaType.APPLICATION_JSON })
-	public Response getUserInvitation(@PathParam("invitationIdentifier") String invitationIdentifier,
-			@QueryParam("fields[apps]") List<String> fieldsApps, @QueryParam("fields[users]") List<String> fieldsUsers,
-			@QueryParam("include") List<String> include, @QueryParam("limit[visibleApps]") Integer limitVisibleApps);
-
-	/**
-	 * Get a list of app resource IDs that will be visible to a user with a pending
-	 * invitation.
-	 *
-	 * @return The service response
-	 */
-	@Path("/{invitationIdentifier}/relationships/visibleApps")
-	@GET
-	@Produces({ MediaType.APPLICATION_JSON })
-	public Response getUserInvitationVisibleAppIDs(@QueryParam("limit") Integer limit,
-			@PathParam("invitationIdentifier") String invitationIdentifier);
-
-	/**
-	 * Get a list of apps that will be visible to a user with a pending invitation.
-	 *
-	 * @return The service response
-	 */
-	@Path("/{invitationIdentifier}/visibleApps")
-	@GET
-	@Produces({ MediaType.APPLICATION_JSON })
-	public Response getUserInvitationVisibleApps(@PathParam("invitationIdentifier") String invitationIdentifier,
-			@QueryParam("limit") Integer limit, @QueryParam("fields[apps]") List<String> fieldsApps);
+	void cancelUserInvitation(@PathParam("id") String id);
 
 	/**
 	 * Invite a user with assigned user roles to join your team.
-	 *
-	 * @return The service response
 	 */
-	@Path("")
+	@Path("/userInvitations")
 	@POST
-	@Produces({ MediaType.APPLICATION_JSON })
-	@Consumes({ MediaType.APPLICATION_JSON })
-	public Response inviteUser(UserInvitationCreateRequest data);
+	@Produces("application/json")
+	@Consumes("application/json")
+	UserInvitationResponse inviteUser(UserInvitationCreateRequest data);
+
+	/**
+	 * Get a list of pending invitations to join your team.
+	 */
+	@Path("/userInvitations")
+	@GET
+	@Produces("application/json")
+	UserInvitationsResponse listInvitedUsers(@QueryParam("filter[email]") List<String> filterEmail,
+			@QueryParam("filter[roles]") List<String> filterRoles,
+			@QueryParam("filter[visibleApps]") List<String> filterVisibleApps, @QueryParam("sort") List<String> sort,
+			@QueryParam("fields[userInvitations]") List<String> fieldsUserInvitations,
+			@QueryParam("limit") Integer limit, @QueryParam("include") List<String> include,
+			@QueryParam("fields[apps]") List<String> fieldsApps,
+			@QueryParam("limit[visibleApps]") Integer limitVisibleApps);
+
+	/**
+	 * Get a list of apps that will be visible to a user with a pending invitation.
+	 */
+	@Path("/userInvitations/{id}/visibleApps")
+	@GET
+	@Produces("application/json")
+	AppsResponse listInvitedUserVisibleApps(@PathParam("id") String id,
+			@QueryParam("fields[apps]") List<String> fieldsApps, @QueryParam("limit") Integer limit);
+
+	/**
+	 * Get information about a pending invitation to join your team.
+	 */
+	@Path("/userInvitations/{id}")
+	@GET
+	@Produces("application/json")
+	UserInvitationResponse readUserInvitation(@PathParam("id") String id,
+			@QueryParam("fields[userInvitations]") List<String> fieldsUserInvitations,
+			@QueryParam("include") List<String> include, @QueryParam("fields[apps]") List<String> fieldsApps,
+			@QueryParam("limit[visibleApps]") Integer limitVisibleApps);
+
 }

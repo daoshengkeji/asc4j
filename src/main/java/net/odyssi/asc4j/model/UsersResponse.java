@@ -1,103 +1,100 @@
 
 package net.odyssi.asc4j.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 /**
- * A response containing a list of resources.
+ * UsersResponse
+ * <p>
+ *
  *
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
+@JsonPropertyOrder({ "data", "included", "links", "meta" })
+public class UsersResponse {
 
-})
-public class UsersResponse extends BaseServiceResponse {
-
-	@JsonProperty("data")
-	@JsonPropertyDescription("")
-	private List<User> data;
-
-	@JsonProperty("included")
-	@JsonPropertyDescription("")
-	private List<App> included;
-
-	/*
-	 * (non-Javadoc)
+	/**
 	 *
-	 * @see java.lang.Object#equals(java.lang.Object)
+	 * (Required)
+	 *
 	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) {
-			return true;
-		}
-		if (!super.equals(obj)) {
-			return false;
-		}
-		if (getClass() != obj.getClass()) {
-			return false;
-		}
-		UsersResponse other = (UsersResponse) obj;
-		if (this.data == null) {
-			if (other.data != null) {
-				return false;
-			}
-		} else if (!this.data.equals(other.data)) {
-			return false;
-		}
-		if (this.included == null) {
-			if (other.included != null) {
-				return false;
-			}
-		} else if (!this.included.equals(other.included)) {
-			return false;
-		}
-		return true;
-	}
+	@JsonProperty("data")
+	private List<User> data = new ArrayList<User>();
+	@JsonProperty("included")
+	private List<App> included = new ArrayList<App>();
+	/**
+	 *
+	 * (Required)
+	 *
+	 */
+	@JsonProperty("links")
+	private PagedDocumentLinks links;
+	@JsonProperty("meta")
+	private PagingInformation meta;
 
+	/**
+	 *
+	 * (Required)
+	 *
+	 */
+	@JsonProperty("data")
 	public List<User> getData() {
 		return this.data;
 	}
 
+	@JsonProperty("included")
 	public List<App> getIncluded() {
 		return this.included;
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
 	 *
-	 * @see java.lang.Object#hashCode()
+	 * (Required)
+	 *
 	 */
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = super.hashCode();
-		result = prime * result + (this.data == null ? 0 : this.data.hashCode());
-		result = prime * result + (this.included == null ? 0 : this.included.hashCode());
-		return result;
+	@JsonProperty("links")
+	public PagedDocumentLinks getLinks() {
+		return this.links;
 	}
 
+	@JsonProperty("meta")
+	public PagingInformation getMeta() {
+		return this.meta;
+	}
+
+	/**
+	 *
+	 * (Required)
+	 *
+	 */
+	@JsonProperty("data")
 	public void setData(List<User> data) {
 		this.data = data;
 	}
 
+	@JsonProperty("included")
 	public void setIncluded(List<App> included) {
 		this.included = included;
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
 	 *
-	 * @see java.lang.Object#toString()
+	 * (Required)
+	 *
 	 */
-	@Override
-	public String toString() {
-		return "UsersResponse [data=" + this.data + ", included=" + this.included + "]";
+	@JsonProperty("links")
+	public void setLinks(PagedDocumentLinks links) {
+		this.links = links;
+	}
+
+	@JsonProperty("meta")
+	public void setMeta(PagingInformation meta) {
+		this.meta = meta;
 	}
 
 }

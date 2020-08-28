@@ -1,57 +1,157 @@
 
 package net.odyssi.asc4j.model;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * The data structure that represents the resource.
+ * BundleIdCapability
+ * <p>
+ *
  *
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
+@JsonPropertyOrder({ "type", "id", "attributes", "links" })
+public class BundleIdCapability {
 
-})
-public class BundleIdCapability
-		extends AttributedResourceObject<BundleIdCapabilityAttributes, BundleIdCapabilityRelationships> {
+	public enum Type {
 
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) {
-			return true;
+		bundleIdCapabilities("bundleIdCapabilities");
+
+		private final static Map<String, BundleIdCapability.Type> CONSTANTS = new HashMap<String, BundleIdCapability.Type>();
+		static {
+			for (BundleIdCapability.Type c : values()) {
+				CONSTANTS.put(c.value, c);
+			}
 		}
-		if (!super.equals(obj)) {
-			return false;
+
+		@JsonCreator
+		public static BundleIdCapability.Type fromValue(String value) {
+			BundleIdCapability.Type constant = CONSTANTS.get(value);
+			if (constant == null) {
+				throw new IllegalArgumentException(value);
+			} else {
+				return constant;
+			}
 		}
-		if (getClass() != obj.getClass()) {
-			return false;
+
+		private final String value;
+
+		private Type(String value) {
+			this.value = value;
 		}
-		return true;
+
+		@Override
+		public String toString() {
+			return this.value;
+		}
+
+		@JsonValue
+		public String value() {
+			return this.value;
+		}
+
 	}
 
-	/*
-	 * (non-Javadoc)
+	@JsonProperty("attributes")
+	private Attributes attributes;
+	/**
 	 *
-	 * @see java.lang.Object#hashCode()
+	 * (Required)
+	 *
 	 */
-	@Override
-	public int hashCode() {
-		return super.hashCode();
+	@JsonProperty("id")
+	private String id;
+	/**
+	 *
+	 * (Required)
+	 *
+	 */
+	@JsonProperty("links")
+	private ResourceLinks links;
+
+	/**
+	 *
+	 * (Required)
+	 *
+	 */
+	@JsonProperty("type")
+	private BundleIdCapability.Type type;
+
+	@JsonProperty("attributes")
+	public Attributes getAttributes() {
+		return this.attributes;
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
 	 *
-	 * @see java.lang.Object#toString()
+	 * (Required)
+	 *
 	 */
-	@Override
-	public String toString() {
-		return "BundleIdCapability [toString()=" + super.toString() + "]";
+	@JsonProperty("id")
+	public String getId() {
+		return this.id;
+	}
+
+	/**
+	 *
+	 * (Required)
+	 *
+	 */
+	@JsonProperty("links")
+	public ResourceLinks getLinks() {
+		return this.links;
+	}
+
+	/**
+	 *
+	 * (Required)
+	 *
+	 */
+	@JsonProperty("type")
+	public BundleIdCapability.Type getType() {
+		return this.type;
+	}
+
+	@JsonProperty("attributes")
+	public void setAttributes(Attributes attributes) {
+		this.attributes = attributes;
+	}
+
+	/**
+	 *
+	 * (Required)
+	 *
+	 */
+	@JsonProperty("id")
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	/**
+	 *
+	 * (Required)
+	 *
+	 */
+	@JsonProperty("links")
+	public void setLinks(ResourceLinks links) {
+		this.links = links;
+	}
+
+	/**
+	 *
+	 * (Required)
+	 *
+	 */
+	@JsonProperty("type")
+	public void setType(BundleIdCapability.Type type) {
+		this.type = type;
 	}
 
 }

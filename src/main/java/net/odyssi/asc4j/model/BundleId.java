@@ -2,55 +2,39 @@
 package net.odyssi.asc4j.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-/**
- * The data structure that represents the resource.
- *
- */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
+@JsonPropertyOrder({ "data" })
+public class BundleId {
 
-})
-public class BundleId extends AttributedResourceObject<BundleIdAttributes, BundleIdRelationships> {
-
-	/*
-	 * (non-Javadoc)
+	/**
 	 *
-	 * @see java.lang.Object#equals(java.lang.Object)
+	 * (Required)
+	 *
 	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) {
-			return true;
-		}
-		if (!super.equals(obj)) {
-			return false;
-		}
-		if (getClass() != obj.getClass()) {
-			return false;
-		}
-		return true;
+	@JsonProperty("data")
+	private Data__1 data;
+
+	/**
+	 *
+	 * (Required)
+	 *
+	 */
+	@JsonProperty("data")
+	public Data__1 getData() {
+		return this.data;
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
 	 *
-	 * @see java.lang.Object#hashCode()
-	 */
-	@Override
-	public int hashCode() {
-		return super.hashCode();
-	}
-
-	/*
-	 * (non-Javadoc)
+	 * (Required)
 	 *
-	 * @see java.lang.Object#toString()
 	 */
-	@Override
-	public String toString() {
-		return "BundleId [toString()=" + super.toString() + "]";
+	@JsonProperty("data")
+	public void setData(Data__1 data) {
+		this.data = data;
 	}
 
 }

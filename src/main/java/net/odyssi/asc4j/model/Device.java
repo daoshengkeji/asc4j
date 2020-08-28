@@ -1,81 +1,157 @@
 
 package net.odyssi.asc4j.model;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * The data structure that represents the resource.
+ * Device
+ * <p>
+ *
  *
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
+@JsonPropertyOrder({ "type", "id", "attributes", "links" })
+public class Device {
 
-})
-public class Device extends ResourceObject {
+	public enum Type {
 
-	@JsonProperty("attributes")
-	@JsonPropertyDescription("")
-	private DeviceAttributes attributes;
+		devices("devices");
 
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) {
-			return true;
-		}
-		if (obj == null) {
-			return false;
-		}
-		if (getClass() != obj.getClass()) {
-			return false;
-		}
-		Device other = (Device) obj;
-		if (this.attributes == null) {
-			if (other.attributes != null) {
-				return false;
+		private final static Map<String, Device.Type> CONSTANTS = new HashMap<String, Device.Type>();
+		static {
+			for (Device.Type c : values()) {
+				CONSTANTS.put(c.value, c);
 			}
-		} else if (!this.attributes.equals(other.attributes)) {
-			return false;
 		}
-		return true;
+
+		@JsonCreator
+		public static Device.Type fromValue(String value) {
+			Device.Type constant = CONSTANTS.get(value);
+			if (constant == null) {
+				throw new IllegalArgumentException(value);
+			} else {
+				return constant;
+			}
+		}
+
+		private final String value;
+
+		private Type(String value) {
+			this.value = value;
+		}
+
+		@Override
+		public String toString() {
+			return this.value;
+		}
+
+		@JsonValue
+		public String value() {
+			return this.value;
+		}
+
 	}
 
-	public DeviceAttributes getAttributes() {
+	@JsonProperty("attributes")
+	private Attributes attributes;
+	/**
+	 *
+	 * (Required)
+	 *
+	 */
+	@JsonProperty("id")
+	private String id;
+	/**
+	 *
+	 * (Required)
+	 *
+	 */
+	@JsonProperty("links")
+	private ResourceLinks links;
+
+	/**
+	 *
+	 * (Required)
+	 *
+	 */
+	@JsonProperty("type")
+	private Device.Type type;
+
+	@JsonProperty("attributes")
+	public Attributes getAttributes() {
 		return this.attributes;
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
 	 *
-	 * @see java.lang.Object#hashCode()
+	 * (Required)
+	 *
 	 */
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + (this.attributes == null ? 0 : this.attributes.hashCode());
-		return result;
+	@JsonProperty("id")
+	public String getId() {
+		return this.id;
 	}
 
-	public void setAttributes(DeviceAttributes attributes) {
+	/**
+	 *
+	 * (Required)
+	 *
+	 */
+	@JsonProperty("links")
+	public ResourceLinks getLinks() {
+		return this.links;
+	}
+
+	/**
+	 *
+	 * (Required)
+	 *
+	 */
+	@JsonProperty("type")
+	public Device.Type getType() {
+		return this.type;
+	}
+
+	@JsonProperty("attributes")
+	public void setAttributes(Attributes attributes) {
 		this.attributes = attributes;
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
 	 *
-	 * @see java.lang.Object#toString()
+	 * (Required)
+	 *
 	 */
-	@Override
-	public String toString() {
-		return "Device [attributes=" + this.attributes + "]";
+	@JsonProperty("id")
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	/**
+	 *
+	 * (Required)
+	 *
+	 */
+	@JsonProperty("links")
+	public void setLinks(ResourceLinks links) {
+		this.links = links;
+	}
+
+	/**
+	 *
+	 * (Required)
+	 *
+	 */
+	@JsonProperty("type")
+	public void setType(Device.Type type) {
+		this.type = type;
 	}
 
 }

@@ -1,3 +1,6 @@
+/**
+ *
+ */
 package net.odyssi.asc4j.jaxrs;
 
 import java.util.List;
@@ -11,122 +14,100 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
 
+import net.odyssi.asc4j.model.AppsResponse;
+import net.odyssi.asc4j.model.UserResponse;
 import net.odyssi.asc4j.model.UserUpdateRequest;
 import net.odyssi.asc4j.model.UserVisibleAppsLinkagesRequest;
+import net.odyssi.asc4j.model.UserVisibleAppsLinkagesResponse;
+import net.odyssi.asc4j.model.UsersResponse;
 
 /**
- * A JAX-RS interface. An implementation of this interface must be provided.
+ * @author sdnakhla
+ *
  */
-@Path("/users")
 public interface UsersResource {
 
 	/**
 	 * Give a user on your team access to one or more apps.
-	 *
-	 * @return The service response
 	 */
-	@Path("/{userIdentifier}/relationships/visibleApps")
+	@Path("/users/{id}/relationships/visibleApps")
 	@POST
-	@Produces({ MediaType.APPLICATION_JSON })
-	@Consumes({ MediaType.APPLICATION_JSON })
-	public Response addUserVisibleApps(@PathParam("userIdentifier") String userIdentifier,
-			UserVisibleAppsLinkagesRequest data);
+	@Consumes("application/json")
+	void addUserVisibleApp(@PathParam("id") String id, UserVisibleAppsLinkagesRequest data);
+
+	/**
+	 * Get a list of app resource IDs to which a user on your team has access.
+	 */
+	@Path("/users/{id}/relationships/visibleApps")
+	@GET
+	@Produces("application/json")
+	UserVisibleAppsLinkagesResponse getUserVisibleAppResourceIDs(@PathParam("id") String id,
+			@QueryParam("limit") Integer limit);
+
+	/**
+	 * Get a list of the users on your team.
+	 */
+	@Path("/users")
+	@GET
+	@Produces("application/json")
+	UsersResponse listUsers(@QueryParam("filter[roles]") List<String> filterRoles,
+			@QueryParam("filter[username]") List<String> filterUsername,
+			@QueryParam("filter[visibleApps]") List<String> filterVisibleApps, @QueryParam("sort") List<String> sort,
+			@QueryParam("fields[users]") List<String> fieldsUsers, @QueryParam("limit") Integer limit,
+			@QueryParam("include") List<String> include, @QueryParam("fields[apps]") List<String> fieldsApps,
+			@QueryParam("limit[visibleApps]") Integer limitVisibleApps);
+
+	/**
+	 * Get a list of apps that a user on your team can view.
+	 */
+	@Path("/users/{id}/visibleApps")
+	@GET
+	@Produces("application/json")
+	AppsResponse listUserVisibleApps(@PathParam("id") String id, @QueryParam("fields[apps]") List<String> fieldsApps,
+			@QueryParam("limit") Integer limit);
+
+	/**
+	 * Change a user's role, app visibility information, or other account details.
+	 */
+	@Path("/users/{id}")
+	@PATCH
+	@Produces("application/json")
+	@Consumes("application/json")
+	UserResponse modifyUserAccount(@PathParam("id") String id, UserUpdateRequest data);
 
 	/**
 	 * Get information about a user on your team, such as name, roles, and app
 	 * visibility.
-	 *
-	 * @return The service response
 	 */
-	@Path("/{userIdentifier}")
+	@Path("/users/{id}")
 	@GET
-	@Produces({ MediaType.APPLICATION_JSON })
-	public Response getUser(@PathParam("userIdentifier") String userIdentifier,
-			@QueryParam("fields[apps]") List<String> fieldsApps, @QueryParam("fields[users]") List<String> fieldsUsers,
-			@QueryParam("include") List<String> include, @QueryParam("limit[visibleApps]") Integer limitVisibleApps);
-
-	/**
-	 * Get a list of the users on your team.
-	 *
-	 * @return The service response
-	 */
-	@Path("")
-	@GET
-	@Produces({ MediaType.APPLICATION_JSON })
-	public Response getUsers(@QueryParam("fields[apps]") List<String> fieldsApps,
-			@QueryParam("fields[users]") List<String> fieldsUsers, @QueryParam("include") List<String> include,
-			@QueryParam("sort") List<String> sort, @QueryParam("filter[roles]") List<String> filterRoles,
-			@QueryParam("filter[visibleApps]") List<String> filterVisibleApps,
-			@QueryParam("filter[username]") List<String> filterUsername, @QueryParam("limit") Integer limit,
+	@Produces("application/json")
+	UserResponse readUserInformation(@PathParam("id") String id, @QueryParam("fields[users]") List<String> fieldsUsers,
+			@QueryParam("include") List<String> include, @QueryParam("fields[apps]") List<String> fieldsApps,
 			@QueryParam("limit[visibleApps]") Integer limitVisibleApps);
 
 	/**
-	 * Get a list of app resource IDs to which a user on your team has access.
-	 *
-	 * @return The service response
-	 */
-	@Path("/{userIdentifier}/relationships/visibleApps")
-	@GET
-	@Produces({ MediaType.APPLICATION_JSON })
-	public Response getUserVisibleAppResourceIDs(@PathParam("userIdentifier") String userIdentifier,
-			@QueryParam("limit") Integer limit);
-
-	/**
-	 * Get a list of apps that a user on your team can view.
-	 *
-	 * @return The service response
-	 */
-	@Path("/{userIdentifier}/visibleApps")
-	@GET
-	@Produces({ MediaType.APPLICATION_JSON })
-	public Response getUserVisibleApps(@PathParam("userIdentifier") String userIdentifier,
-			@QueryParam("limit") Integer limit, @QueryParam("fields[apps]") List<String> fieldsApps);
-
-	/**
 	 * Remove a user from your team.
-	 *
-	 * @return The service response
 	 */
-	@Path("/{userIdentifier}")
+	@Path("/users/{id}")
 	@DELETE
-	@Produces({ MediaType.APPLICATION_JSON })
-	public Response removeUser(@PathParam("userIdentifier") String userIdentifier);
+	void removeUserAccount(@PathParam("id") String id);
 
 	/**
 	 * Remove a user on your team’s access to one or more apps.
-	 *
-	 * @return The service response
 	 */
-	@Path("/{userIdentifier}/relationships/visibleApps")
+	@Path("/users/{id}/relationships/visibleApps")
 	@DELETE
-	@Produces({ MediaType.APPLICATION_JSON })
-	@Consumes({ MediaType.APPLICATION_JSON })
-	public Response removeUserVisibleApps(@PathParam("userIdentifier") String userIdentifier,
-			UserVisibleAppsLinkagesRequest data);
-
-	/**
-	 * Change a user's role, app visibility information, or other account details.
-	 *
-	 * @return The service response
-	 */
-	@Path("/{userIdentifier}")
-	@PATCH
-	@Produces({ MediaType.APPLICATION_JSON })
-	@Consumes({ MediaType.APPLICATION_JSON })
-	public Response updateUser(@PathParam("userIdentifier") String userIdentifier, UserUpdateRequest data);
+	@Consumes("application/json")
+	void removeUserVisibleApps(@PathParam("id") String id, UserVisibleAppsLinkagesRequest data);
 
 	/**
 	 * Replace the list of apps a user on your team can see.
-	 *
-	 * @return The service response
 	 */
-	@Path("/{userIdentifier}/relationships/visibleApps")
+	@Path("/users/{id}/relationships/visibleApps")
 	@PATCH
-	@Produces({ MediaType.APPLICATION_JSON })
-	@Consumes({ MediaType.APPLICATION_JSON })
-	public Response updateUserVisibleApps(@PathParam("userIdentifier") String userIdentifier,
-			UserVisibleAppsLinkagesRequest data);
+	@Consumes("application/json")
+	void replaceUserVisibleApps(@PathParam("id") String id, UserVisibleAppsLinkagesRequest data);
+
 }

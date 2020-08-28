@@ -1,0 +1,49 @@
+
+package net.odyssi.asc4j.model;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+
+public enum InternalBetaState {
+
+	EXPIRED("EXPIRED"), IN_BETA_TESTING("IN_BETA_TESTING"), IN_EXPORT_COMPLIANCE_REVIEW("IN_EXPORT_COMPLIANCE_REVIEW"),
+	MISSING_EXPORT_COMPLIANCE("MISSING_EXPORT_COMPLIANCE"), PROCESSING("PROCESSING"),
+	PROCESSING_EXCEPTION("PROCESSING_EXCEPTION"), READY_FOR_BETA_TESTING("READY_FOR_BETA_TESTING");
+
+	private final static Map<String, InternalBetaState> CONSTANTS = new HashMap<String, InternalBetaState>();
+	static {
+		for (InternalBetaState c : values()) {
+			CONSTANTS.put(c.value, c);
+		}
+	}
+
+	@JsonCreator
+	public static InternalBetaState fromValue(String value) {
+		InternalBetaState constant = CONSTANTS.get(value);
+		if (constant == null) {
+			throw new IllegalArgumentException(value);
+		} else {
+			return constant;
+		}
+	}
+
+	private final String value;
+
+	private InternalBetaState(String value) {
+		this.value = value;
+	}
+
+	@Override
+	public String toString() {
+		return this.value;
+	}
+
+	@JsonValue
+	public String value() {
+		return this.value;
+	}
+
+}

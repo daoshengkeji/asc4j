@@ -9,15 +9,12 @@ import java.util.Map;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonValue;
 
-/**
- *
- */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({ "allowedInstances", "description", "enabledByDefault", "key", "name", "visible", "options" })
+@JsonPropertyOrder({ "key", "name", "description", "enabledByDefault", "visible", "allowedInstances", "minInstances",
+		"options" })
 public class CapabilitySetting {
 
 	public enum AllowedInstances {
@@ -61,6 +58,7 @@ public class CapabilitySetting {
 
 	public enum Key {
 
+		APPLE_ID_AUTH_APP_CONSENT("APPLE_ID_AUTH_APP_CONSENT"),
 		DATA_PROTECTION_PERMISSION_LEVEL("DATA_PROTECTION_PERMISSION_LEVEL"), ICLOUD_VERSION("ICLOUD_VERSION");
 
 		private final static Map<String, CapabilitySetting.Key> CONSTANTS = new HashMap<String, CapabilitySetting.Key>();
@@ -99,179 +97,102 @@ public class CapabilitySetting {
 	}
 
 	@JsonProperty("allowedInstances")
-	@JsonPropertyDescription("")
 	private CapabilitySetting.AllowedInstances allowedInstances;
-
 	@JsonProperty("description")
-	@JsonPropertyDescription("")
 	private String description;
-
 	@JsonProperty("enabledByDefault")
-	@JsonPropertyDescription("")
 	private Boolean enabledByDefault;
-
 	@JsonProperty("key")
-	@JsonPropertyDescription("")
 	private CapabilitySetting.Key key;
-
+	@JsonProperty("minInstances")
+	private Integer minInstances;
 	@JsonProperty("name")
-	@JsonPropertyDescription("")
 	private String name;
 
 	@JsonProperty("options")
-	@JsonPropertyDescription("")
 	private List<CapabilityOption> options = new ArrayList<CapabilityOption>();
 
 	@JsonProperty("visible")
-	@JsonPropertyDescription("")
 	private Boolean visible;
 
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) {
-			return true;
-		}
-		if (obj == null) {
-			return false;
-		}
-		if (getClass() != obj.getClass()) {
-			return false;
-		}
-		CapabilitySetting other = (CapabilitySetting) obj;
-		if (this.allowedInstances != other.allowedInstances) {
-			return false;
-		}
-		if (this.description == null) {
-			if (other.description != null) {
-				return false;
-			}
-		} else if (!this.description.equals(other.description)) {
-			return false;
-		}
-		if (this.enabledByDefault == null) {
-			if (other.enabledByDefault != null) {
-				return false;
-			}
-		} else if (!this.enabledByDefault.equals(other.enabledByDefault)) {
-			return false;
-		}
-		if (this.key != other.key) {
-			return false;
-		}
-		if (this.name == null) {
-			if (other.name != null) {
-				return false;
-			}
-		} else if (!this.name.equals(other.name)) {
-			return false;
-		}
-		if (this.options == null) {
-			if (other.options != null) {
-				return false;
-			}
-		} else if (!this.options.equals(other.options)) {
-			return false;
-		}
-		if (this.visible == null) {
-			if (other.visible != null) {
-				return false;
-			}
-		} else if (!this.visible.equals(other.visible)) {
-			return false;
-		}
-		return true;
-	}
-
+	@JsonProperty("allowedInstances")
 	public CapabilitySetting.AllowedInstances getAllowedInstances() {
 		return this.allowedInstances;
 	}
 
+	@JsonProperty("description")
 	public String getDescription() {
 		return this.description;
 	}
 
+	@JsonProperty("enabledByDefault")
 	public Boolean getEnabledByDefault() {
 		return this.enabledByDefault;
 	}
 
+	@JsonProperty("key")
 	public CapabilitySetting.Key getKey() {
 		return this.key;
 	}
 
+	@JsonProperty("minInstances")
+	public Integer getMinInstances() {
+		return this.minInstances;
+	}
+
+	@JsonProperty("name")
 	public String getName() {
 		return this.name;
 	}
 
+	@JsonProperty("options")
 	public List<CapabilityOption> getOptions() {
 		return this.options;
 	}
 
+	@JsonProperty("visible")
 	public Boolean getVisible() {
 		return this.visible;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see java.lang.Object#hashCode()
-	 */
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + (this.allowedInstances == null ? 0 : this.allowedInstances.hashCode());
-		result = prime * result + (this.description == null ? 0 : this.description.hashCode());
-		result = prime * result + (this.enabledByDefault == null ? 0 : this.enabledByDefault.hashCode());
-		result = prime * result + (this.key == null ? 0 : this.key.hashCode());
-		result = prime * result + (this.name == null ? 0 : this.name.hashCode());
-		result = prime * result + (this.options == null ? 0 : this.options.hashCode());
-		result = prime * result + (this.visible == null ? 0 : this.visible.hashCode());
-		return result;
-	}
-
+	@JsonProperty("allowedInstances")
 	public void setAllowedInstances(CapabilitySetting.AllowedInstances allowedInstances) {
 		this.allowedInstances = allowedInstances;
 	}
 
+	@JsonProperty("description")
 	public void setDescription(String description) {
 		this.description = description;
 	}
 
+	@JsonProperty("enabledByDefault")
 	public void setEnabledByDefault(Boolean enabledByDefault) {
 		this.enabledByDefault = enabledByDefault;
 	}
 
+	@JsonProperty("key")
 	public void setKey(CapabilitySetting.Key key) {
 		this.key = key;
 	}
 
+	@JsonProperty("minInstances")
+	public void setMinInstances(Integer minInstances) {
+		this.minInstances = minInstances;
+	}
+
+	@JsonProperty("name")
 	public void setName(String name) {
 		this.name = name;
 	}
 
+	@JsonProperty("options")
 	public void setOptions(List<CapabilityOption> options) {
 		this.options = options;
 	}
 
+	@JsonProperty("visible")
 	public void setVisible(Boolean visible) {
 		this.visible = visible;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see java.lang.Object#toString()
-	 */
-	@Override
-	public String toString() {
-		return "CapabilitySetting [allowedInstances=" + this.allowedInstances + ", description=" + this.description
-				+ ", enabledByDefault=" + this.enabledByDefault + ", key=" + this.key + ", name=" + this.name
-				+ ", options=" + this.options + ", visible=" + this.visible + "]";
 	}
 
 }

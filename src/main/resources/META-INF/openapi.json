@@ -4485,7 +4485,7 @@
                         "description": "Request entity error(s)"
                     }
                 },
-                "operationId": "appStoreVersionSubmissions-create_instance",
+                "operationId": "createAppStoreVersionSubmission",
                 "summary": "Create an App Store Version Submission",
                 "description": "Submit an App Store version to App Review."
             }

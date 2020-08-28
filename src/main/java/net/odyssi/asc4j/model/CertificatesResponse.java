@@ -1,83 +1,88 @@
 
 package net.odyssi.asc4j.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 /**
- * A response containing a list of resources.
+ * CertificatesResponse
+ * <p>
+ *
  *
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
+@JsonPropertyOrder({ "data", "links", "meta" })
+public class CertificatesResponse {
 
-})
-public class CertificatesResponse extends BaseServiceResponse {
-
-	@JsonProperty("data")
-	@JsonPropertyDescription("The resource data")
-	private List<Certificate> data;
-
-	/*
-	 * (non-Javadoc)
+	/**
 	 *
-	 * @see java.lang.Object#equals(java.lang.Object)
+	 * (Required)
+	 *
 	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) {
-			return true;
-		}
-		if (!super.equals(obj)) {
-			return false;
-		}
-		if (getClass() != obj.getClass()) {
-			return false;
-		}
-		CertificatesResponse other = (CertificatesResponse) obj;
-		if (this.data == null) {
-			if (other.data != null) {
-				return false;
-			}
-		} else if (!this.data.equals(other.data)) {
-			return false;
-		}
-		return true;
-	}
+	@JsonProperty("data")
+	private List<Certificate> data = new ArrayList<Certificate>();
+	/**
+	 *
+	 * (Required)
+	 *
+	 */
+	@JsonProperty("links")
+	private PagedDocumentLinks links;
+	@JsonProperty("meta")
+	private PagingInformation meta;
 
+	/**
+	 *
+	 * (Required)
+	 *
+	 */
+	@JsonProperty("data")
 	public List<Certificate> getData() {
 		return this.data;
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
 	 *
-	 * @see java.lang.Object#hashCode()
+	 * (Required)
+	 *
 	 */
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = super.hashCode();
-		result = prime * result + (this.data == null ? 0 : this.data.hashCode());
-		return result;
+	@JsonProperty("links")
+	public PagedDocumentLinks getLinks() {
+		return this.links;
 	}
 
+	@JsonProperty("meta")
+	public PagingInformation getMeta() {
+		return this.meta;
+	}
+
+	/**
+	 *
+	 * (Required)
+	 *
+	 */
+	@JsonProperty("data")
 	public void setData(List<Certificate> data) {
 		this.data = data;
 	}
 
-	/*
-	 * (non-Javadoc)
+	/**
 	 *
-	 * @see java.lang.Object#toString()
+	 * (Required)
+	 *
 	 */
-	@Override
-	public String toString() {
-		return "CertificatesResponse [data=" + this.data + "]";
+	@JsonProperty("links")
+	public void setLinks(PagedDocumentLinks links) {
+		this.links = links;
+	}
+
+	@JsonProperty("meta")
+	public void setMeta(PagingInformation meta) {
+		this.meta = meta;
 	}
 
 }
