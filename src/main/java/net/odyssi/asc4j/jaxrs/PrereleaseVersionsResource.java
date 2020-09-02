@@ -13,8 +13,8 @@ import javax.ws.rs.QueryParam;
 
 import net.odyssi.asc4j.model.AppResponse;
 import net.odyssi.asc4j.model.BuildsResponse;
-import net.odyssi.asc4j.model.PreReleaseVersionResponse;
 import net.odyssi.asc4j.model.PreReleaseVersionsResponse;
+import net.odyssi.asc4j.model.PrereleaseVersionResponse;
 
 /**
  * @author sdnakhla
@@ -64,7 +64,7 @@ public interface PrereleaseVersionsResource {
 	@Path("/preReleaseVersions/{id}")
 	@GET
 	@Produces("application/json")
-	PreReleaseVersionResponse readPrereleaseVersionInformation(@PathParam("id") String id,
+	PrereleaseVersionResponse readPrereleaseVersionInformation(@PathParam("id") String id,
 			@QueryParam("fields[preReleaseVersions]") List<String> fieldsPreReleaseVersions,
 			@QueryParam("include") List<String> include, @QueryParam("fields[builds]") List<String> fieldsBuilds,
 			@QueryParam("fields[apps]") List<String> fieldsApps, @QueryParam("limit[builds]") Integer limitBuilds);

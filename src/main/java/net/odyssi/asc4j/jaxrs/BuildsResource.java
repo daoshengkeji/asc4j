@@ -30,7 +30,7 @@ import net.odyssi.asc4j.model.BuildIndividualTestersLinkagesResponse;
 import net.odyssi.asc4j.model.BuildResponse;
 import net.odyssi.asc4j.model.BuildUpdateRequest;
 import net.odyssi.asc4j.model.BuildsResponse;
-import net.odyssi.asc4j.model.PreReleaseVersionResponse;
+import net.odyssi.asc4j.model.PrereleaseVersionResponse;
 
 /**
  * @author sdnakhla
@@ -230,7 +230,7 @@ public interface BuildsResource {
 	@Path("/builds/{id}/preReleaseVersion")
 	@GET
 	@Produces("application/json")
-	PreReleaseVersionResponse readBuildPrereleaseVersion(@PathParam("id") String id,
+	PrereleaseVersionResponse readBuildPrereleaseVersion(@PathParam("id") String id,
 			@QueryParam("fields[preReleaseVersions]") List<String> fieldsPreReleaseVersions);
 
 	/**
