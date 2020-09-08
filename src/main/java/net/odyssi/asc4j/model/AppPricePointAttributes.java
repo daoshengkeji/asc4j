@@ -24,16 +24,13 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonPropertyOrder({ AppPricePointAttributes.JSON_PROPERTY_CUSTOMER_PRICE,
 		AppPricePointAttributes.JSON_PROPERTY_PROCEEDS })
-
 public class AppPricePointAttributes implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -1582188535462690584L;
 
 	public static final String JSON_PROPERTY_CUSTOMER_PRICE = "customerPrice";
 
 	public static final String JSON_PROPERTY_PROCEEDS = "proceeds";
+
+	private static final long serialVersionUID = -1582188535462690584L;
 
 	private String customerPrice;
 	private String proceeds;
@@ -57,28 +54,14 @@ public class AppPricePointAttributes implements Serializable {
 				&& Objects.equals(this.proceeds, appPricePointAttributes.proceeds);
 	}
 
-	/**
-	 * Get customerPrice
-	 *
-	 * @return customerPrice
-	 **/
-
 	@JsonProperty(JSON_PROPERTY_CUSTOMER_PRICE)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public String getCustomerPrice() {
 		return this.customerPrice;
 	}
 
-	/**
-	 * Get proceeds
-	 *
-	 * @return proceeds
-	 **/
-
 	@JsonProperty(JSON_PROPERTY_PROCEEDS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public String getProceeds() {
 		return this.proceeds;
 	}
@@ -89,7 +72,6 @@ public class AppPricePointAttributes implements Serializable {
 	}
 
 	public AppPricePointAttributes proceeds(String proceeds) {
-
 		this.proceeds = proceeds;
 		return this;
 	}

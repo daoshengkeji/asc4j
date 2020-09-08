@@ -33,14 +33,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 public class AppEncryptionDeclarationsResponse implements Serializable {
 
-	private static final long serialVersionUID = 2349955647214004359L;
-
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_INCLUDED = "included";
-	public static final String JSON_PROPERTY_LINKS = "links";
 
+	public static final String JSON_PROPERTY_LINKS = "links";
 	public static final String JSON_PROPERTY_META = "meta";
+
+	private static final long serialVersionUID = 2349955647214004359L;
 
 	private List<AppEncryptionDeclaration> data = new ArrayList<>();
 	private List<App> included = null;
@@ -67,7 +67,7 @@ public class AppEncryptionDeclarationsResponse implements Serializable {
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#equals(java.lang.Object)
@@ -118,7 +118,7 @@ public class AppEncryptionDeclarationsResponse implements Serializable {
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#hashCode()
@@ -171,7 +171,7 @@ public class AppEncryptionDeclarationsResponse implements Serializable {
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#toString()

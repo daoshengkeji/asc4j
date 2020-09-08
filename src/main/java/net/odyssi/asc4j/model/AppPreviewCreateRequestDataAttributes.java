@@ -30,14 +30,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		AppPreviewCreateRequestDataAttributes.JSON_PROPERTY_MIME_TYPE })
 public class AppPreviewCreateRequestDataAttributes implements Serializable {
 
-	private static final long serialVersionUID = 5180455094027238401L;
-
 	public static final String JSON_PROPERTY_FILE_NAME = "fileName";
 
 	public static final String JSON_PROPERTY_FILE_SIZE = "fileSize";
-	public static final String JSON_PROPERTY_MIME_TYPE = "mimeType";
 
+	public static final String JSON_PROPERTY_MIME_TYPE = "mimeType";
 	public static final String JSON_PROPERTY_PREVIEW_FRAME_TIME_CODE = "previewFrameTimeCode";
+
+	private static final long serialVersionUID = 5180455094027238401L;
 
 	private String fileName;
 	private Integer fileSize;

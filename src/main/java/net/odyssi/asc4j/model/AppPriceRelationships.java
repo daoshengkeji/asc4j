@@ -25,22 +25,18 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  * AppPriceRelationships
  */
 @JsonPropertyOrder({ AppPriceRelationships.JSON_PROPERTY_APP, AppPriceRelationships.JSON_PROPERTY_PRICE_TIER })
-
 public class AppPriceRelationships implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -8033102927395874169L;
 
 	public static final String JSON_PROPERTY_APP = "app";
 
 	public static final String JSON_PROPERTY_PRICE_TIER = "priceTier";
 
+	private static final long serialVersionUID = -8033102927395874169L;
+
 	private AppEncryptionDeclarationRelationshipsApp app;
 	private AppPricePointRelationshipsPriceTier priceTier;
 
 	public AppPriceRelationships app(AppEncryptionDeclarationRelationshipsApp app) {
-
 		this.app = app;
 		return this;
 	}
@@ -58,32 +54,16 @@ public class AppPriceRelationships implements Serializable {
 				&& Objects.equals(this.priceTier, appPriceRelationships.priceTier);
 	}
 
-	/**
-	 * Get app
-	 *
-	 * @return app
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_APP)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppEncryptionDeclarationRelationshipsApp getApp() {
 		return this.app;
 	}
 
-	/**
-	 * Get priceTier
-	 *
-	 * @return priceTier
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_PRICE_TIER)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppPricePointRelationshipsPriceTier getPriceTier() {
 		return this.priceTier;
 	}
@@ -94,7 +74,6 @@ public class AppPriceRelationships implements Serializable {
 	}
 
 	public AppPriceRelationships priceTier(AppPricePointRelationshipsPriceTier priceTier) {
-
 		this.priceTier = priceTier;
 		return this;
 	}

@@ -28,12 +28,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
  */
 @JsonPropertyOrder({ AppRelationshipsBetaAppReviewDetailData.JSON_PROPERTY_TYPE,
 		AppRelationshipsBetaAppReviewDetailData.JSON_PROPERTY_ID })
-
 public class AppRelationshipsBetaAppReviewDetailData implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -4447040169759015848L;
 
 	/**
 	 * Gets or Sets type
@@ -72,6 +67,8 @@ public class AppRelationshipsBetaAppReviewDetailData implements Serializable {
 
 	public static final String JSON_PROPERTY_TYPE = "type";
 
+	private static final long serialVersionUID = -4447040169759015848L;
+
 	private String id;
 	private TypeEnum type;
 
@@ -88,30 +85,16 @@ public class AppRelationshipsBetaAppReviewDetailData implements Serializable {
 				&& Objects.equals(this.id, appRelationshipsBetaAppReviewDetailData.id);
 	}
 
-	/**
-	 * Get id
-	 *
-	 * @return id
-	 **/
 	@NotNull
-
 	@JsonProperty(JSON_PROPERTY_ID)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public String getId() {
 		return this.id;
 	}
 
-	/**
-	 * Get type
-	 *
-	 * @return type
-	 **/
 	@NotNull
-
 	@JsonProperty(JSON_PROPERTY_TYPE)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public TypeEnum getType() {
 		return this.type;
 	}
@@ -122,7 +105,6 @@ public class AppRelationshipsBetaAppReviewDetailData implements Serializable {
 	}
 
 	public AppRelationshipsBetaAppReviewDetailData id(String id) {
-
 		this.id = id;
 		return this;
 	}
@@ -157,7 +139,6 @@ public class AppRelationshipsBetaAppReviewDetailData implements Serializable {
 	}
 
 	public AppRelationshipsBetaAppReviewDetailData type(TypeEnum type) {
-
 		this.type = type;
 		return this;
 	}

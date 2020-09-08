@@ -31,15 +31,15 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		DevicesResponse.JSON_PROPERTY_META })
 
 public class DevicesResponse implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
+	public static final String JSON_PROPERTY_LINKS = "links";
+
+	public static final String JSON_PROPERTY_META = "meta";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 6442845489070481467L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
-
-	public static final String JSON_PROPERTY_LINKS = "links";
-	public static final String JSON_PROPERTY_META = "meta";
 
 	private List<Device> data = new ArrayList<>();
 

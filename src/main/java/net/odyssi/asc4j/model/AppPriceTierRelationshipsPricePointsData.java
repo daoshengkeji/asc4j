@@ -28,12 +28,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
  */
 @JsonPropertyOrder({ AppPriceTierRelationshipsPricePointsData.JSON_PROPERTY_TYPE,
 		AppPriceTierRelationshipsPricePointsData.JSON_PROPERTY_ID })
-
 public class AppPriceTierRelationshipsPricePointsData implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -6813272169789575232L;
 
 	/**
 	 * Gets or Sets type
@@ -72,6 +67,8 @@ public class AppPriceTierRelationshipsPricePointsData implements Serializable {
 
 	public static final String JSON_PROPERTY_TYPE = "type";
 
+	private static final long serialVersionUID = -6813272169789575232L;
+
 	private String id;
 	private TypeEnum type;
 
@@ -88,30 +85,16 @@ public class AppPriceTierRelationshipsPricePointsData implements Serializable {
 				&& Objects.equals(this.id, appPriceTierRelationshipsPricePointsData.id);
 	}
 
-	/**
-	 * Get id
-	 *
-	 * @return id
-	 **/
 	@NotNull
-
 	@JsonProperty(JSON_PROPERTY_ID)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public String getId() {
 		return this.id;
 	}
 
-	/**
-	 * Get type
-	 *
-	 * @return type
-	 **/
 	@NotNull
-
 	@JsonProperty(JSON_PROPERTY_TYPE)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public TypeEnum getType() {
 		return this.type;
 	}
@@ -122,7 +105,6 @@ public class AppPriceTierRelationshipsPricePointsData implements Serializable {
 	}
 
 	public AppPriceTierRelationshipsPricePointsData id(String id) {
-
 		this.id = id;
 		return this;
 	}
@@ -157,7 +139,6 @@ public class AppPriceTierRelationshipsPricePointsData implements Serializable {
 	}
 
 	public AppPriceTierRelationshipsPricePointsData type(TypeEnum type) {
-
 		this.type = type;
 		return this;
 	}

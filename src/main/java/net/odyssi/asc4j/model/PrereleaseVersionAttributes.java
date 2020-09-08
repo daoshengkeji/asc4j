@@ -28,14 +28,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		PrereleaseVersionAttributes.JSON_PROPERTY_PLATFORM })
 
 public class PrereleaseVersionAttributes implements Serializable {
+	public static final String JSON_PROPERTY_PLATFORM = "platform";
+
+	public static final String JSON_PROPERTY_VERSION = "version";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -867564088459803830L;
-
-	public static final String JSON_PROPERTY_PLATFORM = "platform";
-
-	public static final String JSON_PROPERTY_VERSION = "version";
 
 	private Platform platform;
 	private String version;

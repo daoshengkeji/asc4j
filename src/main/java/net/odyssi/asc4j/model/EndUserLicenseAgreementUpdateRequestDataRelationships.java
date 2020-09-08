@@ -27,12 +27,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ EndUserLicenseAgreementUpdateRequestDataRelationships.JSON_PROPERTY_TERRITORIES })
 
 public class EndUserLicenseAgreementUpdateRequestDataRelationships implements Serializable {
+	public static final String JSON_PROPERTY_TERRITORIES = "territories";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 8076079345696031492L;
-
-	public static final String JSON_PROPERTY_TERRITORIES = "territories";
 
 	private AppUpdateRequestDataRelationshipsAvailableTerritories territories;
 

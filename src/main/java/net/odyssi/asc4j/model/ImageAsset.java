@@ -26,15 +26,15 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		ImageAsset.JSON_PROPERTY_HEIGHT })
 
 public class ImageAsset implements Serializable {
+	public static final String JSON_PROPERTY_HEIGHT = "height";
+
+	public static final String JSON_PROPERTY_TEMPLATE_URL = "templateUrl";
+
+	public static final String JSON_PROPERTY_WIDTH = "width";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -3171334028051613982L;
-
-	public static final String JSON_PROPERTY_HEIGHT = "height";
-
-	public static final String JSON_PROPERTY_TEMPLATE_URL = "templateUrl";
-	public static final String JSON_PROPERTY_WIDTH = "width";
 
 	private Integer height;
 

@@ -26,16 +26,13 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonPropertyOrder({ AppPricePointRelationships.JSON_PROPERTY_PRICE_TIER,
 		AppPricePointRelationships.JSON_PROPERTY_TERRITORY })
-
 public class AppPricePointRelationships implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -9013327008260193710L;
 
 	public static final String JSON_PROPERTY_PRICE_TIER = "priceTier";
 
 	public static final String JSON_PROPERTY_TERRITORY = "territory";
+
+	private static final long serialVersionUID = -9013327008260193710L;
 
 	private AppPricePointRelationshipsPriceTier priceTier;
 	private AppPricePointRelationshipsTerritory territory;
@@ -53,32 +50,16 @@ public class AppPricePointRelationships implements Serializable {
 				&& Objects.equals(this.territory, appPricePointRelationships.territory);
 	}
 
-	/**
-	 * Get priceTier
-	 *
-	 * @return priceTier
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_PRICE_TIER)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppPricePointRelationshipsPriceTier getPriceTier() {
 		return this.priceTier;
 	}
 
-	/**
-	 * Get territory
-	 *
-	 * @return territory
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_TERRITORY)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppPricePointRelationshipsTerritory getTerritory() {
 		return this.territory;
 	}
@@ -89,7 +70,6 @@ public class AppPricePointRelationships implements Serializable {
 	}
 
 	public AppPricePointRelationships priceTier(AppPricePointRelationshipsPriceTier priceTier) {
-
 		this.priceTier = priceTier;
 		return this;
 	}
@@ -103,7 +83,6 @@ public class AppPricePointRelationships implements Serializable {
 	}
 
 	public AppPricePointRelationships territory(AppPricePointRelationshipsTerritory territory) {
-
 		this.territory = territory;
 		return this;
 	}

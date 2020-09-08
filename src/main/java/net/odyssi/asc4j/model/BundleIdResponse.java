@@ -31,15 +31,15 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		BundleIdResponse.JSON_PROPERTY_LINKS })
 
 public class BundleIdResponse implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
+	public static final String JSON_PROPERTY_INCLUDED = "included";
+
+	public static final String JSON_PROPERTY_LINKS = "links";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 5392932462354796218L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
-
-	public static final String JSON_PROPERTY_INCLUDED = "included";
-	public static final String JSON_PROPERTY_LINKS = "links";
 
 	private BundleId data;
 

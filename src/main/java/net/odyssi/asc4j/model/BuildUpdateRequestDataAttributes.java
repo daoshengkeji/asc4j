@@ -26,14 +26,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		BuildUpdateRequestDataAttributes.JSON_PROPERTY_USES_NON_EXEMPT_ENCRYPTION })
 
 public class BuildUpdateRequestDataAttributes implements Serializable {
+	public static final String JSON_PROPERTY_EXPIRED = "expired";
+
+	public static final String JSON_PROPERTY_USES_NON_EXEMPT_ENCRYPTION = "usesNonExemptEncryption";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 1716528553250412540L;
-
-	public static final String JSON_PROPERTY_EXPIRED = "expired";
-
-	public static final String JSON_PROPERTY_USES_NON_EXEMPT_ENCRYPTION = "usesNonExemptEncryption";
 
 	private Boolean expired;
 	private Boolean usesNonExemptEncryption;

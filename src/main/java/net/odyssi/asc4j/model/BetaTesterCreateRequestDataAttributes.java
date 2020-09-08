@@ -29,15 +29,15 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		BetaTesterCreateRequestDataAttributes.JSON_PROPERTY_EMAIL })
 
 public class BetaTesterCreateRequestDataAttributes implements Serializable {
+	public static final String JSON_PROPERTY_EMAIL = "email";
+
+	public static final String JSON_PROPERTY_FIRST_NAME = "firstName";
+
+	public static final String JSON_PROPERTY_LAST_NAME = "lastName";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 650919808128089708L;
-
-	public static final String JSON_PROPERTY_EMAIL = "email";
-
-	public static final String JSON_PROPERTY_FIRST_NAME = "firstName";
-	public static final String JSON_PROPERTY_LAST_NAME = "lastName";
 
 	private String email;
 

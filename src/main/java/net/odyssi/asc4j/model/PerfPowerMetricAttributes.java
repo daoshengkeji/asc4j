@@ -29,11 +29,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class PerfPowerMetricAttributes implements Serializable {
 	/**
-	 *
-	 */
-	private static final long serialVersionUID = -393602641556785387L;
-
-	/**
 	 * Gets or Sets metricType
 	 */
 	public enum MetricTypeEnum {
@@ -110,9 +105,14 @@ public class PerfPowerMetricAttributes implements Serializable {
 	}
 
 	public static final String JSON_PROPERTY_DEVICE_TYPE = "deviceType";
-	public static final String JSON_PROPERTY_METRIC_TYPE = "metricType";
 
+	public static final String JSON_PROPERTY_METRIC_TYPE = "metricType";
 	public static final String JSON_PROPERTY_PLATFORM = "platform";
+
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = -393602641556785387L;
 
 	private String deviceType;
 

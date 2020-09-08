@@ -35,11 +35,6 @@ public class Build implements Serializable, AppResponseIncludedOneOf, AppStoreVe
 		BetaGroupsResponseIncludedOneOf, BetaTesterResponseIncludedOneOf, BetaTestersResponseIncludedOneOf,
 		PreReleaseVersionsResponseIncludedOneOf, PrereleaseVersionResponseIncludedOneOf {
 	/**
-	 *
-	 */
-	private static final long serialVersionUID = 1995425593213184891L;
-
-	/**
 	 * Gets or Sets type
 	 */
 	public enum TypeEnum {
@@ -75,10 +70,15 @@ public class Build implements Serializable, AppResponseIncludedOneOf, AppStoreVe
 	public static final String JSON_PROPERTY_ATTRIBUTES = "attributes";
 
 	public static final String JSON_PROPERTY_ID = "id";
-	public static final String JSON_PROPERTY_LINKS = "links";
 
+	public static final String JSON_PROPERTY_LINKS = "links";
 	public static final String JSON_PROPERTY_RELATIONSHIPS = "relationships";
+
 	public static final String JSON_PROPERTY_TYPE = "type";
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 1995425593213184891L;
 
 	private BuildAttributes attributes;
 

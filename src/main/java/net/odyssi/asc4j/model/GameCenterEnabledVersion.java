@@ -33,11 +33,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class GameCenterEnabledVersion implements Serializable, AppResponseIncludedOneOf, AppsResponseIncludedOneOf {
 	/**
-	 *
-	 */
-	private static final long serialVersionUID = 8640523980498793646L;
-
-	/**
 	 * Gets or Sets type
 	 */
 	public enum TypeEnum {
@@ -73,10 +68,15 @@ public class GameCenterEnabledVersion implements Serializable, AppResponseInclud
 	public static final String JSON_PROPERTY_ATTRIBUTES = "attributes";
 
 	public static final String JSON_PROPERTY_ID = "id";
-	public static final String JSON_PROPERTY_LINKS = "links";
 
+	public static final String JSON_PROPERTY_LINKS = "links";
 	public static final String JSON_PROPERTY_RELATIONSHIPS = "relationships";
+
 	public static final String JSON_PROPERTY_TYPE = "type";
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 8640523980498793646L;
 
 	private GameCenterEnabledVersionAttributes attributes;
 

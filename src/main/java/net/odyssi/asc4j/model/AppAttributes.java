@@ -31,8 +31,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 		AppAttributes.JSON_PROPERTY_CONTENT_RIGHTS_DECLARATION })
 public class AppAttributes implements Serializable {
 
-	private static final long serialVersionUID = -4128708845203902694L;
-
 	/**
 	 * Gets or Sets contentRightsDeclaration
 	 */
@@ -69,15 +67,17 @@ public class AppAttributes implements Serializable {
 	}
 
 	public static final String JSON_PROPERTY_AVAILABLE_IN_NEW_TERRITORIES = "availableInNewTerritories";
+
 	public static final String JSON_PROPERTY_BUNDLE_ID = "bundleId";
-
 	public static final String JSON_PROPERTY_CONTENT_RIGHTS_DECLARATION = "contentRightsDeclaration";
+
 	public static final String JSON_PROPERTY_IS_OR_EVER_WAS_MADE_FOR_KIDS = "isOrEverWasMadeForKids";
-
 	public static final String JSON_PROPERTY_NAME = "name";
-	public static final String JSON_PROPERTY_PRIMARY_LOCALE = "primaryLocale";
 
+	public static final String JSON_PROPERTY_PRIMARY_LOCALE = "primaryLocale";
 	public static final String JSON_PROPERTY_SKU = "sku";
+
+	private static final long serialVersionUID = -4128708845203902694L;
 
 	private Boolean availableInNewTerritories;
 	private String bundleId;

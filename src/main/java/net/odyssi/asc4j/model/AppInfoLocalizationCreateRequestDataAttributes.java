@@ -31,15 +31,15 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		AppInfoLocalizationCreateRequestDataAttributes.JSON_PROPERTY_PRIVACY_POLICY_TEXT })
 public class AppInfoLocalizationCreateRequestDataAttributes implements Serializable {
 
-	private static final long serialVersionUID = -1601292396152899575L;
-
 	public static final String JSON_PROPERTY_LOCALE = "locale";
 
 	public static final String JSON_PROPERTY_NAME = "name";
-	public static final String JSON_PROPERTY_PRIVACY_POLICY_TEXT = "privacyPolicyText";
 
+	public static final String JSON_PROPERTY_PRIVACY_POLICY_TEXT = "privacyPolicyText";
 	public static final String JSON_PROPERTY_PRIVACY_POLICY_URL = "privacyPolicyUrl";
+
 	public static final String JSON_PROPERTY_SUBTITLE = "subtitle";
+	private static final long serialVersionUID = -1601292396152899575L;
 
 	private String locale;
 

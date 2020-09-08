@@ -29,17 +29,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonPropertyOrder({ AppPricePointResponse.JSON_PROPERTY_DATA, AppPricePointResponse.JSON_PROPERTY_INCLUDED,
 		AppPricePointResponse.JSON_PROPERTY_LINKS })
-
 public class AppPricePointResponse implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 3954169510370171345L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_INCLUDED = "included";
+
 	public static final String JSON_PROPERTY_LINKS = "links";
+	private static final long serialVersionUID = 3954169510370171345L;
 
 	private AppPricePoint data;
 
@@ -55,7 +52,6 @@ public class AppPricePointResponse implements Serializable {
 	}
 
 	public AppPricePointResponse data(AppPricePoint data) {
-
 		this.data = data;
 		return this;
 	}
@@ -74,47 +70,25 @@ public class AppPricePointResponse implements Serializable {
 				&& Objects.equals(this.links, appPricePointResponse.links);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public AppPricePoint getData() {
 		return this.data;
 	}
 
-	/**
-	 * Get included
-	 *
-	 * @return included
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_INCLUDED)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public List<Territory> getIncluded() {
 		return this.included;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public DocumentLinks getLinks() {
 		return this.links;
 	}
@@ -125,13 +99,11 @@ public class AppPricePointResponse implements Serializable {
 	}
 
 	public AppPricePointResponse included(List<Territory> included) {
-
 		this.included = included;
 		return this;
 	}
 
 	public AppPricePointResponse links(DocumentLinks links) {
-
 		this.links = links;
 		return this;
 	}

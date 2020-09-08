@@ -31,15 +31,15 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		BetaGroupResponse.JSON_PROPERTY_LINKS })
 
 public class BetaGroupResponse implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
+	public static final String JSON_PROPERTY_INCLUDED = "included";
+
+	public static final String JSON_PROPERTY_LINKS = "links";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 659729012343958777L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
-
-	public static final String JSON_PROPERTY_INCLUDED = "included";
-	public static final String JSON_PROPERTY_LINKS = "links";
 
 	private BetaGroup data;
 

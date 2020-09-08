@@ -29,11 +29,11 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 public class AppCategoryRelationships implements Serializable {
 
-	private static final long serialVersionUID = -5194431539181566090L;
-
 	public static final String JSON_PROPERTY_PARENT = "parent";
 
 	public static final String JSON_PROPERTY_SUBCATEGORIES = "subcategories";
+
+	private static final long serialVersionUID = -5194431539181566090L;
 
 	private AppCategoryRelationshipsParent parent;
 	private AppCategoryRelationshipsSubcategories subcategories;
@@ -66,7 +66,7 @@ public class AppCategoryRelationships implements Serializable {
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#hashCode()
@@ -106,7 +106,7 @@ public class AppCategoryRelationships implements Serializable {
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#toString()

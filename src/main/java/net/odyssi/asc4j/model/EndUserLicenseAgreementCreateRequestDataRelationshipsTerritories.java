@@ -30,12 +30,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ EndUserLicenseAgreementCreateRequestDataRelationshipsTerritories.JSON_PROPERTY_DATA })
 
 public class EndUserLicenseAgreementCreateRequestDataRelationshipsTerritories implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -3526206464622203323L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
 
 	private List<AppPricePointRelationshipsTerritoryData> data = new ArrayList<>();
 

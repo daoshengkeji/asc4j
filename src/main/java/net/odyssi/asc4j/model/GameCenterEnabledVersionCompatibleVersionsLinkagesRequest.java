@@ -30,12 +30,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ GameCenterEnabledVersionCompatibleVersionsLinkagesRequest.JSON_PROPERTY_DATA })
 
 public class GameCenterEnabledVersionCompatibleVersionsLinkagesRequest implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -6094758571932161485L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
 
 	private List<AppRelationshipsGameCenterEnabledVersionsData> data = new ArrayList<>();
 

@@ -31,8 +31,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 		AppPreOrderUpdateRequestData.JSON_PROPERTY_ATTRIBUTES })
 public class AppPreOrderUpdateRequestData implements Serializable {
 
-	private static final long serialVersionUID = -7249154777671496075L;
-
 	/**
 	 * Gets or Sets type
 	 */
@@ -69,7 +67,9 @@ public class AppPreOrderUpdateRequestData implements Serializable {
 	public static final String JSON_PROPERTY_ATTRIBUTES = "attributes";
 
 	public static final String JSON_PROPERTY_ID = "id";
+
 	public static final String JSON_PROPERTY_TYPE = "type";
+	private static final long serialVersionUID = -7249154777671496075L;
 
 	private AppPreOrderCreateRequestDataAttributes attributes;
 

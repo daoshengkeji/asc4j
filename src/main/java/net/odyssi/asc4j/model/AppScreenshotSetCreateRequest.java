@@ -26,14 +26,11 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  * AppScreenshotSetCreateRequest
  */
 @JsonPropertyOrder({ AppScreenshotSetCreateRequest.JSON_PROPERTY_DATA })
-
 public class AppScreenshotSetCreateRequest implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 243959604091765901L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
+
+	private static final long serialVersionUID = 243959604091765901L;
 
 	private AppScreenshotSetCreateRequestData data;
 
@@ -55,17 +52,10 @@ public class AppScreenshotSetCreateRequest implements Serializable {
 		return Objects.equals(this.data, appScreenshotSetCreateRequest.data);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public AppScreenshotSetCreateRequestData getData() {
 		return this.data;
 	}

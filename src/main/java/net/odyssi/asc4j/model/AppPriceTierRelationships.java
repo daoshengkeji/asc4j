@@ -25,14 +25,11 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  * AppPriceTierRelationships
  */
 @JsonPropertyOrder({ AppPriceTierRelationships.JSON_PROPERTY_PRICE_POINTS })
-
 public class AppPriceTierRelationships implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 2915735271235743643L;
 
 	public static final String JSON_PROPERTY_PRICE_POINTS = "pricePoints";
+
+	private static final long serialVersionUID = 2915735271235743643L;
 
 	private AppPriceTierRelationshipsPricePoints pricePoints;
 
@@ -48,17 +45,9 @@ public class AppPriceTierRelationships implements Serializable {
 		return Objects.equals(this.pricePoints, appPriceTierRelationships.pricePoints);
 	}
 
-	/**
-	 * Get pricePoints
-	 *
-	 * @return pricePoints
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_PRICE_POINTS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppPriceTierRelationshipsPricePoints getPricePoints() {
 		return this.pricePoints;
 	}
@@ -69,7 +58,6 @@ public class AppPriceTierRelationships implements Serializable {
 	}
 
 	public AppPriceTierRelationships pricePoints(AppPriceTierRelationshipsPricePoints pricePoints) {
-
 		this.pricePoints = pricePoints;
 		return this;
 	}

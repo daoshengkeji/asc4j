@@ -29,17 +29,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonPropertyOrder({ AppPricesResponse.JSON_PROPERTY_DATA, AppPricesResponse.JSON_PROPERTY_LINKS,
 		AppPricesResponse.JSON_PROPERTY_META })
-
 public class AppPricesResponse implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -7901331998829669538L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_LINKS = "links";
+
 	public static final String JSON_PROPERTY_META = "meta";
+	private static final long serialVersionUID = -7901331998829669538L;
 
 	private List<AppPrice> data = new ArrayList<>();
 
@@ -70,47 +67,25 @@ public class AppPricesResponse implements Serializable {
 				&& Objects.equals(this.meta, appPricesResponse.meta);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public List<AppPrice> getData() {
 		return this.data;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public PagedDocumentLinks getLinks() {
 		return this.links;
 	}
 
-	/**
-	 * Get meta
-	 *
-	 * @return meta
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_META)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public PagingInformation getMeta() {
 		return this.meta;
 	}
@@ -121,13 +96,11 @@ public class AppPricesResponse implements Serializable {
 	}
 
 	public AppPricesResponse links(PagedDocumentLinks links) {
-
 		this.links = links;
 		return this;
 	}
 
 	public AppPricesResponse meta(PagingInformation meta) {
-
 		this.meta = meta;
 		return this;
 	}

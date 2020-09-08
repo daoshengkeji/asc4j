@@ -31,9 +31,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 public class AppEncryptionDeclarationBuildsLinkagesRequest implements Serializable {
 
-	private static final long serialVersionUID = -8522406709117792095L;
-
 	public static final String JSON_PROPERTY_DATA = "data";
+
+	private static final long serialVersionUID = -8522406709117792095L;
 
 	private List<AppStoreVersionRelationshipsBuildData> data = new ArrayList<>();
 
@@ -48,7 +48,7 @@ public class AppEncryptionDeclarationBuildsLinkagesRequest implements Serializab
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#equals(java.lang.Object)
@@ -74,7 +74,7 @@ public class AppEncryptionDeclarationBuildsLinkagesRequest implements Serializab
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#hashCode()
@@ -100,7 +100,7 @@ public class AppEncryptionDeclarationBuildsLinkagesRequest implements Serializab
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#toString()

@@ -30,15 +30,15 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		BundleIdRelationshipsProfiles.JSON_PROPERTY_META, BundleIdRelationshipsProfiles.JSON_PROPERTY_DATA })
 
 public class BundleIdRelationshipsProfiles implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
+	public static final String JSON_PROPERTY_LINKS = "links";
+
+	public static final String JSON_PROPERTY_META = "meta";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -5587358120673040490L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
-
-	public static final String JSON_PROPERTY_LINKS = "links";
-	public static final String JSON_PROPERTY_META = "meta";
 
 	private List<BundleIdRelationshipsProfilesData> data = null;
 

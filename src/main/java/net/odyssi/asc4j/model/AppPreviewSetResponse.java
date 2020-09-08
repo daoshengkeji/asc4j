@@ -29,17 +29,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonPropertyOrder({ AppPreviewSetResponse.JSON_PROPERTY_DATA, AppPreviewSetResponse.JSON_PROPERTY_INCLUDED,
 		AppPreviewSetResponse.JSON_PROPERTY_LINKS })
-
 public class AppPreviewSetResponse implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -273911466269710552L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_INCLUDED = "included";
+
 	public static final String JSON_PROPERTY_LINKS = "links";
+	private static final long serialVersionUID = -273911466269710552L;
 
 	private AppPreviewSet data;
 
@@ -55,7 +52,6 @@ public class AppPreviewSetResponse implements Serializable {
 	}
 
 	public AppPreviewSetResponse data(AppPreviewSet data) {
-
 		this.data = data;
 		return this;
 	}
@@ -74,47 +70,25 @@ public class AppPreviewSetResponse implements Serializable {
 				&& Objects.equals(this.links, appPreviewSetResponse.links);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public AppPreviewSet getData() {
 		return this.data;
 	}
 
-	/**
-	 * Get included
-	 *
-	 * @return included
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_INCLUDED)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public List<AppPreview> getIncluded() {
 		return this.included;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public DocumentLinks getLinks() {
 		return this.links;
 	}
@@ -125,13 +99,11 @@ public class AppPreviewSetResponse implements Serializable {
 	}
 
 	public AppPreviewSetResponse included(List<AppPreview> included) {
-
 		this.included = included;
 		return this;
 	}
 
 	public AppPreviewSetResponse links(DocumentLinks links) {
-
 		this.links = links;
 		return this;
 	}

@@ -29,12 +29,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
  */
 @JsonPropertyOrder({ AppPreviewUpdateRequestData.JSON_PROPERTY_TYPE, AppPreviewUpdateRequestData.JSON_PROPERTY_ID,
 		AppPreviewUpdateRequestData.JSON_PROPERTY_ATTRIBUTES })
-
 public class AppPreviewUpdateRequestData implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 6517457415694676981L;
 
 	/**
 	 * Gets or Sets type
@@ -72,7 +67,9 @@ public class AppPreviewUpdateRequestData implements Serializable {
 	public static final String JSON_PROPERTY_ATTRIBUTES = "attributes";
 
 	public static final String JSON_PROPERTY_ID = "id";
+
 	public static final String JSON_PROPERTY_TYPE = "type";
+	private static final long serialVersionUID = 6517457415694676981L;
 
 	private AppPreviewUpdateRequestDataAttributes attributes;
 
@@ -99,45 +96,23 @@ public class AppPreviewUpdateRequestData implements Serializable {
 				&& Objects.equals(this.attributes, appPreviewUpdateRequestData.attributes);
 	}
 
-	/**
-	 * Get attributes
-	 *
-	 * @return attributes
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_ATTRIBUTES)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppPreviewUpdateRequestDataAttributes getAttributes() {
 		return this.attributes;
 	}
 
-	/**
-	 * Get id
-	 *
-	 * @return id
-	 **/
 	@NotNull
-
 	@JsonProperty(JSON_PROPERTY_ID)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public String getId() {
 		return this.id;
 	}
 
-	/**
-	 * Get type
-	 *
-	 * @return type
-	 **/
 	@NotNull
-
 	@JsonProperty(JSON_PROPERTY_TYPE)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public TypeEnum getType() {
 		return this.type;
 	}
@@ -148,7 +123,6 @@ public class AppPreviewUpdateRequestData implements Serializable {
 	}
 
 	public AppPreviewUpdateRequestData id(String id) {
-
 		this.id = id;
 		return this;
 	}
@@ -188,7 +162,6 @@ public class AppPreviewUpdateRequestData implements Serializable {
 	}
 
 	public AppPreviewUpdateRequestData type(TypeEnum type) {
-
 		this.type = type;
 		return this;
 	}

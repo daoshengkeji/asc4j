@@ -27,12 +27,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ BetaAppReviewSubmissionAttributes.JSON_PROPERTY_BETA_REVIEW_STATE })
 
 public class BetaAppReviewSubmissionAttributes implements Serializable {
+	public static final String JSON_PROPERTY_BETA_REVIEW_STATE = "betaReviewState";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 7476020983171342499L;
-
-	public static final String JSON_PROPERTY_BETA_REVIEW_STATE = "betaReviewState";
 
 	private BetaReviewState betaReviewState;
 

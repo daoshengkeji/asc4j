@@ -30,12 +30,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 @JsonPropertyOrder({ AppPricePoint.JSON_PROPERTY_TYPE, AppPricePoint.JSON_PROPERTY_ID,
 		AppPricePoint.JSON_PROPERTY_ATTRIBUTES, AppPricePoint.JSON_PROPERTY_RELATIONSHIPS,
 		AppPricePoint.JSON_PROPERTY_LINKS })
-
 public class AppPricePoint implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -6869852608617537632L;
 
 	/**
 	 * Gets or Sets type
@@ -73,10 +68,12 @@ public class AppPricePoint implements Serializable {
 	public static final String JSON_PROPERTY_ATTRIBUTES = "attributes";
 
 	public static final String JSON_PROPERTY_ID = "id";
-	public static final String JSON_PROPERTY_LINKS = "links";
 
+	public static final String JSON_PROPERTY_LINKS = "links";
 	public static final String JSON_PROPERTY_RELATIONSHIPS = "relationships";
+
 	public static final String JSON_PROPERTY_TYPE = "type";
+	private static final long serialVersionUID = -6869852608617537632L;
 
 	private AppPricePointAttributes attributes;
 
@@ -107,75 +104,38 @@ public class AppPricePoint implements Serializable {
 				&& Objects.equals(this.links, appPricePoint.links);
 	}
 
-	/**
-	 * Get attributes
-	 *
-	 * @return attributes
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_ATTRIBUTES)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppPricePointAttributes getAttributes() {
 		return this.attributes;
 	}
 
-	/**
-	 * Get id
-	 *
-	 * @return id
-	 **/
 	@NotNull
-
 	@JsonProperty(JSON_PROPERTY_ID)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public String getId() {
 		return this.id;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public ResourceLinks getLinks() {
 		return this.links;
 	}
 
-	/**
-	 * Get relationships
-	 *
-	 * @return relationships
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_RELATIONSHIPS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppPricePointRelationships getRelationships() {
 		return this.relationships;
 	}
 
-	/**
-	 * Get type
-	 *
-	 * @return type
-	 **/
 	@NotNull
-
 	@JsonProperty(JSON_PROPERTY_TYPE)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public TypeEnum getType() {
 		return this.type;
 	}
@@ -186,19 +146,16 @@ public class AppPricePoint implements Serializable {
 	}
 
 	public AppPricePoint id(String id) {
-
 		this.id = id;
 		return this;
 	}
 
 	public AppPricePoint links(ResourceLinks links) {
-
 		this.links = links;
 		return this;
 	}
 
 	public AppPricePoint relationships(AppPricePointRelationships relationships) {
-
 		this.relationships = relationships;
 		return this;
 	}
@@ -248,7 +205,6 @@ public class AppPricePoint implements Serializable {
 	}
 
 	public AppPricePoint type(TypeEnum type) {
-
 		this.type = type;
 		return this;
 	}

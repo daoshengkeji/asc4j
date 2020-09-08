@@ -29,17 +29,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ AppRelationshipsAvailableTerritories.JSON_PROPERTY_LINKS,
 		AppRelationshipsAvailableTerritories.JSON_PROPERTY_META,
 		AppRelationshipsAvailableTerritories.JSON_PROPERTY_DATA })
-
 public class AppRelationshipsAvailableTerritories implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 5008623973883393362L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_LINKS = "links";
+
 	public static final String JSON_PROPERTY_META = "meta";
+	private static final long serialVersionUID = 5008623973883393362L;
 
 	private List<AppPricePointRelationshipsTerritoryData> data = null;
 
@@ -55,7 +52,6 @@ public class AppRelationshipsAvailableTerritories implements Serializable {
 	}
 
 	public AppRelationshipsAvailableTerritories data(List<AppPricePointRelationshipsTerritoryData> data) {
-
 		this.data = data;
 		return this;
 	}
@@ -74,47 +70,23 @@ public class AppRelationshipsAvailableTerritories implements Serializable {
 				&& Objects.equals(this.data, appRelationshipsAvailableTerritories.data);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public List<AppPricePointRelationshipsTerritoryData> getData() {
 		return this.data;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppCategoryRelationshipsSubcategoriesLinks getLinks() {
 		return this.links;
 	}
 
-	/**
-	 * Get meta
-	 *
-	 * @return meta
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_META)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public PagingInformation getMeta() {
 		return this.meta;
 	}
@@ -125,13 +97,11 @@ public class AppRelationshipsAvailableTerritories implements Serializable {
 	}
 
 	public AppRelationshipsAvailableTerritories links(AppCategoryRelationshipsSubcategoriesLinks links) {
-
 		this.links = links;
 		return this;
 	}
 
 	public AppRelationshipsAvailableTerritories meta(PagingInformation meta) {
-
 		this.meta = meta;
 		return this;
 	}

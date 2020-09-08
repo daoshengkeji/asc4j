@@ -28,14 +28,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		GameCenterEnabledVersionRelationships.JSON_PROPERTY_APP })
 
 public class GameCenterEnabledVersionRelationships implements Serializable {
+	public static final String JSON_PROPERTY_APP = "app";
+
+	public static final String JSON_PROPERTY_COMPATIBLE_VERSIONS = "compatibleVersions";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -7170183777629900343L;
-
-	public static final String JSON_PROPERTY_APP = "app";
-
-	public static final String JSON_PROPERTY_COMPATIBLE_VERSIONS = "compatibleVersions";
 
 	private AppEncryptionDeclarationRelationshipsApp app;
 	private AppRelationshipsGameCenterEnabledVersions compatibleVersions;

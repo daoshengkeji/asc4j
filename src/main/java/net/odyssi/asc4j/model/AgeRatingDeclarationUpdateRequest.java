@@ -28,9 +28,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ AgeRatingDeclarationUpdateRequest.JSON_PROPERTY_DATA })
 public class AgeRatingDeclarationUpdateRequest implements Serializable {
 
-	private static final long serialVersionUID = 934004255525049763L;
-
 	public static final String JSON_PROPERTY_DATA = "data";
+
+	private static final long serialVersionUID = 934004255525049763L;
 
 	private AgeRatingDeclarationUpdateRequestData data;
 

@@ -35,24 +35,24 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		AppStoreVersionRelationships.JSON_PROPERTY_IDFA_DECLARATION })
 
 public class AppStoreVersionRelationships implements Serializable {
+	public static final String JSON_PROPERTY_AGE_RATING_DECLARATION = "ageRatingDeclaration";
+
+	public static final String JSON_PROPERTY_APP = "app";
+
+	public static final String JSON_PROPERTY_APP_STORE_REVIEW_DETAIL = "appStoreReviewDetail";
+	public static final String JSON_PROPERTY_APP_STORE_VERSION_LOCALIZATIONS = "appStoreVersionLocalizations";
+
+	public static final String JSON_PROPERTY_APP_STORE_VERSION_PHASED_RELEASE = "appStoreVersionPhasedRelease";
+	public static final String JSON_PROPERTY_APP_STORE_VERSION_SUBMISSION = "appStoreVersionSubmission";
+
+	public static final String JSON_PROPERTY_BUILD = "build";
+	public static final String JSON_PROPERTY_IDFA_DECLARATION = "idfaDeclaration";
+
+	public static final String JSON_PROPERTY_ROUTING_APP_COVERAGE = "routingAppCoverage";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -4370765586231150700L;
-
-	public static final String JSON_PROPERTY_AGE_RATING_DECLARATION = "ageRatingDeclaration";
-
-	public static final String JSON_PROPERTY_APP = "app";
-	public static final String JSON_PROPERTY_APP_STORE_REVIEW_DETAIL = "appStoreReviewDetail";
-
-	public static final String JSON_PROPERTY_APP_STORE_VERSION_LOCALIZATIONS = "appStoreVersionLocalizations";
-	public static final String JSON_PROPERTY_APP_STORE_VERSION_PHASED_RELEASE = "appStoreVersionPhasedRelease";
-
-	public static final String JSON_PROPERTY_APP_STORE_VERSION_SUBMISSION = "appStoreVersionSubmission";
-	public static final String JSON_PROPERTY_BUILD = "build";
-
-	public static final String JSON_PROPERTY_IDFA_DECLARATION = "idfaDeclaration";
-	public static final String JSON_PROPERTY_ROUTING_APP_COVERAGE = "routingAppCoverage";
 
 	private AppStoreVersionRelationshipsAgeRatingDeclaration ageRatingDeclaration;
 

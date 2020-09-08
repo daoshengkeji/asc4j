@@ -32,8 +32,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 		AppInfoLocalization.JSON_PROPERTY_LINKS })
 public class AppInfoLocalization implements Serializable, AppInfoResponseIncludedOneOf, AppInfosResponseIncludedOneOf {
 
-	private static final long serialVersionUID = 985987588459045335L;
-
 	/**
 	 * Gets or Sets type
 	 */
@@ -70,10 +68,12 @@ public class AppInfoLocalization implements Serializable, AppInfoResponseInclude
 	public static final String JSON_PROPERTY_ATTRIBUTES = "attributes";
 
 	public static final String JSON_PROPERTY_ID = "id";
-	public static final String JSON_PROPERTY_LINKS = "links";
 
+	public static final String JSON_PROPERTY_LINKS = "links";
 	public static final String JSON_PROPERTY_RELATIONSHIPS = "relationships";
+
 	public static final String JSON_PROPERTY_TYPE = "type";
+	private static final long serialVersionUID = 985987588459045335L;
 
 	private AppInfoLocalizationAttributes attributes;
 

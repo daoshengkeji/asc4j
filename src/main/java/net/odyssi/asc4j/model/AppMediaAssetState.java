@@ -32,8 +32,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 		AppMediaAssetState.JSON_PROPERTY_STATE })
 public class AppMediaAssetState implements Serializable {
 
-	private static final long serialVersionUID = -6728271854538693027L;
-
 	/**
 	 * Gets or Sets state
 	 */
@@ -74,9 +72,11 @@ public class AppMediaAssetState implements Serializable {
 	}
 
 	public static final String JSON_PROPERTY_ERRORS = "errors";
-	public static final String JSON_PROPERTY_STATE = "state";
 
+	public static final String JSON_PROPERTY_STATE = "state";
 	public static final String JSON_PROPERTY_WARNINGS = "warnings";
+
+	private static final long serialVersionUID = -6728271854538693027L;
 
 	private List<AppMediaStateError> errors = null;
 

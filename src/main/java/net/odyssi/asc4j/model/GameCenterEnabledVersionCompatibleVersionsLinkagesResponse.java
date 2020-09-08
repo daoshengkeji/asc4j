@@ -32,15 +32,15 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		GameCenterEnabledVersionCompatibleVersionsLinkagesResponse.JSON_PROPERTY_META })
 
 public class GameCenterEnabledVersionCompatibleVersionsLinkagesResponse implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
+	public static final String JSON_PROPERTY_LINKS = "links";
+
+	public static final String JSON_PROPERTY_META = "meta";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 4630982821026280557L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
-
-	public static final String JSON_PROPERTY_LINKS = "links";
-	public static final String JSON_PROPERTY_META = "meta";
 
 	private List<AppRelationshipsGameCenterEnabledVersionsData> data = new ArrayList<>();
 

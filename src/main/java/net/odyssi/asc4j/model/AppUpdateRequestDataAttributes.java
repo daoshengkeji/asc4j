@@ -31,11 +31,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class AppUpdateRequestDataAttributes implements Serializable {
 	/**
-	 *
-	 */
-	private static final long serialVersionUID = 1018524054854593056L;
-
-	/**
 	 * Gets or Sets contentRightsDeclaration
 	 */
 	public enum ContentRightsDeclarationEnum {
@@ -71,10 +66,15 @@ public class AppUpdateRequestDataAttributes implements Serializable {
 	}
 
 	public static final String JSON_PROPERTY_AVAILABLE_IN_NEW_TERRITORIES = "availableInNewTerritories";
-	public static final String JSON_PROPERTY_BUNDLE_ID = "bundleId";
 
+	public static final String JSON_PROPERTY_BUNDLE_ID = "bundleId";
 	public static final String JSON_PROPERTY_CONTENT_RIGHTS_DECLARATION = "contentRightsDeclaration";
+
 	public static final String JSON_PROPERTY_PRIMARY_LOCALE = "primaryLocale";
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 1018524054854593056L;
 
 	private Boolean availableInNewTerritories;
 

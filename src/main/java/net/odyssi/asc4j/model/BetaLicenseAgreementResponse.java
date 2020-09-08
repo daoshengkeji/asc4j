@@ -31,15 +31,15 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		BetaLicenseAgreementResponse.JSON_PROPERTY_INCLUDED, BetaLicenseAgreementResponse.JSON_PROPERTY_LINKS })
 
 public class BetaLicenseAgreementResponse implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
+	public static final String JSON_PROPERTY_INCLUDED = "included";
+
+	public static final String JSON_PROPERTY_LINKS = "links";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 7999636810592830367L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
-
-	public static final String JSON_PROPERTY_INCLUDED = "included";
-	public static final String JSON_PROPERTY_LINKS = "links";
 
 	private BetaLicenseAgreement data;
 

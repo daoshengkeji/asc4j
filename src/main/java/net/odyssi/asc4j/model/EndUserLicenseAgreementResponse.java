@@ -31,15 +31,15 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		EndUserLicenseAgreementResponse.JSON_PROPERTY_INCLUDED, EndUserLicenseAgreementResponse.JSON_PROPERTY_LINKS })
 
 public class EndUserLicenseAgreementResponse implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
+	public static final String JSON_PROPERTY_INCLUDED = "included";
+
+	public static final String JSON_PROPERTY_LINKS = "links";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -6982580939327471425L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
-
-	public static final String JSON_PROPERTY_INCLUDED = "included";
-	public static final String JSON_PROPERTY_LINKS = "links";
 
 	private EndUserLicenseAgreement data;
 

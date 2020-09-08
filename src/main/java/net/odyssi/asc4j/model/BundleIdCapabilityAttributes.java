@@ -30,14 +30,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		BundleIdCapabilityAttributes.JSON_PROPERTY_SETTINGS })
 
 public class BundleIdCapabilityAttributes implements Serializable {
+	public static final String JSON_PROPERTY_CAPABILITY_TYPE = "capabilityType";
+
+	public static final String JSON_PROPERTY_SETTINGS = "settings";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -7832141373754546738L;
-
-	public static final String JSON_PROPERTY_CAPABILITY_TYPE = "capabilityType";
-
-	public static final String JSON_PROPERTY_SETTINGS = "settings";
 
 	private CapabilityType capabilityType;
 	private List<CapabilitySetting> settings = null;

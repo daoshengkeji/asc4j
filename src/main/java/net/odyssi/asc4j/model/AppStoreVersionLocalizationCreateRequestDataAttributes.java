@@ -35,21 +35,21 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		AppStoreVersionLocalizationCreateRequestDataAttributes.JSON_PROPERTY_WHATS_NEW })
 
 public class AppStoreVersionLocalizationCreateRequestDataAttributes implements Serializable {
+	public static final String JSON_PROPERTY_DESCRIPTION = "description";
+
+	public static final String JSON_PROPERTY_KEYWORDS = "keywords";
+
+	public static final String JSON_PROPERTY_LOCALE = "locale";
+	public static final String JSON_PROPERTY_MARKETING_URL = "marketingUrl";
+
+	public static final String JSON_PROPERTY_PROMOTIONAL_TEXT = "promotionalText";
+	public static final String JSON_PROPERTY_SUPPORT_URL = "supportUrl";
+
+	public static final String JSON_PROPERTY_WHATS_NEW = "whatsNew";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -3213068548015817436L;
-
-	public static final String JSON_PROPERTY_DESCRIPTION = "description";
-
-	public static final String JSON_PROPERTY_KEYWORDS = "keywords";
-	public static final String JSON_PROPERTY_LOCALE = "locale";
-
-	public static final String JSON_PROPERTY_MARKETING_URL = "marketingUrl";
-	public static final String JSON_PROPERTY_PROMOTIONAL_TEXT = "promotionalText";
-
-	public static final String JSON_PROPERTY_SUPPORT_URL = "supportUrl";
-	public static final String JSON_PROPERTY_WHATS_NEW = "whatsNew";
 
 	private String description;
 

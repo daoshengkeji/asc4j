@@ -28,15 +28,15 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		PagedDocumentLinks.JSON_PROPERTY_NEXT })
 
 public class PagedDocumentLinks implements Serializable {
+	public static final String JSON_PROPERTY_FIRST = "first";
+
+	public static final String JSON_PROPERTY_NEXT = "next";
+
+	public static final String JSON_PROPERTY_SELF = "self";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -2750800564850986017L;
-
-	public static final String JSON_PROPERTY_FIRST = "first";
-
-	public static final String JSON_PROPERTY_NEXT = "next";
-	public static final String JSON_PROPERTY_SELF = "self";
 
 	private String first;
 

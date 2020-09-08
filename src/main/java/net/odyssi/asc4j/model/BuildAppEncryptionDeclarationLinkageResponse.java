@@ -29,14 +29,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		BuildAppEncryptionDeclarationLinkageResponse.JSON_PROPERTY_LINKS })
 
 public class BuildAppEncryptionDeclarationLinkageResponse implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
+	public static final String JSON_PROPERTY_LINKS = "links";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -1819668239641216610L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
-
-	public static final String JSON_PROPERTY_LINKS = "links";
 
 	private BuildRelationshipsAppEncryptionDeclarationData data;
 	private DocumentLinks links;

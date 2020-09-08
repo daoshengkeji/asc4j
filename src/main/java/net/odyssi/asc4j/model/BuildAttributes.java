@@ -34,11 +34,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class BuildAttributes implements Serializable {
 	/**
-	 *
-	 */
-	private static final long serialVersionUID = 9042953660754044205L;
-
-	/**
 	 * Gets or Sets processingState
 	 */
 	public enum ProcessingStateEnum {
@@ -78,16 +73,21 @@ public class BuildAttributes implements Serializable {
 	}
 
 	public static final String JSON_PROPERTY_EXPIRATION_DATE = "expirationDate";
+
 	public static final String JSON_PROPERTY_EXPIRED = "expired";
-
 	public static final String JSON_PROPERTY_ICON_ASSET_TOKEN = "iconAssetToken";
+
 	public static final String JSON_PROPERTY_MIN_OS_VERSION = "minOsVersion";
-
 	public static final String JSON_PROPERTY_PROCESSING_STATE = "processingState";
-	public static final String JSON_PROPERTY_UPLOADED_DATE = "uploadedDate";
 
+	public static final String JSON_PROPERTY_UPLOADED_DATE = "uploadedDate";
 	public static final String JSON_PROPERTY_USES_NON_EXEMPT_ENCRYPTION = "usesNonExemptEncryption";
+
 	public static final String JSON_PROPERTY_VERSION = "version";
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 9042953660754044205L;
 
 	private OffsetDateTime expirationDate;
 

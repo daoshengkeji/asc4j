@@ -27,12 +27,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ UserInvitationRelationships.JSON_PROPERTY_VISIBLE_APPS })
 
 public class UserInvitationRelationships implements Serializable {
+	public static final String JSON_PROPERTY_VISIBLE_APPS = "visibleApps";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 2232895895528571202L;
-
-	public static final String JSON_PROPERTY_VISIBLE_APPS = "visibleApps";
 
 	private BetaTesterRelationshipsApps visibleApps;
 

@@ -25,12 +25,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ TerritoryAttributes.JSON_PROPERTY_CURRENCY })
 
 public class TerritoryAttributes implements Serializable {
+	public static final String JSON_PROPERTY_CURRENCY = "currency";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -1957128271924401489L;
-
-	public static final String JSON_PROPERTY_CURRENCY = "currency";
 
 	private String currency;
 

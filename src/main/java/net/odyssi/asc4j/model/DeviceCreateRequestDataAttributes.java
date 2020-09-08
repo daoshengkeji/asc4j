@@ -30,15 +30,15 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		DeviceCreateRequestDataAttributes.JSON_PROPERTY_UDID })
 
 public class DeviceCreateRequestDataAttributes implements Serializable {
+	public static final String JSON_PROPERTY_NAME = "name";
+
+	public static final String JSON_PROPERTY_PLATFORM = "platform";
+
+	public static final String JSON_PROPERTY_UDID = "udid";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 2873431568883868979L;
-
-	public static final String JSON_PROPERTY_NAME = "name";
-
-	public static final String JSON_PROPERTY_PLATFORM = "platform";
-	public static final String JSON_PROPERTY_UDID = "udid";
 
 	private String name;
 

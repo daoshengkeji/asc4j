@@ -30,11 +30,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class BuildRelationshipsIconsData implements Serializable {
 	/**
-	 *
-	 */
-	private static final long serialVersionUID = 5382178640032295509L;
-
-	/**
 	 * Gets or Sets type
 	 */
 	public enum TypeEnum {
@@ -70,6 +65,11 @@ public class BuildRelationshipsIconsData implements Serializable {
 	public static final String JSON_PROPERTY_ID = "id";
 
 	public static final String JSON_PROPERTY_TYPE = "type";
+
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 5382178640032295509L;
 
 	private String id;
 	private TypeEnum type;

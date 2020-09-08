@@ -32,11 +32,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class Profile implements Serializable, BundleIdResponseIncludedOneOf, BundleIdsResponseIncludedOneOf {
 	/**
-	 *
-	 */
-	private static final long serialVersionUID = 7661345462833827680L;
-
-	/**
 	 * Gets or Sets type
 	 */
 	public enum TypeEnum {
@@ -72,10 +67,15 @@ public class Profile implements Serializable, BundleIdResponseIncludedOneOf, Bun
 	public static final String JSON_PROPERTY_ATTRIBUTES = "attributes";
 
 	public static final String JSON_PROPERTY_ID = "id";
-	public static final String JSON_PROPERTY_LINKS = "links";
 
+	public static final String JSON_PROPERTY_LINKS = "links";
 	public static final String JSON_PROPERTY_RELATIONSHIPS = "relationships";
+
 	public static final String JSON_PROPERTY_TYPE = "type";
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 7661345462833827680L;
 
 	private ProfileAttributes attributes;
 

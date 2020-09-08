@@ -28,14 +28,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		AppStoreVersionRelationshipsAgeRatingDeclaration.JSON_PROPERTY_DATA })
 
 public class AppStoreVersionRelationshipsAgeRatingDeclaration implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
+	public static final String JSON_PROPERTY_LINKS = "links";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 4435715690355206348L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
-
-	public static final String JSON_PROPERTY_LINKS = "links";
 
 	private AppStoreVersionRelationshipsAgeRatingDeclarationData data;
 	private AppCategoryRelationshipsSubcategoriesLinks links;

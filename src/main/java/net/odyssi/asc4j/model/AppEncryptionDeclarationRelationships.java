@@ -28,9 +28,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 public class AppEncryptionDeclarationRelationships implements Serializable {
 
-	private static final long serialVersionUID = 4157080072004357405L;
-
 	public static final String JSON_PROPERTY_APP = "app";
+
+	private static final long serialVersionUID = 4157080072004357405L;
 
 	private AppEncryptionDeclarationRelationshipsApp app;
 
@@ -40,7 +40,7 @@ public class AppEncryptionDeclarationRelationships implements Serializable {
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#equals(java.lang.Object)
@@ -65,7 +65,7 @@ public class AppEncryptionDeclarationRelationships implements Serializable {
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#hashCode()
@@ -91,7 +91,7 @@ public class AppEncryptionDeclarationRelationships implements Serializable {
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#toString()

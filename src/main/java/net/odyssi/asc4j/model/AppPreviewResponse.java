@@ -26,16 +26,13 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  * AppPreviewResponse
  */
 @JsonPropertyOrder({ AppPreviewResponse.JSON_PROPERTY_DATA, AppPreviewResponse.JSON_PROPERTY_LINKS })
-
 public class AppPreviewResponse implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -6495104957446102299L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_LINKS = "links";
+
+	private static final long serialVersionUID = -6495104957446102299L;
 
 	private AppPreview data;
 	private DocumentLinks links;
@@ -59,32 +56,18 @@ public class AppPreviewResponse implements Serializable {
 				&& Objects.equals(this.links, appPreviewResponse.links);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public AppPreview getData() {
 		return this.data;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public DocumentLinks getLinks() {
 		return this.links;
 	}
@@ -95,7 +78,6 @@ public class AppPreviewResponse implements Serializable {
 	}
 
 	public AppPreviewResponse links(DocumentLinks links) {
-
 		this.links = links;
 		return this;
 	}

@@ -27,12 +27,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ AppStoreReviewAttachmentRelationships.JSON_PROPERTY_APP_STORE_REVIEW_DETAIL })
 
 public class AppStoreReviewAttachmentRelationships implements Serializable {
+	public static final String JSON_PROPERTY_APP_STORE_REVIEW_DETAIL = "appStoreReviewDetail";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 442755906142452002L;
-
-	public static final String JSON_PROPERTY_APP_STORE_REVIEW_DETAIL = "appStoreReviewDetail";
 
 	private AppStoreReviewAttachmentRelationshipsAppStoreReviewDetail appStoreReviewDetail;
 

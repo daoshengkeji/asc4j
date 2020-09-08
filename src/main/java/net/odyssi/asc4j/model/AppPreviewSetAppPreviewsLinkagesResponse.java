@@ -30,17 +30,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ AppPreviewSetAppPreviewsLinkagesResponse.JSON_PROPERTY_DATA,
 		AppPreviewSetAppPreviewsLinkagesResponse.JSON_PROPERTY_LINKS,
 		AppPreviewSetAppPreviewsLinkagesResponse.JSON_PROPERTY_META })
-
 public class AppPreviewSetAppPreviewsLinkagesResponse implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 7656479173329232363L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_LINKS = "links";
+
 	public static final String JSON_PROPERTY_META = "meta";
+	private static final long serialVersionUID = 7656479173329232363L;
 
 	private List<AppPreviewSetRelationshipsAppPreviewsData> data = new ArrayList<>();
 
@@ -53,7 +50,6 @@ public class AppPreviewSetAppPreviewsLinkagesResponse implements Serializable {
 	}
 
 	public AppPreviewSetAppPreviewsLinkagesResponse data(List<AppPreviewSetRelationshipsAppPreviewsData> data) {
-
 		this.data = data;
 		return this;
 	}
@@ -72,47 +68,25 @@ public class AppPreviewSetAppPreviewsLinkagesResponse implements Serializable {
 				&& Objects.equals(this.meta, appPreviewSetAppPreviewsLinkagesResponse.meta);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public List<AppPreviewSetRelationshipsAppPreviewsData> getData() {
 		return this.data;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public PagedDocumentLinks getLinks() {
 		return this.links;
 	}
 
-	/**
-	 * Get meta
-	 *
-	 * @return meta
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_META)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public PagingInformation getMeta() {
 		return this.meta;
 	}
@@ -123,13 +97,11 @@ public class AppPreviewSetAppPreviewsLinkagesResponse implements Serializable {
 	}
 
 	public AppPreviewSetAppPreviewsLinkagesResponse links(PagedDocumentLinks links) {
-
 		this.links = links;
 		return this;
 	}
 
 	public AppPreviewSetAppPreviewsLinkagesResponse meta(PagingInformation meta) {
-
 		this.meta = meta;
 		return this;
 	}

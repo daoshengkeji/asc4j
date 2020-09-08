@@ -31,17 +31,17 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		UserInvitationsResponse.JSON_PROPERTY_LINKS, UserInvitationsResponse.JSON_PROPERTY_META })
 
 public class UserInvitationsResponse implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
+	public static final String JSON_PROPERTY_INCLUDED = "included";
+
+	public static final String JSON_PROPERTY_LINKS = "links";
+	public static final String JSON_PROPERTY_META = "meta";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 6825075835642673026L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
-
-	public static final String JSON_PROPERTY_INCLUDED = "included";
-	public static final String JSON_PROPERTY_LINKS = "links";
-
-	public static final String JSON_PROPERTY_META = "meta";
 
 	private List<UserInvitation> data = new ArrayList<>();
 	private List<App> included = null;

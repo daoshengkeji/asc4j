@@ -28,15 +28,15 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		ProfileRelationships.JSON_PROPERTY_CERTIFICATES })
 
 public class ProfileRelationships implements Serializable {
+	public static final String JSON_PROPERTY_BUNDLE_ID = "bundleId";
+
+	public static final String JSON_PROPERTY_CERTIFICATES = "certificates";
+
+	public static final String JSON_PROPERTY_DEVICES = "devices";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -5840706515392088608L;
-
-	public static final String JSON_PROPERTY_BUNDLE_ID = "bundleId";
-
-	public static final String JSON_PROPERTY_CERTIFICATES = "certificates";
-	public static final String JSON_PROPERTY_DEVICES = "devices";
 
 	private ProfileRelationshipsBundleId bundleId;
 

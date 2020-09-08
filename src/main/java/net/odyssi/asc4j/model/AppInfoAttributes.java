@@ -29,14 +29,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		AppInfoAttributes.JSON_PROPERTY_KIDS_AGE_BAND })
 public class AppInfoAttributes implements Serializable {
 
-	private static final long serialVersionUID = 3230429419820619341L;
-
 	public static final String JSON_PROPERTY_APP_STORE_AGE_RATING = "appStoreAgeRating";
 
 	public static final String JSON_PROPERTY_APP_STORE_STATE = "appStoreState";
-	public static final String JSON_PROPERTY_BRAZIL_AGE_RATING = "brazilAgeRating";
 
+	public static final String JSON_PROPERTY_BRAZIL_AGE_RATING = "brazilAgeRating";
 	public static final String JSON_PROPERTY_KIDS_AGE_BAND = "kidsAgeBand";
+
+	private static final long serialVersionUID = 3230429419820619341L;
 
 	private AppStoreAgeRating appStoreAgeRating;
 	private AppStoreVersionState appStoreState;

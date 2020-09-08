@@ -28,15 +28,15 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		BundleIdRelationships.JSON_PROPERTY_BUNDLE_ID_CAPABILITIES, BundleIdRelationships.JSON_PROPERTY_APP })
 
 public class BundleIdRelationships implements Serializable {
+	public static final String JSON_PROPERTY_APP = "app";
+
+	public static final String JSON_PROPERTY_BUNDLE_ID_CAPABILITIES = "bundleIdCapabilities";
+
+	public static final String JSON_PROPERTY_PROFILES = "profiles";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -6950987938050482553L;
-
-	public static final String JSON_PROPERTY_APP = "app";
-
-	public static final String JSON_PROPERTY_BUNDLE_ID_CAPABILITIES = "bundleIdCapabilities";
-	public static final String JSON_PROPERTY_PROFILES = "profiles";
 
 	private AppEncryptionDeclarationRelationshipsApp app;
 

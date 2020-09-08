@@ -26,16 +26,13 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonPropertyOrder({ AppPreviewSetRelationshipsAppStoreVersionLocalization.JSON_PROPERTY_LINKS,
 		AppPreviewSetRelationshipsAppStoreVersionLocalization.JSON_PROPERTY_DATA })
-
 public class AppPreviewSetRelationshipsAppStoreVersionLocalization implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -6392841485468711468L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_LINKS = "links";
+
+	private static final long serialVersionUID = -6392841485468711468L;
 
 	private AppPreviewSetRelationshipsAppStoreVersionLocalizationData data;
 	private AppCategoryRelationshipsSubcategoriesLinks links;
@@ -60,32 +57,16 @@ public class AppPreviewSetRelationshipsAppStoreVersionLocalization implements Se
 				&& Objects.equals(this.data, appPreviewSetRelationshipsAppStoreVersionLocalization.data);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppPreviewSetRelationshipsAppStoreVersionLocalizationData getData() {
 		return this.data;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppCategoryRelationshipsSubcategoriesLinks getLinks() {
 		return this.links;
 	}
@@ -97,7 +78,6 @@ public class AppPreviewSetRelationshipsAppStoreVersionLocalization implements Se
 
 	public AppPreviewSetRelationshipsAppStoreVersionLocalization links(
 			AppCategoryRelationshipsSubcategoriesLinks links) {
-
 		this.links = links;
 		return this;
 	}

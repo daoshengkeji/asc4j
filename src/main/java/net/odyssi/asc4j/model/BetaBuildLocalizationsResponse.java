@@ -32,17 +32,17 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		BetaBuildLocalizationsResponse.JSON_PROPERTY_META })
 
 public class BetaBuildLocalizationsResponse implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
+	public static final String JSON_PROPERTY_INCLUDED = "included";
+
+	public static final String JSON_PROPERTY_LINKS = "links";
+	public static final String JSON_PROPERTY_META = "meta";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 130057287217370279L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
-
-	public static final String JSON_PROPERTY_INCLUDED = "included";
-	public static final String JSON_PROPERTY_LINKS = "links";
-
-	public static final String JSON_PROPERTY_META = "meta";
 
 	private List<BetaBuildLocalization> data = new ArrayList<>();
 	private List<Build> included = null;

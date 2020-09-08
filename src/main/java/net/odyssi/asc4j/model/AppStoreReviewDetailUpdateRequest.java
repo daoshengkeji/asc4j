@@ -28,12 +28,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ AppStoreReviewDetailUpdateRequest.JSON_PROPERTY_DATA })
 
 public class AppStoreReviewDetailUpdateRequest implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 759813295324079719L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
 
 	private AppStoreReviewDetailUpdateRequestData data;
 

@@ -31,25 +31,22 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		AppScreenshotAttributes.JSON_PROPERTY_ASSET_TOKEN, AppScreenshotAttributes.JSON_PROPERTY_ASSET_TYPE,
 		AppScreenshotAttributes.JSON_PROPERTY_UPLOAD_OPERATIONS,
 		AppScreenshotAttributes.JSON_PROPERTY_ASSET_DELIVERY_STATE })
-
 public class AppScreenshotAttributes implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -1215574555265168803L;
 
 	public static final String JSON_PROPERTY_ASSET_DELIVERY_STATE = "assetDeliveryState";
 
 	public static final String JSON_PROPERTY_ASSET_TOKEN = "assetToken";
+
 	public static final String JSON_PROPERTY_ASSET_TYPE = "assetType";
-
 	public static final String JSON_PROPERTY_FILE_NAME = "fileName";
+
 	public static final String JSON_PROPERTY_FILE_SIZE = "fileSize";
-
 	public static final String JSON_PROPERTY_IMAGE_ASSET = "imageAsset";
-	public static final String JSON_PROPERTY_SOURCE_FILE_CHECKSUM = "sourceFileChecksum";
 
+	public static final String JSON_PROPERTY_SOURCE_FILE_CHECKSUM = "sourceFileChecksum";
 	public static final String JSON_PROPERTY_UPLOAD_OPERATIONS = "uploadOperations";
+
+	private static final long serialVersionUID = -1215574555265168803L;
 
 	private AppMediaAssetState assetDeliveryState;
 	private String assetToken;
@@ -72,19 +69,16 @@ public class AppScreenshotAttributes implements Serializable {
 	}
 
 	public AppScreenshotAttributes assetDeliveryState(AppMediaAssetState assetDeliveryState) {
-
 		this.assetDeliveryState = assetDeliveryState;
 		return this;
 	}
 
 	public AppScreenshotAttributes assetToken(String assetToken) {
-
 		this.assetToken = assetToken;
 		return this;
 	}
 
 	public AppScreenshotAttributes assetType(String assetType) {
-
 		this.assetType = assetType;
 		return this;
 	}
@@ -109,123 +103,62 @@ public class AppScreenshotAttributes implements Serializable {
 	}
 
 	public AppScreenshotAttributes fileName(String fileName) {
-
 		this.fileName = fileName;
 		return this;
 	}
 
 	public AppScreenshotAttributes fileSize(Integer fileSize) {
-
 		this.fileSize = fileSize;
 		return this;
 	}
 
-	/**
-	 * Get assetDeliveryState
-	 *
-	 * @return assetDeliveryState
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_ASSET_DELIVERY_STATE)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppMediaAssetState getAssetDeliveryState() {
 		return this.assetDeliveryState;
 	}
 
-	/**
-	 * Get assetToken
-	 *
-	 * @return assetToken
-	 **/
-
 	@JsonProperty(JSON_PROPERTY_ASSET_TOKEN)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public String getAssetToken() {
 		return this.assetToken;
 	}
 
-	/**
-	 * Get assetType
-	 *
-	 * @return assetType
-	 **/
-
 	@JsonProperty(JSON_PROPERTY_ASSET_TYPE)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public String getAssetType() {
 		return this.assetType;
 	}
 
-	/**
-	 * Get fileName
-	 *
-	 * @return fileName
-	 **/
-
 	@JsonProperty(JSON_PROPERTY_FILE_NAME)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public String getFileName() {
 		return this.fileName;
 	}
 
-	/**
-	 * Get fileSize
-	 *
-	 * @return fileSize
-	 **/
-
 	@JsonProperty(JSON_PROPERTY_FILE_SIZE)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public Integer getFileSize() {
 		return this.fileSize;
 	}
 
-	/**
-	 * Get imageAsset
-	 *
-	 * @return imageAsset
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_IMAGE_ASSET)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public ImageAsset getImageAsset() {
 		return this.imageAsset;
 	}
 
-	/**
-	 * Get sourceFileChecksum
-	 *
-	 * @return sourceFileChecksum
-	 **/
-
 	@JsonProperty(JSON_PROPERTY_SOURCE_FILE_CHECKSUM)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public String getSourceFileChecksum() {
 		return this.sourceFileChecksum;
 	}
 
-	/**
-	 * Get uploadOperations
-	 *
-	 * @return uploadOperations
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_UPLOAD_OPERATIONS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public List<UploadOperation> getUploadOperations() {
 		return this.uploadOperations;
 	}
@@ -237,7 +170,6 @@ public class AppScreenshotAttributes implements Serializable {
 	}
 
 	public AppScreenshotAttributes imageAsset(ImageAsset imageAsset) {
-
 		this.imageAsset = imageAsset;
 		return this;
 	}
@@ -275,7 +207,6 @@ public class AppScreenshotAttributes implements Serializable {
 	}
 
 	public AppScreenshotAttributes sourceFileChecksum(String sourceFileChecksum) {
-
 		this.sourceFileChecksum = sourceFileChecksum;
 		return this;
 	}
@@ -308,7 +239,6 @@ public class AppScreenshotAttributes implements Serializable {
 	}
 
 	public AppScreenshotAttributes uploadOperations(List<UploadOperation> uploadOperations) {
-
 		this.uploadOperations = uploadOperations;
 		return this;
 	}

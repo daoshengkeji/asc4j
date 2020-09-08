@@ -28,12 +28,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ BundleIdCapabilityUpdateRequest.JSON_PROPERTY_DATA })
 
 public class BundleIdCapabilityUpdateRequest implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -3770861569005955032L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
 
 	private BundleIdCapabilityUpdateRequestData data;
 

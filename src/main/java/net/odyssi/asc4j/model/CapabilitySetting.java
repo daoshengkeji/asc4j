@@ -35,11 +35,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class CapabilitySetting implements Serializable {
 	/**
-	 *
-	 */
-	private static final long serialVersionUID = 4775127070502267550L;
-
-	/**
 	 * Gets or Sets allowedInstances
 	 */
 	public enum AllowedInstancesEnum {
@@ -114,16 +109,21 @@ public class CapabilitySetting implements Serializable {
 	}
 
 	public static final String JSON_PROPERTY_ALLOWED_INSTANCES = "allowedInstances";
+
 	public static final String JSON_PROPERTY_DESCRIPTION = "description";
-
 	public static final String JSON_PROPERTY_ENABLED_BY_DEFAULT = "enabledByDefault";
+
 	public static final String JSON_PROPERTY_KEY = "key";
-
 	public static final String JSON_PROPERTY_MIN_INSTANCES = "minInstances";
-	public static final String JSON_PROPERTY_NAME = "name";
 
+	public static final String JSON_PROPERTY_NAME = "name";
 	public static final String JSON_PROPERTY_OPTIONS = "options";
+
 	public static final String JSON_PROPERTY_VISIBLE = "visible";
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 4775127070502267550L;
 
 	private AllowedInstancesEnum allowedInstances;
 

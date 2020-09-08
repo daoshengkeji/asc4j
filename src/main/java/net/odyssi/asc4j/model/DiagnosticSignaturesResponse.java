@@ -32,17 +32,17 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		DiagnosticSignaturesResponse.JSON_PROPERTY_META })
 
 public class DiagnosticSignaturesResponse implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
+	public static final String JSON_PROPERTY_INCLUDED = "included";
+
+	public static final String JSON_PROPERTY_LINKS = "links";
+	public static final String JSON_PROPERTY_META = "meta";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -7924327290857779418L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
-
-	public static final String JSON_PROPERTY_INCLUDED = "included";
-	public static final String JSON_PROPERTY_LINKS = "links";
-
-	public static final String JSON_PROPERTY_META = "meta";
 
 	private List<DiagnosticSignature> data = new ArrayList<>();
 	private List<DiagnosticLog> included = null;

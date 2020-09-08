@@ -29,15 +29,15 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		BuildBetaDetailAttributes.JSON_PROPERTY_EXTERNAL_BUILD_STATE })
 
 public class BuildBetaDetailAttributes implements Serializable {
+	public static final String JSON_PROPERTY_AUTO_NOTIFY_ENABLED = "autoNotifyEnabled";
+
+	public static final String JSON_PROPERTY_EXTERNAL_BUILD_STATE = "externalBuildState";
+
+	public static final String JSON_PROPERTY_INTERNAL_BUILD_STATE = "internalBuildState";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 275192809323892822L;
-
-	public static final String JSON_PROPERTY_AUTO_NOTIFY_ENABLED = "autoNotifyEnabled";
-
-	public static final String JSON_PROPERTY_EXTERNAL_BUILD_STATE = "externalBuildState";
-	public static final String JSON_PROPERTY_INTERNAL_BUILD_STATE = "internalBuildState";
 
 	private Boolean autoNotifyEnabled;
 

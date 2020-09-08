@@ -28,11 +28,11 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ AppInfoLocalizationResponse.JSON_PROPERTY_DATA, AppInfoLocalizationResponse.JSON_PROPERTY_LINKS })
 public class AppInfoLocalizationResponse implements Serializable {
 
-	private static final long serialVersionUID = 6483864044273436961L;
-
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_LINKS = "links";
+
+	private static final long serialVersionUID = 6483864044273436961L;
 
 	private AppInfoLocalization data;
 	private DocumentLinks links;

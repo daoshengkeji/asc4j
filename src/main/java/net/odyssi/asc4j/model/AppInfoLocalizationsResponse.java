@@ -31,12 +31,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		AppInfoLocalizationsResponse.JSON_PROPERTY_META })
 public class AppInfoLocalizationsResponse implements Serializable {
 
-	private static final long serialVersionUID = 4515960210970481559L;
-
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_LINKS = "links";
+
 	public static final String JSON_PROPERTY_META = "meta";
+	private static final long serialVersionUID = 4515960210970481559L;
 
 	private List<AppInfoLocalization> data = new ArrayList<>();
 

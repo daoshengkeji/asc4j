@@ -29,15 +29,15 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		AppStoreVersionLocalizationRelationships.JSON_PROPERTY_APP_PREVIEW_SETS })
 
 public class AppStoreVersionLocalizationRelationships implements Serializable {
+	public static final String JSON_PROPERTY_APP_PREVIEW_SETS = "appPreviewSets";
+
+	public static final String JSON_PROPERTY_APP_SCREENSHOT_SETS = "appScreenshotSets";
+
+	public static final String JSON_PROPERTY_APP_STORE_VERSION = "appStoreVersion";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 7730943105620821445L;
-
-	public static final String JSON_PROPERTY_APP_PREVIEW_SETS = "appPreviewSets";
-
-	public static final String JSON_PROPERTY_APP_SCREENSHOT_SETS = "appScreenshotSets";
-	public static final String JSON_PROPERTY_APP_STORE_VERSION = "appStoreVersion";
 
 	private AppStoreVersionLocalizationRelationshipsAppPreviewSets appPreviewSets;
 

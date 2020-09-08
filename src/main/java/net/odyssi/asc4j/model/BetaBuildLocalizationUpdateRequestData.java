@@ -33,11 +33,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class BetaBuildLocalizationUpdateRequestData implements Serializable {
 	/**
-	 *
-	 */
-	private static final long serialVersionUID = -648986209812238081L;
-
-	/**
 	 * Gets or Sets type
 	 */
 	public enum TypeEnum {
@@ -73,7 +68,12 @@ public class BetaBuildLocalizationUpdateRequestData implements Serializable {
 	public static final String JSON_PROPERTY_ATTRIBUTES = "attributes";
 
 	public static final String JSON_PROPERTY_ID = "id";
+
 	public static final String JSON_PROPERTY_TYPE = "type";
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = -648986209812238081L;
 
 	private BetaBuildLocalizationUpdateRequestDataAttributes attributes;
 

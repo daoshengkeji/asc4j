@@ -31,11 +31,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class DeviceCreateRequestData implements Serializable {
 	/**
-	 *
-	 */
-	private static final long serialVersionUID = -2306774646869385072L;
-
-	/**
 	 * Gets or Sets type
 	 */
 	public enum TypeEnum {
@@ -71,6 +66,11 @@ public class DeviceCreateRequestData implements Serializable {
 	public static final String JSON_PROPERTY_ATTRIBUTES = "attributes";
 
 	public static final String JSON_PROPERTY_TYPE = "type";
+
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = -2306774646869385072L;
 
 	private DeviceCreateRequestDataAttributes attributes;
 	private TypeEnum type;

@@ -35,20 +35,20 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		UserInvitationCreateRequestDataAttributes.JSON_PROPERTY_PROVISIONING_ALLOWED })
 
 public class UserInvitationCreateRequestDataAttributes implements Serializable {
+	public static final String JSON_PROPERTY_ALL_APPS_VISIBLE = "allAppsVisible";
+
+	public static final String JSON_PROPERTY_EMAIL = "email";
+
+	public static final String JSON_PROPERTY_FIRST_NAME = "firstName";
+	public static final String JSON_PROPERTY_LAST_NAME = "lastName";
+
+	public static final String JSON_PROPERTY_PROVISIONING_ALLOWED = "provisioningAllowed";
+	public static final String JSON_PROPERTY_ROLES = "roles";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -5979494106364485826L;
-
-	public static final String JSON_PROPERTY_ALL_APPS_VISIBLE = "allAppsVisible";
-
-	public static final String JSON_PROPERTY_EMAIL = "email";
-	public static final String JSON_PROPERTY_FIRST_NAME = "firstName";
-
-	public static final String JSON_PROPERTY_LAST_NAME = "lastName";
-	public static final String JSON_PROPERTY_PROVISIONING_ALLOWED = "provisioningAllowed";
-
-	public static final String JSON_PROPERTY_ROLES = "roles";
 
 	private Boolean allAppsVisible;
 	private String email;

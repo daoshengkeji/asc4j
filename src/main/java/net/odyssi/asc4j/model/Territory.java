@@ -32,11 +32,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class Territory implements Serializable, AppResponseIncludedOneOf, AppsResponseIncludedOneOf {
 	/**
-	 *
-	 */
-	private static final long serialVersionUID = -229043415607737673L;
-
-	/**
 	 * Gets or Sets type
 	 */
 	public enum TypeEnum {
@@ -72,9 +67,14 @@ public class Territory implements Serializable, AppResponseIncludedOneOf, AppsRe
 	public static final String JSON_PROPERTY_ATTRIBUTES = "attributes";
 
 	public static final String JSON_PROPERTY_ID = "id";
-	public static final String JSON_PROPERTY_LINKS = "links";
 
+	public static final String JSON_PROPERTY_LINKS = "links";
 	public static final String JSON_PROPERTY_TYPE = "type";
+
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = -229043415607737673L;
 
 	private TerritoryAttributes attributes;
 	private String id;

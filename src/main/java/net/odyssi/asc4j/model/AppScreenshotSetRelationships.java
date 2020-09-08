@@ -26,16 +26,13 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonPropertyOrder({ AppScreenshotSetRelationships.JSON_PROPERTY_APP_STORE_VERSION_LOCALIZATION,
 		AppScreenshotSetRelationships.JSON_PROPERTY_APP_SCREENSHOTS })
-
 public class AppScreenshotSetRelationships implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -8657159502321018789L;
 
 	public static final String JSON_PROPERTY_APP_SCREENSHOTS = "appScreenshots";
 
 	public static final String JSON_PROPERTY_APP_STORE_VERSION_LOCALIZATION = "appStoreVersionLocalization";
+
+	private static final long serialVersionUID = -8657159502321018789L;
 
 	private AppScreenshotSetRelationshipsAppScreenshots appScreenshots;
 	private AppPreviewSetRelationshipsAppStoreVersionLocalization appStoreVersionLocalization;
@@ -67,32 +64,16 @@ public class AppScreenshotSetRelationships implements Serializable {
 				&& Objects.equals(this.appScreenshots, appScreenshotSetRelationships.appScreenshots);
 	}
 
-	/**
-	 * Get appScreenshots
-	 *
-	 * @return appScreenshots
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_APP_SCREENSHOTS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppScreenshotSetRelationshipsAppScreenshots getAppScreenshots() {
 		return this.appScreenshots;
 	}
 
-	/**
-	 * Get appStoreVersionLocalization
-	 *
-	 * @return appStoreVersionLocalization
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_APP_STORE_VERSION_LOCALIZATION)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppPreviewSetRelationshipsAppStoreVersionLocalization getAppStoreVersionLocalization() {
 		return this.appStoreVersionLocalization;
 	}

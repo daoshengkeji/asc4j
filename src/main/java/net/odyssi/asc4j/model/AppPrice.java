@@ -29,12 +29,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
  */
 @JsonPropertyOrder({ AppPrice.JSON_PROPERTY_TYPE, AppPrice.JSON_PROPERTY_ID, AppPrice.JSON_PROPERTY_RELATIONSHIPS,
 		AppPrice.JSON_PROPERTY_LINKS })
-
 public class AppPrice implements Serializable, AppResponseIncludedOneOf, AppsResponseIncludedOneOf {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 6890026633430962477L;
 
 	/**
 	 * Gets or Sets type
@@ -72,9 +67,11 @@ public class AppPrice implements Serializable, AppResponseIncludedOneOf, AppsRes
 	public static final String JSON_PROPERTY_ID = "id";
 
 	public static final String JSON_PROPERTY_LINKS = "links";
-	public static final String JSON_PROPERTY_RELATIONSHIPS = "relationships";
 
+	public static final String JSON_PROPERTY_RELATIONSHIPS = "relationships";
 	public static final String JSON_PROPERTY_TYPE = "type";
+
+	private static final long serialVersionUID = 6890026633430962477L;
 
 	private String id;
 	private ResourceLinks links;
@@ -96,60 +93,31 @@ public class AppPrice implements Serializable, AppResponseIncludedOneOf, AppsRes
 				&& Objects.equals(this.links, appPrice.links);
 	}
 
-	/**
-	 * Get id
-	 *
-	 * @return id
-	 **/
 	@NotNull
-
 	@JsonProperty(JSON_PROPERTY_ID)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public String getId() {
 		return this.id;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public ResourceLinks getLinks() {
 		return this.links;
 	}
 
-	/**
-	 * Get relationships
-	 *
-	 * @return relationships
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_RELATIONSHIPS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppPriceRelationships getRelationships() {
 		return this.relationships;
 	}
 
-	/**
-	 * Get type
-	 *
-	 * @return type
-	 **/
 	@NotNull
-
 	@JsonProperty(JSON_PROPERTY_TYPE)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public TypeEnum getType() {
 		return this.type;
 	}
@@ -160,19 +128,16 @@ public class AppPrice implements Serializable, AppResponseIncludedOneOf, AppsRes
 	}
 
 	public AppPrice id(String id) {
-
 		this.id = id;
 		return this;
 	}
 
 	public AppPrice links(ResourceLinks links) {
-
 		this.links = links;
 		return this;
 	}
 
 	public AppPrice relationships(AppPriceRelationships relationships) {
-
 		this.relationships = relationships;
 		return this;
 	}
@@ -217,7 +182,6 @@ public class AppPrice implements Serializable, AppResponseIncludedOneOf, AppsRes
 	}
 
 	public AppPrice type(TypeEnum type) {
-
 		this.type = type;
 		return this;
 	}

@@ -32,23 +32,23 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		AppStoreReviewDetailAttributes.JSON_PROPERTY_NOTES })
 
 public class AppStoreReviewDetailAttributes implements Serializable {
+	public static final String JSON_PROPERTY_CONTACT_EMAIL = "contactEmail";
+
+	public static final String JSON_PROPERTY_CONTACT_FIRST_NAME = "contactFirstName";
+
+	public static final String JSON_PROPERTY_CONTACT_LAST_NAME = "contactLastName";
+	public static final String JSON_PROPERTY_CONTACT_PHONE = "contactPhone";
+
+	public static final String JSON_PROPERTY_DEMO_ACCOUNT_NAME = "demoAccountName";
+	public static final String JSON_PROPERTY_DEMO_ACCOUNT_PASSWORD = "demoAccountPassword";
+
+	public static final String JSON_PROPERTY_DEMO_ACCOUNT_REQUIRED = "demoAccountRequired";
+	public static final String JSON_PROPERTY_NOTES = "notes";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -5406133898554423006L;
-
-	public static final String JSON_PROPERTY_CONTACT_EMAIL = "contactEmail";
-
-	public static final String JSON_PROPERTY_CONTACT_FIRST_NAME = "contactFirstName";
-	public static final String JSON_PROPERTY_CONTACT_LAST_NAME = "contactLastName";
-
-	public static final String JSON_PROPERTY_CONTACT_PHONE = "contactPhone";
-	public static final String JSON_PROPERTY_DEMO_ACCOUNT_NAME = "demoAccountName";
-
-	public static final String JSON_PROPERTY_DEMO_ACCOUNT_PASSWORD = "demoAccountPassword";
-	public static final String JSON_PROPERTY_DEMO_ACCOUNT_REQUIRED = "demoAccountRequired";
-
-	public static final String JSON_PROPERTY_NOTES = "notes";
 
 	private String contactEmail;
 	private String contactFirstName;

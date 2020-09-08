@@ -29,14 +29,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		CertificateCreateRequestDataAttributes.JSON_PROPERTY_CERTIFICATE_TYPE })
 
 public class CertificateCreateRequestDataAttributes implements Serializable {
+	public static final String JSON_PROPERTY_CERTIFICATE_TYPE = "certificateType";
+
+	public static final String JSON_PROPERTY_CSR_CONTENT = "csrContent";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -5390562958867880519L;
-
-	public static final String JSON_PROPERTY_CERTIFICATE_TYPE = "certificateType";
-
-	public static final String JSON_PROPERTY_CSR_CONTENT = "csrContent";
 
 	private CertificateType certificateType;
 	private String csrContent;

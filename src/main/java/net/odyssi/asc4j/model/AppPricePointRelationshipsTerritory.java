@@ -26,22 +26,18 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonPropertyOrder({ AppPricePointRelationshipsTerritory.JSON_PROPERTY_LINKS,
 		AppPricePointRelationshipsTerritory.JSON_PROPERTY_DATA })
-
 public class AppPricePointRelationshipsTerritory implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -1898433619937583950L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_LINKS = "links";
 
+	private static final long serialVersionUID = -1898433619937583950L;
+
 	private AppPricePointRelationshipsTerritoryData data;
 	private AppCategoryRelationshipsSubcategoriesLinks links;
 
 	public AppPricePointRelationshipsTerritory data(AppPricePointRelationshipsTerritoryData data) {
-
 		this.data = data;
 		return this;
 	}
@@ -59,32 +55,16 @@ public class AppPricePointRelationshipsTerritory implements Serializable {
 				&& Objects.equals(this.data, appPricePointRelationshipsTerritory.data);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppPricePointRelationshipsTerritoryData getData() {
 		return this.data;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppCategoryRelationshipsSubcategoriesLinks getLinks() {
 		return this.links;
 	}
@@ -95,7 +75,6 @@ public class AppPricePointRelationshipsTerritory implements Serializable {
 	}
 
 	public AppPricePointRelationshipsTerritory links(AppCategoryRelationshipsSubcategoriesLinks links) {
-
 		this.links = links;
 		return this;
 	}

@@ -42,8 +42,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 		AgeRatingDeclarationAttributes.JSON_PROPERTY_VIOLENCE_REALISTIC })
 public class AgeRatingDeclarationAttributes implements Serializable {
 
-	private static final long serialVersionUID = 8260430488461812443L;
-
 	/**
 	 * Gets or Sets alcoholTobaccoOrDrugUseOrReferences
 	 */
@@ -455,26 +453,28 @@ public class AgeRatingDeclarationAttributes implements Serializable {
 	public static final String JSON_PROPERTY_ALCOHOL_TOBACCO_OR_DRUG_USE_OR_REFERENCES = "alcoholTobaccoOrDrugUseOrReferences";
 
 	public static final String JSON_PROPERTY_GAMBLING_AND_CONTESTS = "gamblingAndContests";
-	public static final String JSON_PROPERTY_GAMBLING_SIMULATED = "gamblingSimulated";
 
+	public static final String JSON_PROPERTY_GAMBLING_SIMULATED = "gamblingSimulated";
 	public static final String JSON_PROPERTY_HORROR_OR_FEAR_THEMES = "horrorOrFearThemes";
 
 	public static final String JSON_PROPERTY_KIDS_AGE_BAND = "kidsAgeBand";
-	public static final String JSON_PROPERTY_MATURE_OR_SUGGESTIVE_THEMES = "matureOrSuggestiveThemes";
 
+	public static final String JSON_PROPERTY_MATURE_OR_SUGGESTIVE_THEMES = "matureOrSuggestiveThemes";
 	public static final String JSON_PROPERTY_MEDICAL_OR_TREATMENT_INFORMATION = "medicalOrTreatmentInformation";
 
 	public static final String JSON_PROPERTY_PROFANITY_OR_CRUDE_HUMOR = "profanityOrCrudeHumor";
-	public static final String JSON_PROPERTY_SEXUAL_CONTENT_GRAPHIC_AND_NUDITY = "sexualContentGraphicAndNudity";
 
+	public static final String JSON_PROPERTY_SEXUAL_CONTENT_GRAPHIC_AND_NUDITY = "sexualContentGraphicAndNudity";
 	public static final String JSON_PROPERTY_SEXUAL_CONTENT_OR_NUDITY = "sexualContentOrNudity";
 
 	public static final String JSON_PROPERTY_UNRESTRICTED_WEB_ACCESS = "unrestrictedWebAccess";
-	public static final String JSON_PROPERTY_VIOLENCE_CARTOON_OR_FANTASY = "violenceCartoonOrFantasy";
 
+	public static final String JSON_PROPERTY_VIOLENCE_CARTOON_OR_FANTASY = "violenceCartoonOrFantasy";
 	public static final String JSON_PROPERTY_VIOLENCE_REALISTIC = "violenceRealistic";
 
 	public static final String JSON_PROPERTY_VIOLENCE_REALISTIC_PROLONGED_GRAPHIC_OR_SADISTIC = "violenceRealisticProlongedGraphicOrSadistic";
+
+	private static final long serialVersionUID = 8260430488461812443L;
 
 	private AlcoholTobaccoOrDrugUseOrReferencesEnum alcoholTobaccoOrDrugUseOrReferences;
 

@@ -29,17 +29,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ AppPriceTierRelationshipsPricePoints.JSON_PROPERTY_LINKS,
 		AppPriceTierRelationshipsPricePoints.JSON_PROPERTY_META,
 		AppPriceTierRelationshipsPricePoints.JSON_PROPERTY_DATA })
-
 public class AppPriceTierRelationshipsPricePoints implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -2290254771278928876L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_LINKS = "links";
+
 	public static final String JSON_PROPERTY_META = "meta";
+	private static final long serialVersionUID = -2290254771278928876L;
 
 	private List<AppPriceTierRelationshipsPricePointsData> data = null;
 
@@ -74,47 +71,23 @@ public class AppPriceTierRelationshipsPricePoints implements Serializable {
 				&& Objects.equals(this.data, appPriceTierRelationshipsPricePoints.data);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public List<AppPriceTierRelationshipsPricePointsData> getData() {
 		return this.data;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppCategoryRelationshipsSubcategoriesLinks getLinks() {
 		return this.links;
 	}
 
-	/**
-	 * Get meta
-	 *
-	 * @return meta
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_META)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public PagingInformation getMeta() {
 		return this.meta;
 	}
@@ -125,13 +98,11 @@ public class AppPriceTierRelationshipsPricePoints implements Serializable {
 	}
 
 	public AppPriceTierRelationshipsPricePoints links(AppCategoryRelationshipsSubcategoriesLinks links) {
-
 		this.links = links;
 		return this;
 	}
 
 	public AppPriceTierRelationshipsPricePoints meta(PagingInformation meta) {
-
 		this.meta = meta;
 		return this;
 	}

@@ -34,11 +34,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 public class PrereleaseVersion implements Serializable, AppResponseIncludedOneOf, AppsResponseIncludedOneOf,
 		BuildResponseIncludedOneOf, BuildsResponseIncludedOneOf {
 	/**
-	 *
-	 */
-	private static final long serialVersionUID = 1647824138989648453L;
-
-	/**
 	 * Gets or Sets type
 	 */
 	public enum TypeEnum {
@@ -74,10 +69,15 @@ public class PrereleaseVersion implements Serializable, AppResponseIncludedOneOf
 	public static final String JSON_PROPERTY_ATTRIBUTES = "attributes";
 
 	public static final String JSON_PROPERTY_ID = "id";
-	public static final String JSON_PROPERTY_LINKS = "links";
 
+	public static final String JSON_PROPERTY_LINKS = "links";
 	public static final String JSON_PROPERTY_RELATIONSHIPS = "relationships";
+
 	public static final String JSON_PROPERTY_TYPE = "type";
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 1647824138989648453L;
 
 	private PrereleaseVersionAttributes attributes;
 

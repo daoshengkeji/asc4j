@@ -32,8 +32,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 public class AgeRatingDeclaration
 		implements Serializable, AppStoreVersionResponseIncludedOneOf, AppStoreVersionsResponseIncludedOneOf {
 
-	private static final long serialVersionUID = 901819902536053295L;
-
 	/**
 	 * Gets or Sets type
 	 */
@@ -70,9 +68,11 @@ public class AgeRatingDeclaration
 	public static final String JSON_PROPERTY_ATTRIBUTES = "attributes";
 
 	public static final String JSON_PROPERTY_ID = "id";
-	public static final String JSON_PROPERTY_LINKS = "links";
 
+	public static final String JSON_PROPERTY_LINKS = "links";
 	public static final String JSON_PROPERTY_TYPE = "type";
+
+	private static final long serialVersionUID = 901819902536053295L;
 
 	private AgeRatingDeclarationAttributes attributes;
 	private String id;

@@ -31,8 +31,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class AppEncryptionDeclarationRelationshipsAppData implements Serializable {
 
-	private static final long serialVersionUID = 6766564190288574882L;
-
 	/**
 	 * Gets or Sets type
 	 */
@@ -70,11 +68,13 @@ public class AppEncryptionDeclarationRelationshipsAppData implements Serializabl
 
 	public static final String JSON_PROPERTY_TYPE = "type";
 
+	private static final long serialVersionUID = 6766564190288574882L;
+
 	private String id;
 	private TypeEnum type;
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#equals(java.lang.Object)
@@ -107,7 +107,7 @@ public class AppEncryptionDeclarationRelationshipsAppData implements Serializabl
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#hashCode()
@@ -142,7 +142,7 @@ public class AppEncryptionDeclarationRelationshipsAppData implements Serializabl
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#toString()

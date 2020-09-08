@@ -27,17 +27,17 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 public class AppCategoryRelationshipsSubcategoriesLinks implements Serializable {
 
-	private static final long serialVersionUID = 972900666632679941L;
-
 	public static final String JSON_PROPERTY_RELATED = "related";
 
 	public static final String JSON_PROPERTY_SELF = "self";
+
+	private static final long serialVersionUID = 972900666632679941L;
 
 	private String related;
 	private String self;
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#equals(java.lang.Object)
@@ -68,7 +68,7 @@ public class AppCategoryRelationshipsSubcategoriesLinks implements Serializable 
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#hashCode()
@@ -108,7 +108,7 @@ public class AppCategoryRelationshipsSubcategoriesLinks implements Serializable 
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#toString()

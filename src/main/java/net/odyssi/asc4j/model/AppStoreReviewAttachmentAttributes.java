@@ -33,18 +33,18 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		AppStoreReviewAttachmentAttributes.JSON_PROPERTY_ASSET_DELIVERY_STATE })
 
 public class AppStoreReviewAttachmentAttributes implements Serializable {
+	public static final String JSON_PROPERTY_ASSET_DELIVERY_STATE = "assetDeliveryState";
+
+	public static final String JSON_PROPERTY_FILE_NAME = "fileName";
+
+	public static final String JSON_PROPERTY_FILE_SIZE = "fileSize";
+	public static final String JSON_PROPERTY_SOURCE_FILE_CHECKSUM = "sourceFileChecksum";
+
+	public static final String JSON_PROPERTY_UPLOAD_OPERATIONS = "uploadOperations";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -309973818771062204L;
-
-	public static final String JSON_PROPERTY_ASSET_DELIVERY_STATE = "assetDeliveryState";
-
-	public static final String JSON_PROPERTY_FILE_NAME = "fileName";
-	public static final String JSON_PROPERTY_FILE_SIZE = "fileSize";
-
-	public static final String JSON_PROPERTY_SOURCE_FILE_CHECKSUM = "sourceFileChecksum";
-	public static final String JSON_PROPERTY_UPLOAD_OPERATIONS = "uploadOperations";
 
 	private AppMediaAssetState assetDeliveryState;
 

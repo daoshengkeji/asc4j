@@ -32,20 +32,20 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		AppInfoRelationships.JSON_PROPERTY_SECONDARY_SUBCATEGORY_TWO })
 public class AppInfoRelationships implements Serializable {
 
-	private static final long serialVersionUID = -6071001179156268419L;
-
 	public static final String JSON_PROPERTY_APP = "app";
 
 	public static final String JSON_PROPERTY_APP_INFO_LOCALIZATIONS = "appInfoLocalizations";
+
 	public static final String JSON_PROPERTY_PRIMARY_CATEGORY = "primaryCategory";
-
 	public static final String JSON_PROPERTY_PRIMARY_SUBCATEGORY_ONE = "primarySubcategoryOne";
+
 	public static final String JSON_PROPERTY_PRIMARY_SUBCATEGORY_TWO = "primarySubcategoryTwo";
-
 	public static final String JSON_PROPERTY_SECONDARY_CATEGORY = "secondaryCategory";
-	public static final String JSON_PROPERTY_SECONDARY_SUBCATEGORY_ONE = "secondarySubcategoryOne";
 
+	public static final String JSON_PROPERTY_SECONDARY_SUBCATEGORY_ONE = "secondarySubcategoryOne";
 	public static final String JSON_PROPERTY_SECONDARY_SUBCATEGORY_TWO = "secondarySubcategoryTwo";
+
+	private static final long serialVersionUID = -6071001179156268419L;
 
 	private AppEncryptionDeclarationRelationshipsApp app;
 	private AppInfoRelationshipsAppInfoLocalizations appInfoLocalizations;

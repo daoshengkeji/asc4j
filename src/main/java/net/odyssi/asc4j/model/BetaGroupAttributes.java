@@ -32,24 +32,24 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		BetaGroupAttributes.JSON_PROPERTY_FEEDBACK_ENABLED })
 
 public class BetaGroupAttributes implements Serializable {
+	public static final String JSON_PROPERTY_CREATED_DATE = "createdDate";
+
+	public static final String JSON_PROPERTY_FEEDBACK_ENABLED = "feedbackEnabled";
+
+	public static final String JSON_PROPERTY_IS_INTERNAL_GROUP = "isInternalGroup";
+	public static final String JSON_PROPERTY_NAME = "name";
+
+	public static final String JSON_PROPERTY_PUBLIC_LINK = "publicLink";
+	public static final String JSON_PROPERTY_PUBLIC_LINK_ENABLED = "publicLinkEnabled";
+
+	public static final String JSON_PROPERTY_PUBLIC_LINK_ID = "publicLinkId";
+	public static final String JSON_PROPERTY_PUBLIC_LINK_LIMIT = "publicLinkLimit";
+
+	public static final String JSON_PROPERTY_PUBLIC_LINK_LIMIT_ENABLED = "publicLinkLimitEnabled";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -3710966910197312368L;
-
-	public static final String JSON_PROPERTY_CREATED_DATE = "createdDate";
-
-	public static final String JSON_PROPERTY_FEEDBACK_ENABLED = "feedbackEnabled";
-	public static final String JSON_PROPERTY_IS_INTERNAL_GROUP = "isInternalGroup";
-
-	public static final String JSON_PROPERTY_NAME = "name";
-	public static final String JSON_PROPERTY_PUBLIC_LINK = "publicLink";
-
-	public static final String JSON_PROPERTY_PUBLIC_LINK_ENABLED = "publicLinkEnabled";
-	public static final String JSON_PROPERTY_PUBLIC_LINK_ID = "publicLinkId";
-
-	public static final String JSON_PROPERTY_PUBLIC_LINK_LIMIT = "publicLinkLimit";
-	public static final String JSON_PROPERTY_PUBLIC_LINK_LIMIT_ENABLED = "publicLinkLimitEnabled";
 
 	private OffsetDateTime createdDate;
 

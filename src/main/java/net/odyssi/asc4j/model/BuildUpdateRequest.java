@@ -28,12 +28,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ BuildUpdateRequest.JSON_PROPERTY_DATA })
 
 public class BuildUpdateRequest implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -5487376472906050627L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
 
 	private BuildUpdateRequestData data;
 

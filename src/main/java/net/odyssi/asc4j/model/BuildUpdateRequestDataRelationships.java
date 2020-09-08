@@ -27,12 +27,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ BuildUpdateRequestDataRelationships.JSON_PROPERTY_APP_ENCRYPTION_DECLARATION })
 
 public class BuildUpdateRequestDataRelationships implements Serializable {
+	public static final String JSON_PROPERTY_APP_ENCRYPTION_DECLARATION = "appEncryptionDeclaration";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 4007859527271830662L;
-
-	public static final String JSON_PROPERTY_APP_ENCRYPTION_DECLARATION = "appEncryptionDeclaration";
 
 	private BuildUpdateRequestDataRelationshipsAppEncryptionDeclaration appEncryptionDeclaration;
 

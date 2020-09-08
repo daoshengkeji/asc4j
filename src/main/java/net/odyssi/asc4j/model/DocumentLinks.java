@@ -27,12 +27,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ DocumentLinks.JSON_PROPERTY_SELF })
 
 public class DocumentLinks implements Serializable {
+	public static final String JSON_PROPERTY_SELF = "self";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 7327841040288327065L;
-
-	public static final String JSON_PROPERTY_SELF = "self";
 
 	private String self;
 

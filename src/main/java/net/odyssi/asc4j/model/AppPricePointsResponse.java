@@ -29,19 +29,16 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonPropertyOrder({ AppPricePointsResponse.JSON_PROPERTY_DATA, AppPricePointsResponse.JSON_PROPERTY_INCLUDED,
 		AppPricePointsResponse.JSON_PROPERTY_LINKS, AppPricePointsResponse.JSON_PROPERTY_META })
-
 public class AppPricePointsResponse implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 446879221795527781L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_INCLUDED = "included";
-	public static final String JSON_PROPERTY_LINKS = "links";
 
+	public static final String JSON_PROPERTY_LINKS = "links";
 	public static final String JSON_PROPERTY_META = "meta";
+
+	private static final long serialVersionUID = 446879221795527781L;
 
 	private List<AppPricePoint> data = new ArrayList<>();
 	private List<Territory> included = null;
@@ -63,7 +60,6 @@ public class AppPricePointsResponse implements Serializable {
 	}
 
 	public AppPricePointsResponse data(List<AppPricePoint> data) {
-
 		this.data = data;
 		return this;
 	}
@@ -83,62 +79,32 @@ public class AppPricePointsResponse implements Serializable {
 				&& Objects.equals(this.meta, appPricePointsResponse.meta);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public List<AppPricePoint> getData() {
 		return this.data;
 	}
 
-	/**
-	 * Get included
-	 *
-	 * @return included
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_INCLUDED)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public List<Territory> getIncluded() {
 		return this.included;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public PagedDocumentLinks getLinks() {
 		return this.links;
 	}
 
-	/**
-	 * Get meta
-	 *
-	 * @return meta
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_META)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public PagingInformation getMeta() {
 		return this.meta;
 	}
@@ -149,19 +115,16 @@ public class AppPricePointsResponse implements Serializable {
 	}
 
 	public AppPricePointsResponse included(List<Territory> included) {
-
 		this.included = included;
 		return this;
 	}
 
 	public AppPricePointsResponse links(PagedDocumentLinks links) {
-
 		this.links = links;
 		return this;
 	}
 
 	public AppPricePointsResponse meta(PagingInformation meta) {
-
 		this.meta = meta;
 		return this;
 	}

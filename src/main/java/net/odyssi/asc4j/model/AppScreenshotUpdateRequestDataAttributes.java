@@ -24,16 +24,13 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonPropertyOrder({ AppScreenshotUpdateRequestDataAttributes.JSON_PROPERTY_SOURCE_FILE_CHECKSUM,
 		AppScreenshotUpdateRequestDataAttributes.JSON_PROPERTY_UPLOADED })
-
 public class AppScreenshotUpdateRequestDataAttributes implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -3572073330529904278L;
 
 	public static final String JSON_PROPERTY_SOURCE_FILE_CHECKSUM = "sourceFileChecksum";
 
 	public static final String JSON_PROPERTY_UPLOADED = "uploaded";
+
+	private static final long serialVersionUID = -3572073330529904278L;
 
 	private String sourceFileChecksum;
 	private Boolean uploaded;
@@ -51,28 +48,14 @@ public class AppScreenshotUpdateRequestDataAttributes implements Serializable {
 				&& Objects.equals(this.uploaded, appScreenshotUpdateRequestDataAttributes.uploaded);
 	}
 
-	/**
-	 * Get sourceFileChecksum
-	 *
-	 * @return sourceFileChecksum
-	 **/
-
 	@JsonProperty(JSON_PROPERTY_SOURCE_FILE_CHECKSUM)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public String getSourceFileChecksum() {
 		return this.sourceFileChecksum;
 	}
 
-	/**
-	 * Get uploaded
-	 *
-	 * @return uploaded
-	 **/
-
 	@JsonProperty(JSON_PROPERTY_UPLOADED)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public Boolean getUploaded() {
 		return this.uploaded;
 	}
@@ -91,7 +74,6 @@ public class AppScreenshotUpdateRequestDataAttributes implements Serializable {
 	}
 
 	public AppScreenshotUpdateRequestDataAttributes sourceFileChecksum(String sourceFileChecksum) {
-
 		this.sourceFileChecksum = sourceFileChecksum;
 		return this;
 	}
@@ -118,7 +100,6 @@ public class AppScreenshotUpdateRequestDataAttributes implements Serializable {
 	}
 
 	public AppScreenshotUpdateRequestDataAttributes uploaded(Boolean uploaded) {
-
 		this.uploaded = uploaded;
 		return this;
 	}

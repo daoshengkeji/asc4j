@@ -25,11 +25,11 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ AppMediaStateError.JSON_PROPERTY_CODE, AppMediaStateError.JSON_PROPERTY_DESCRIPTION })
 public class AppMediaStateError implements Serializable {
 
-	private static final long serialVersionUID = 5693810990849362426L;
-
 	public static final String JSON_PROPERTY_CODE = "code";
 
 	public static final String JSON_PROPERTY_DESCRIPTION = "description";
+
+	private static final long serialVersionUID = 5693810990849362426L;
 
 	private String code;
 	private String description;

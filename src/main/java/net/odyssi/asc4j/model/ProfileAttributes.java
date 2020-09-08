@@ -34,11 +34,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class ProfileAttributes implements Serializable {
 	/**
-	 *
-	 */
-	private static final long serialVersionUID = -2034451748270397771L;
-
-	/**
 	 * Gets or Sets profileState
 	 */
 	public enum ProfileStateEnum {
@@ -135,16 +130,21 @@ public class ProfileAttributes implements Serializable {
 	public static final String JSON_PROPERTY_CREATED_DATE = "createdDate";
 
 	public static final String JSON_PROPERTY_EXPIRATION_DATE = "expirationDate";
-	public static final String JSON_PROPERTY_NAME = "name";
 
+	public static final String JSON_PROPERTY_NAME = "name";
 	public static final String JSON_PROPERTY_PLATFORM = "platform";
 
 	public static final String JSON_PROPERTY_PROFILE_CONTENT = "profileContent";
-	public static final String JSON_PROPERTY_PROFILE_STATE = "profileState";
 
+	public static final String JSON_PROPERTY_PROFILE_STATE = "profileState";
 	public static final String JSON_PROPERTY_PROFILE_TYPE = "profileType";
 
 	public static final String JSON_PROPERTY_UUID = "uuid";
+
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = -2034451748270397771L;
 
 	private OffsetDateTime createdDate;
 	private OffsetDateTime expirationDate;

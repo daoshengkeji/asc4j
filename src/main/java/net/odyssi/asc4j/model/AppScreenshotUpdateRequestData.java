@@ -29,12 +29,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
  */
 @JsonPropertyOrder({ AppScreenshotUpdateRequestData.JSON_PROPERTY_TYPE, AppScreenshotUpdateRequestData.JSON_PROPERTY_ID,
 		AppScreenshotUpdateRequestData.JSON_PROPERTY_ATTRIBUTES })
-
 public class AppScreenshotUpdateRequestData implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 796628268270391044L;
 
 	/**
 	 * Gets or Sets type
@@ -72,7 +67,9 @@ public class AppScreenshotUpdateRequestData implements Serializable {
 	public static final String JSON_PROPERTY_ATTRIBUTES = "attributes";
 
 	public static final String JSON_PROPERTY_ID = "id";
+
 	public static final String JSON_PROPERTY_TYPE = "type";
+	private static final long serialVersionUID = 796628268270391044L;
 
 	private AppScreenshotUpdateRequestDataAttributes attributes;
 
@@ -99,45 +96,23 @@ public class AppScreenshotUpdateRequestData implements Serializable {
 				&& Objects.equals(this.attributes, appScreenshotUpdateRequestData.attributes);
 	}
 
-	/**
-	 * Get attributes
-	 *
-	 * @return attributes
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_ATTRIBUTES)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppScreenshotUpdateRequestDataAttributes getAttributes() {
 		return this.attributes;
 	}
 
-	/**
-	 * Get id
-	 *
-	 * @return id
-	 **/
 	@NotNull
-
 	@JsonProperty(JSON_PROPERTY_ID)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public String getId() {
 		return this.id;
 	}
 
-	/**
-	 * Get type
-	 *
-	 * @return type
-	 **/
 	@NotNull
-
 	@JsonProperty(JSON_PROPERTY_TYPE)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public TypeEnum getType() {
 		return this.type;
 	}
@@ -148,7 +123,6 @@ public class AppScreenshotUpdateRequestData implements Serializable {
 	}
 
 	public AppScreenshotUpdateRequestData id(String id) {
-
 		this.id = id;
 		return this;
 	}
@@ -188,7 +162,6 @@ public class AppScreenshotUpdateRequestData implements Serializable {
 	}
 
 	public AppScreenshotUpdateRequestData type(TypeEnum type) {
-
 		this.type = type;
 		return this;
 	}

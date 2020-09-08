@@ -40,26 +40,26 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 public class AppEncryptionDeclarationAttributes implements Serializable {
 
-	private static final long serialVersionUID = 6252845937198814248L;
-
 	public static final String JSON_PROPERTY_APP_ENCRYPTION_DECLARATION_STATE = "appEncryptionDeclarationState";
 
 	public static final String JSON_PROPERTY_AVAILABLE_ON_FRENCH_STORE = "availableOnFrenchStore";
+
 	public static final String JSON_PROPERTY_CODE_VALUE = "codeValue";
-
 	public static final String JSON_PROPERTY_CONTAINS_PROPRIETARY_CRYPTOGRAPHY = "containsProprietaryCryptography";
+
 	public static final String JSON_PROPERTY_CONTAINS_THIRD_PARTY_CRYPTOGRAPHY = "containsThirdPartyCryptography";
-
 	public static final String JSON_PROPERTY_DOCUMENT_NAME = "documentName";
+
 	public static final String JSON_PROPERTY_DOCUMENT_TYPE = "documentType";
-
 	public static final String JSON_PROPERTY_DOCUMENT_URL = "documentUrl";
+
 	public static final String JSON_PROPERTY_EXEMPT = "exempt";
-
 	public static final String JSON_PROPERTY_PLATFORM = "platform";
-	public static final String JSON_PROPERTY_UPLOADED_DATE = "uploadedDate";
 
+	public static final String JSON_PROPERTY_UPLOADED_DATE = "uploadedDate";
 	public static final String JSON_PROPERTY_USES_ENCRYPTION = "usesEncryption";
+
+	private static final long serialVersionUID = 6252845937198814248L;
 
 	private AppEncryptionDeclarationState appEncryptionDeclarationState;
 	private Boolean availableOnFrenchStore;
@@ -121,7 +121,7 @@ public class AppEncryptionDeclarationAttributes implements Serializable {
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#equals(java.lang.Object)
@@ -234,7 +234,7 @@ public class AppEncryptionDeclarationAttributes implements Serializable {
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#hashCode()
@@ -312,7 +312,7 @@ public class AppEncryptionDeclarationAttributes implements Serializable {
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#toString()

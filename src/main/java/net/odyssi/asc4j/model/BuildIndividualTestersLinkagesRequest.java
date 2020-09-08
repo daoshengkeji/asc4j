@@ -30,12 +30,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ BuildIndividualTestersLinkagesRequest.JSON_PROPERTY_DATA })
 
 public class BuildIndividualTestersLinkagesRequest implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 6284322577125390187L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
 
 	private List<BetaGroupRelationshipsBetaTestersData> data = new ArrayList<>();
 

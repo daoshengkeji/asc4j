@@ -32,11 +32,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class DiagnosticSignatureAttributes implements Serializable {
 	/**
-	 *
-	 */
-	private static final long serialVersionUID = -7309345026103160584L;
-
-	/**
 	 * Gets or Sets diagnosticType
 	 */
 	public enum DiagnosticTypeEnum {
@@ -72,7 +67,12 @@ public class DiagnosticSignatureAttributes implements Serializable {
 	public static final String JSON_PROPERTY_DIAGNOSTIC_TYPE = "diagnosticType";
 
 	public static final String JSON_PROPERTY_SIGNATURE = "signature";
+
 	public static final String JSON_PROPERTY_WEIGHT = "weight";
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = -7309345026103160584L;
 
 	private DiagnosticTypeEnum diagnosticType;
 

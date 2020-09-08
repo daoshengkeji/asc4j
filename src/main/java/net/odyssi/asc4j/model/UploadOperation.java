@@ -31,18 +31,18 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		UploadOperation.JSON_PROPERTY_REQUEST_HEADERS })
 
 public class UploadOperation implements Serializable {
+	public static final String JSON_PROPERTY_LENGTH = "length";
+
+	public static final String JSON_PROPERTY_METHOD = "method";
+
+	public static final String JSON_PROPERTY_OFFSET = "offset";
+	public static final String JSON_PROPERTY_REQUEST_HEADERS = "requestHeaders";
+
+	public static final String JSON_PROPERTY_URL = "url";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -6074884943928400641L;
-
-	public static final String JSON_PROPERTY_LENGTH = "length";
-
-	public static final String JSON_PROPERTY_METHOD = "method";
-	public static final String JSON_PROPERTY_OFFSET = "offset";
-
-	public static final String JSON_PROPERTY_REQUEST_HEADERS = "requestHeaders";
-	public static final String JSON_PROPERTY_URL = "url";
 
 	private Integer length;
 

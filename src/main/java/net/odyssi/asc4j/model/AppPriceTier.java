@@ -29,12 +29,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
  */
 @JsonPropertyOrder({ AppPriceTier.JSON_PROPERTY_TYPE, AppPriceTier.JSON_PROPERTY_ID,
 		AppPriceTier.JSON_PROPERTY_RELATIONSHIPS, AppPriceTier.JSON_PROPERTY_LINKS })
-
 public class AppPriceTier implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 3746376884542085366L;
 
 	/**
 	 * Gets or Sets type
@@ -72,9 +67,11 @@ public class AppPriceTier implements Serializable {
 	public static final String JSON_PROPERTY_ID = "id";
 
 	public static final String JSON_PROPERTY_LINKS = "links";
-	public static final String JSON_PROPERTY_RELATIONSHIPS = "relationships";
 
+	public static final String JSON_PROPERTY_RELATIONSHIPS = "relationships";
 	public static final String JSON_PROPERTY_TYPE = "type";
+
+	private static final long serialVersionUID = 3746376884542085366L;
 
 	private String id;
 	private ResourceLinks links;
@@ -96,60 +93,31 @@ public class AppPriceTier implements Serializable {
 				&& Objects.equals(this.links, appPriceTier.links);
 	}
 
-	/**
-	 * Get id
-	 *
-	 * @return id
-	 **/
 	@NotNull
-
 	@JsonProperty(JSON_PROPERTY_ID)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public String getId() {
 		return this.id;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public ResourceLinks getLinks() {
 		return this.links;
 	}
 
-	/**
-	 * Get relationships
-	 *
-	 * @return relationships
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_RELATIONSHIPS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppPriceTierRelationships getRelationships() {
 		return this.relationships;
 	}
 
-	/**
-	 * Get type
-	 *
-	 * @return type
-	 **/
 	@NotNull
-
 	@JsonProperty(JSON_PROPERTY_TYPE)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public TypeEnum getType() {
 		return this.type;
 	}
@@ -160,19 +128,16 @@ public class AppPriceTier implements Serializable {
 	}
 
 	public AppPriceTier id(String id) {
-
 		this.id = id;
 		return this;
 	}
 
 	public AppPriceTier links(ResourceLinks links) {
-
 		this.links = links;
 		return this;
 	}
 
 	public AppPriceTier relationships(AppPriceTierRelationships relationships) {
-
 		this.relationships = relationships;
 		return this;
 	}
@@ -217,7 +182,6 @@ public class AppPriceTier implements Serializable {
 	}
 
 	public AppPriceTier type(TypeEnum type) {
-
 		this.type = type;
 		return this;
 	}

@@ -28,14 +28,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ InAppPurchaseResponse.JSON_PROPERTY_DATA, InAppPurchaseResponse.JSON_PROPERTY_LINKS })
 
 public class InAppPurchaseResponse implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
+	public static final String JSON_PROPERTY_LINKS = "links";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -932017835597445019L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
-
-	public static final String JSON_PROPERTY_LINKS = "links";
 
 	private InAppPurchase data;
 	private DocumentLinks links;

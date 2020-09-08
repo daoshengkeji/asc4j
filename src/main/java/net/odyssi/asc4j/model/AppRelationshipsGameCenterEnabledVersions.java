@@ -29,17 +29,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ AppRelationshipsGameCenterEnabledVersions.JSON_PROPERTY_LINKS,
 		AppRelationshipsGameCenterEnabledVersions.JSON_PROPERTY_META,
 		AppRelationshipsGameCenterEnabledVersions.JSON_PROPERTY_DATA })
-
 public class AppRelationshipsGameCenterEnabledVersions implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 8659522685513980185L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_LINKS = "links";
+
 	public static final String JSON_PROPERTY_META = "meta";
+	private static final long serialVersionUID = 8659522685513980185L;
 
 	private List<AppRelationshipsGameCenterEnabledVersionsData> data = null;
 
@@ -56,7 +53,6 @@ public class AppRelationshipsGameCenterEnabledVersions implements Serializable {
 	}
 
 	public AppRelationshipsGameCenterEnabledVersions data(List<AppRelationshipsGameCenterEnabledVersionsData> data) {
-
 		this.data = data;
 		return this;
 	}
@@ -75,47 +71,23 @@ public class AppRelationshipsGameCenterEnabledVersions implements Serializable {
 				&& Objects.equals(this.data, appRelationshipsGameCenterEnabledVersions.data);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public List<AppRelationshipsGameCenterEnabledVersionsData> getData() {
 		return this.data;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppCategoryRelationshipsSubcategoriesLinks getLinks() {
 		return this.links;
 	}
 
-	/**
-	 * Get meta
-	 *
-	 * @return meta
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_META)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public PagingInformation getMeta() {
 		return this.meta;
 	}
@@ -126,13 +98,11 @@ public class AppRelationshipsGameCenterEnabledVersions implements Serializable {
 	}
 
 	public AppRelationshipsGameCenterEnabledVersions links(AppCategoryRelationshipsSubcategoriesLinks links) {
-
 		this.links = links;
 		return this;
 	}
 
 	public AppRelationshipsGameCenterEnabledVersions meta(PagingInformation meta) {
-
 		this.meta = meta;
 		return this;
 	}

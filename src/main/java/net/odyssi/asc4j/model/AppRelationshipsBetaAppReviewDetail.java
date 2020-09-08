@@ -26,22 +26,18 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonPropertyOrder({ AppRelationshipsBetaAppReviewDetail.JSON_PROPERTY_LINKS,
 		AppRelationshipsBetaAppReviewDetail.JSON_PROPERTY_DATA })
-
 public class AppRelationshipsBetaAppReviewDetail implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -4691186177947164465L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_LINKS = "links";
 
+	private static final long serialVersionUID = -4691186177947164465L;
+
 	private AppRelationshipsBetaAppReviewDetailData data;
 	private AppCategoryRelationshipsSubcategoriesLinks links;
 
 	public AppRelationshipsBetaAppReviewDetail data(AppRelationshipsBetaAppReviewDetailData data) {
-
 		this.data = data;
 		return this;
 	}
@@ -59,32 +55,16 @@ public class AppRelationshipsBetaAppReviewDetail implements Serializable {
 				&& Objects.equals(this.data, appRelationshipsBetaAppReviewDetail.data);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppRelationshipsBetaAppReviewDetailData getData() {
 		return this.data;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppCategoryRelationshipsSubcategoriesLinks getLinks() {
 		return this.links;
 	}
@@ -95,7 +75,6 @@ public class AppRelationshipsBetaAppReviewDetail implements Serializable {
 	}
 
 	public AppRelationshipsBetaAppReviewDetail links(AppCategoryRelationshipsSubcategoriesLinks links) {
-
 		this.links = links;
 		return this;
 	}

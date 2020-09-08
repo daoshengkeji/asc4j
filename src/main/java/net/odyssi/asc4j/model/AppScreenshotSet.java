@@ -30,13 +30,8 @@ import com.fasterxml.jackson.annotation.JsonValue;
 @JsonPropertyOrder({ AppScreenshotSet.JSON_PROPERTY_TYPE, AppScreenshotSet.JSON_PROPERTY_ID,
 		AppScreenshotSet.JSON_PROPERTY_ATTRIBUTES, AppScreenshotSet.JSON_PROPERTY_RELATIONSHIPS,
 		AppScreenshotSet.JSON_PROPERTY_LINKS })
-
 public class AppScreenshotSet implements Serializable, AppStoreVersionLocalizationResponseIncludedOneOf,
 		AppStoreVersionLocalizationsResponseIncludedOneOf {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -2690028027456887477L;
 
 	/**
 	 * Gets or Sets type
@@ -74,10 +69,12 @@ public class AppScreenshotSet implements Serializable, AppStoreVersionLocalizati
 	public static final String JSON_PROPERTY_ATTRIBUTES = "attributes";
 
 	public static final String JSON_PROPERTY_ID = "id";
-	public static final String JSON_PROPERTY_LINKS = "links";
 
+	public static final String JSON_PROPERTY_LINKS = "links";
 	public static final String JSON_PROPERTY_RELATIONSHIPS = "relationships";
+
 	public static final String JSON_PROPERTY_TYPE = "type";
+	private static final long serialVersionUID = -2690028027456887477L;
 
 	private AppScreenshotSetAttributes attributes;
 
@@ -88,7 +85,6 @@ public class AppScreenshotSet implements Serializable, AppStoreVersionLocalizati
 	private TypeEnum type;
 
 	public AppScreenshotSet attributes(AppScreenshotSetAttributes attributes) {
-
 		this.attributes = attributes;
 		return this;
 	}
@@ -108,75 +104,38 @@ public class AppScreenshotSet implements Serializable, AppStoreVersionLocalizati
 				&& Objects.equals(this.links, appScreenshotSet.links);
 	}
 
-	/**
-	 * Get attributes
-	 *
-	 * @return attributes
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_ATTRIBUTES)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppScreenshotSetAttributes getAttributes() {
 		return this.attributes;
 	}
 
-	/**
-	 * Get id
-	 *
-	 * @return id
-	 **/
 	@NotNull
-
 	@JsonProperty(JSON_PROPERTY_ID)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public String getId() {
 		return this.id;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public ResourceLinks getLinks() {
 		return this.links;
 	}
 
-	/**
-	 * Get relationships
-	 *
-	 * @return relationships
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_RELATIONSHIPS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppScreenshotSetRelationships getRelationships() {
 		return this.relationships;
 	}
 
-	/**
-	 * Get type
-	 *
-	 * @return type
-	 **/
 	@NotNull
-
 	@JsonProperty(JSON_PROPERTY_TYPE)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public TypeEnum getType() {
 		return this.type;
 	}
@@ -187,19 +146,16 @@ public class AppScreenshotSet implements Serializable, AppStoreVersionLocalizati
 	}
 
 	public AppScreenshotSet id(String id) {
-
 		this.id = id;
 		return this;
 	}
 
 	public AppScreenshotSet links(ResourceLinks links) {
-
 		this.links = links;
 		return this;
 	}
 
 	public AppScreenshotSet relationships(AppScreenshotSetRelationships relationships) {
-
 		this.relationships = relationships;
 		return this;
 	}
@@ -249,7 +205,6 @@ public class AppScreenshotSet implements Serializable, AppStoreVersionLocalizati
 	}
 
 	public AppScreenshotSet type(TypeEnum type) {
-
 		this.type = type;
 		return this;
 	}

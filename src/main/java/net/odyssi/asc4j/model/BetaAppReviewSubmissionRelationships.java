@@ -27,12 +27,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ BetaAppReviewSubmissionRelationships.JSON_PROPERTY_BUILD })
 
 public class BetaAppReviewSubmissionRelationships implements Serializable {
+	public static final String JSON_PROPERTY_BUILD = "build";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -5967473912983158310L;
-
-	public static final String JSON_PROPERTY_BUILD = "build";
 
 	private AppStoreVersionRelationshipsBuild build;
 

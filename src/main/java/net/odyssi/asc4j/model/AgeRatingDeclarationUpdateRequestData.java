@@ -32,8 +32,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 		AgeRatingDeclarationUpdateRequestData.JSON_PROPERTY_ATTRIBUTES })
 public class AgeRatingDeclarationUpdateRequestData implements Serializable {
 
-	private static final long serialVersionUID = 6533934864206041533L;
-
 	/**
 	 * Gets or Sets type
 	 */
@@ -70,7 +68,9 @@ public class AgeRatingDeclarationUpdateRequestData implements Serializable {
 	public static final String JSON_PROPERTY_ATTRIBUTES = "attributes";
 
 	public static final String JSON_PROPERTY_ID = "id";
+
 	public static final String JSON_PROPERTY_TYPE = "type";
+	private static final long serialVersionUID = 6533934864206041533L;
 
 	private AgeRatingDeclarationAttributes attributes;
 

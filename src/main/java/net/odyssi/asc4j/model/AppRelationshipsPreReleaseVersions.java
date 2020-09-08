@@ -28,17 +28,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonPropertyOrder({ AppRelationshipsPreReleaseVersions.JSON_PROPERTY_LINKS,
 		AppRelationshipsPreReleaseVersions.JSON_PROPERTY_META, AppRelationshipsPreReleaseVersions.JSON_PROPERTY_DATA })
-
 public class AppRelationshipsPreReleaseVersions implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -444025999630835173L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_LINKS = "links";
+
 	public static final String JSON_PROPERTY_META = "meta";
+	private static final long serialVersionUID = -444025999630835173L;
 
 	private List<AppRelationshipsPreReleaseVersionsData> data = null;
 
@@ -54,7 +51,6 @@ public class AppRelationshipsPreReleaseVersions implements Serializable {
 	}
 
 	public AppRelationshipsPreReleaseVersions data(List<AppRelationshipsPreReleaseVersionsData> data) {
-
 		this.data = data;
 		return this;
 	}
@@ -73,47 +69,23 @@ public class AppRelationshipsPreReleaseVersions implements Serializable {
 				&& Objects.equals(this.data, appRelationshipsPreReleaseVersions.data);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public List<AppRelationshipsPreReleaseVersionsData> getData() {
 		return this.data;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppCategoryRelationshipsSubcategoriesLinks getLinks() {
 		return this.links;
 	}
 
-	/**
-	 * Get meta
-	 *
-	 * @return meta
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_META)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public PagingInformation getMeta() {
 		return this.meta;
 	}
@@ -124,13 +96,11 @@ public class AppRelationshipsPreReleaseVersions implements Serializable {
 	}
 
 	public AppRelationshipsPreReleaseVersions links(AppCategoryRelationshipsSubcategoriesLinks links) {
-
 		this.links = links;
 		return this;
 	}
 
 	public AppRelationshipsPreReleaseVersions meta(PagingInformation meta) {
-
 		this.meta = meta;
 		return this;
 	}

@@ -25,14 +25,11 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  * AppScreenshotRelationships
  */
 @JsonPropertyOrder({ AppScreenshotRelationships.JSON_PROPERTY_APP_SCREENSHOT_SET })
-
 public class AppScreenshotRelationships implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 1734945510462894333L;
 
 	public static final String JSON_PROPERTY_APP_SCREENSHOT_SET = "appScreenshotSet";
+
+	private static final long serialVersionUID = 1734945510462894333L;
 
 	private AppScreenshotRelationshipsAppScreenshotSet appScreenshotSet;
 
@@ -54,17 +51,9 @@ public class AppScreenshotRelationships implements Serializable {
 		return Objects.equals(this.appScreenshotSet, appScreenshotRelationships.appScreenshotSet);
 	}
 
-	/**
-	 * Get appScreenshotSet
-	 *
-	 * @return appScreenshotSet
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_APP_SCREENSHOT_SET)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppScreenshotRelationshipsAppScreenshotSet getAppScreenshotSet() {
 		return this.appScreenshotSet;
 	}

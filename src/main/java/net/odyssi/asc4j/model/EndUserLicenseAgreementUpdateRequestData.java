@@ -34,11 +34,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class EndUserLicenseAgreementUpdateRequestData implements Serializable {
 	/**
-	 *
-	 */
-	private static final long serialVersionUID = -3973408929729482513L;
-
-	/**
 	 * Gets or Sets type
 	 */
 	public enum TypeEnum {
@@ -74,9 +69,14 @@ public class EndUserLicenseAgreementUpdateRequestData implements Serializable {
 	public static final String JSON_PROPERTY_ATTRIBUTES = "attributes";
 
 	public static final String JSON_PROPERTY_ID = "id";
-	public static final String JSON_PROPERTY_RELATIONSHIPS = "relationships";
 
+	public static final String JSON_PROPERTY_RELATIONSHIPS = "relationships";
 	public static final String JSON_PROPERTY_TYPE = "type";
+
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = -3973408929729482513L;
 
 	private BetaLicenseAgreementAttributes attributes;
 	private String id;

@@ -29,11 +29,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class DeviceUpdateRequestDataAttributes implements Serializable {
 	/**
-	 *
-	 */
-	private static final long serialVersionUID = 5479664692083483911L;
-
-	/**
 	 * Gets or Sets status
 	 */
 	public enum StatusEnum {
@@ -69,7 +64,12 @@ public class DeviceUpdateRequestDataAttributes implements Serializable {
 	}
 
 	public static final String JSON_PROPERTY_NAME = "name";
+
 	public static final String JSON_PROPERTY_STATUS = "status";
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 5479664692083483911L;
 
 	private String name;
 	private StatusEnum status;

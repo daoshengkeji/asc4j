@@ -26,16 +26,13 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonPropertyOrder({ AppRelationshipsEndUserLicenseAgreement.JSON_PROPERTY_LINKS,
 		AppRelationshipsEndUserLicenseAgreement.JSON_PROPERTY_DATA })
-
 public class AppRelationshipsEndUserLicenseAgreement implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 2180733131099143752L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_LINKS = "links";
+
+	private static final long serialVersionUID = 2180733131099143752L;
 
 	private AppRelationshipsEndUserLicenseAgreementData data;
 	private AppCategoryRelationshipsSubcategoriesLinks links;
@@ -59,32 +56,16 @@ public class AppRelationshipsEndUserLicenseAgreement implements Serializable {
 				&& Objects.equals(this.data, appRelationshipsEndUserLicenseAgreement.data);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppRelationshipsEndUserLicenseAgreementData getData() {
 		return this.data;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppCategoryRelationshipsSubcategoriesLinks getLinks() {
 		return this.links;
 	}
@@ -95,7 +76,6 @@ public class AppRelationshipsEndUserLicenseAgreement implements Serializable {
 	}
 
 	public AppRelationshipsEndUserLicenseAgreement links(AppCategoryRelationshipsSubcategoriesLinks links) {
-
 		this.links = links;
 		return this;
 	}

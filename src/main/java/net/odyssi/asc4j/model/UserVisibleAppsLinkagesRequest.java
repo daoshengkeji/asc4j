@@ -30,12 +30,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ UserVisibleAppsLinkagesRequest.JSON_PROPERTY_DATA })
 
 public class UserVisibleAppsLinkagesRequest implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 4579105265795174211L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
 
 	private List<AppEncryptionDeclarationRelationshipsAppData> data = new ArrayList<>();
 

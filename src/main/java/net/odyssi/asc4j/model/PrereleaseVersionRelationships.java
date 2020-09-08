@@ -28,14 +28,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		PrereleaseVersionRelationships.JSON_PROPERTY_APP })
 
 public class PrereleaseVersionRelationships implements Serializable {
+	public static final String JSON_PROPERTY_APP = "app";
+
+	public static final String JSON_PROPERTY_BUILDS = "builds";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -8068393032042394011L;
-
-	public static final String JSON_PROPERTY_APP = "app";
-
-	public static final String JSON_PROPERTY_BUILDS = "builds";
 
 	private AppEncryptionDeclarationRelationshipsApp app;
 	private AppRelationshipsBuilds builds;

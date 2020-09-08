@@ -28,14 +28,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		ProfileRelationshipsBundleId.JSON_PROPERTY_DATA })
 
 public class ProfileRelationshipsBundleId implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
+	public static final String JSON_PROPERTY_LINKS = "links";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 2141065736035655422L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
-
-	public static final String JSON_PROPERTY_LINKS = "links";
 
 	private BundleIdCapabilityCreateRequestDataRelationshipsBundleIdData data;
 	private AppCategoryRelationshipsSubcategoriesLinks links;

@@ -31,15 +31,15 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		BetaTesterAppsLinkagesResponse.JSON_PROPERTY_LINKS, BetaTesterAppsLinkagesResponse.JSON_PROPERTY_META })
 
 public class BetaTesterAppsLinkagesResponse implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
+	public static final String JSON_PROPERTY_LINKS = "links";
+
+	public static final String JSON_PROPERTY_META = "meta";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -324137935544370218L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
-
-	public static final String JSON_PROPERTY_LINKS = "links";
-	public static final String JSON_PROPERTY_META = "meta";
 
 	private List<AppEncryptionDeclarationRelationshipsAppData> data = new ArrayList<>();
 

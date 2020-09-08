@@ -28,9 +28,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ AppInfoLocalizationCreateRequestDataRelationshipsAppInfo.JSON_PROPERTY_DATA })
 public class AppInfoLocalizationCreateRequestDataRelationshipsAppInfo implements Serializable {
 
-	private static final long serialVersionUID = 7902846660560558466L;
-
 	public static final String JSON_PROPERTY_DATA = "data";
+
+	private static final long serialVersionUID = 7902846660560558466L;
 
 	private AppInfoLocalizationRelationshipsAppInfoData data;
 

@@ -25,12 +25,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ BuildBetaDetailUpdateRequestDataAttributes.JSON_PROPERTY_AUTO_NOTIFY_ENABLED })
 
 public class BuildBetaDetailUpdateRequestDataAttributes implements Serializable {
+	public static final String JSON_PROPERTY_AUTO_NOTIFY_ENABLED = "autoNotifyEnabled";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -1088548888860795390L;
-
-	public static final String JSON_PROPERTY_AUTO_NOTIFY_ENABLED = "autoNotifyEnabled";
 
 	private Boolean autoNotifyEnabled;
 

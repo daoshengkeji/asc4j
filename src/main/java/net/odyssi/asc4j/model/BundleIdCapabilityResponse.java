@@ -28,14 +28,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ BundleIdCapabilityResponse.JSON_PROPERTY_DATA, BundleIdCapabilityResponse.JSON_PROPERTY_LINKS })
 
 public class BundleIdCapabilityResponse implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
+	public static final String JSON_PROPERTY_LINKS = "links";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 8789859958093061361L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
-
-	public static final String JSON_PROPERTY_LINKS = "links";
 
 	private BundleIdCapability data;
 	private DocumentLinks links;

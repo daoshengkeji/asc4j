@@ -32,8 +32,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 public class AppCategory implements Serializable, AppCategoriesResponseIncludedOneOf, AppCategoryResponseIncludedOneOf,
 		AppInfoResponseIncludedOneOf, AppInfosResponseIncludedOneOf {
 
-	private static final long serialVersionUID = -1480837007818572275L;
-
 	/**
 	 * Gets or Sets type
 	 */
@@ -70,10 +68,12 @@ public class AppCategory implements Serializable, AppCategoriesResponseIncludedO
 	public static final String JSON_PROPERTY_ATTRIBUTES = "attributes";
 
 	public static final String JSON_PROPERTY_ID = "id";
-	public static final String JSON_PROPERTY_LINKS = "links";
 
+	public static final String JSON_PROPERTY_LINKS = "links";
 	public static final String JSON_PROPERTY_RELATIONSHIPS = "relationships";
+
 	public static final String JSON_PROPERTY_TYPE = "type";
+	private static final long serialVersionUID = -1480837007818572275L;
 
 	private AppCategoryAttributes attributes;
 
@@ -89,7 +89,7 @@ public class AppCategory implements Serializable, AppCategoriesResponseIncludedO
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#equals(java.lang.Object)
@@ -146,7 +146,7 @@ public class AppCategory implements Serializable, AppCategoriesResponseIncludedO
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#hashCode()
@@ -203,7 +203,7 @@ public class AppCategory implements Serializable, AppCategoriesResponseIncludedO
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#toString()

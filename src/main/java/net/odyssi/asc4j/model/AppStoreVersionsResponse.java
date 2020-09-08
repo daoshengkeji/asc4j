@@ -31,17 +31,17 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		AppStoreVersionsResponse.JSON_PROPERTY_LINKS, AppStoreVersionsResponse.JSON_PROPERTY_META })
 
 public class AppStoreVersionsResponse implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
+	public static final String JSON_PROPERTY_INCLUDED = "included";
+
+	public static final String JSON_PROPERTY_LINKS = "links";
+	public static final String JSON_PROPERTY_META = "meta";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 2935786011016307548L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
-
-	public static final String JSON_PROPERTY_INCLUDED = "included";
-	public static final String JSON_PROPERTY_LINKS = "links";
-
-	public static final String JSON_PROPERTY_META = "meta";
 
 	private List<AppStoreVersion> data = new ArrayList<>();
 	private List<AppStoreVersionsResponseIncludedOneOf> included = null;

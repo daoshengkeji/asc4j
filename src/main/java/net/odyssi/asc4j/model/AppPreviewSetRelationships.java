@@ -26,29 +26,24 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonPropertyOrder({ AppPreviewSetRelationships.JSON_PROPERTY_APP_STORE_VERSION_LOCALIZATION,
 		AppPreviewSetRelationships.JSON_PROPERTY_APP_PREVIEWS })
-
 public class AppPreviewSetRelationships implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 8505050142969284311L;
 
 	public static final String JSON_PROPERTY_APP_PREVIEWS = "appPreviews";
 
 	public static final String JSON_PROPERTY_APP_STORE_VERSION_LOCALIZATION = "appStoreVersionLocalization";
 
+	private static final long serialVersionUID = 8505050142969284311L;
+
 	private AppPreviewSetRelationshipsAppPreviews appPreviews;
 	private AppPreviewSetRelationshipsAppStoreVersionLocalization appStoreVersionLocalization;
 
 	public AppPreviewSetRelationships appPreviews(AppPreviewSetRelationshipsAppPreviews appPreviews) {
-
 		this.appPreviews = appPreviews;
 		return this;
 	}
 
 	public AppPreviewSetRelationships appStoreVersionLocalization(
 			AppPreviewSetRelationshipsAppStoreVersionLocalization appStoreVersionLocalization) {
-
 		this.appStoreVersionLocalization = appStoreVersionLocalization;
 		return this;
 	}
@@ -66,32 +61,16 @@ public class AppPreviewSetRelationships implements Serializable {
 				&& Objects.equals(this.appPreviews, appPreviewSetRelationships.appPreviews);
 	}
 
-	/**
-	 * Get appPreviews
-	 *
-	 * @return appPreviews
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_APP_PREVIEWS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppPreviewSetRelationshipsAppPreviews getAppPreviews() {
 		return this.appPreviews;
 	}
 
-	/**
-	 * Get appStoreVersionLocalization
-	 *
-	 * @return appStoreVersionLocalization
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_APP_STORE_VERSION_LOCALIZATION)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppPreviewSetRelationshipsAppStoreVersionLocalization getAppStoreVersionLocalization() {
 		return this.appStoreVersionLocalization;
 	}

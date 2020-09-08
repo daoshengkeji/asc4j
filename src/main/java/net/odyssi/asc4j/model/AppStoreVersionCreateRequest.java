@@ -28,12 +28,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ AppStoreVersionCreateRequest.JSON_PROPERTY_DATA })
 
 public class AppStoreVersionCreateRequest implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 1075323604449661034L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
 
 	private AppStoreVersionCreateRequestData data;
 

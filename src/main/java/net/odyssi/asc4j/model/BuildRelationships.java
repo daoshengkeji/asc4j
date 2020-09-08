@@ -32,24 +32,24 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		BuildRelationships.JSON_PROPERTY_ICONS })
 
 public class BuildRelationships implements Serializable {
+	public static final String JSON_PROPERTY_APP = "app";
+
+	public static final String JSON_PROPERTY_APP_ENCRYPTION_DECLARATION = "appEncryptionDeclaration";
+
+	public static final String JSON_PROPERTY_APP_STORE_VERSION = "appStoreVersion";
+	public static final String JSON_PROPERTY_BETA_APP_REVIEW_SUBMISSION = "betaAppReviewSubmission";
+
+	public static final String JSON_PROPERTY_BETA_BUILD_LOCALIZATIONS = "betaBuildLocalizations";
+	public static final String JSON_PROPERTY_BUILD_BETA_DETAIL = "buildBetaDetail";
+
+	public static final String JSON_PROPERTY_ICONS = "icons";
+	public static final String JSON_PROPERTY_INDIVIDUAL_TESTERS = "individualTesters";
+
+	public static final String JSON_PROPERTY_PRE_RELEASE_VERSION = "preReleaseVersion";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -2412506816121061930L;
-
-	public static final String JSON_PROPERTY_APP = "app";
-
-	public static final String JSON_PROPERTY_APP_ENCRYPTION_DECLARATION = "appEncryptionDeclaration";
-	public static final String JSON_PROPERTY_APP_STORE_VERSION = "appStoreVersion";
-
-	public static final String JSON_PROPERTY_BETA_APP_REVIEW_SUBMISSION = "betaAppReviewSubmission";
-	public static final String JSON_PROPERTY_BETA_BUILD_LOCALIZATIONS = "betaBuildLocalizations";
-
-	public static final String JSON_PROPERTY_BUILD_BETA_DETAIL = "buildBetaDetail";
-	public static final String JSON_PROPERTY_ICONS = "icons";
-
-	public static final String JSON_PROPERTY_INDIVIDUAL_TESTERS = "individualTesters";
-	public static final String JSON_PROPERTY_PRE_RELEASE_VERSION = "preReleaseVersion";
 
 	private AppEncryptionDeclarationRelationshipsApp app;
 

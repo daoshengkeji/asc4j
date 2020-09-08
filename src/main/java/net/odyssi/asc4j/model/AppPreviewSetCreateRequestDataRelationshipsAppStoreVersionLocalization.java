@@ -26,14 +26,11 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  * AppPreviewSetCreateRequestDataRelationshipsAppStoreVersionLocalization
  */
 @JsonPropertyOrder({ AppPreviewSetCreateRequestDataRelationshipsAppStoreVersionLocalization.JSON_PROPERTY_DATA })
-
 public class AppPreviewSetCreateRequestDataRelationshipsAppStoreVersionLocalization implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -1943811296102760279L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
+
+	private static final long serialVersionUID = -1943811296102760279L;
 
 	private AppPreviewSetRelationshipsAppStoreVersionLocalizationData data;
 
@@ -56,17 +53,10 @@ public class AppPreviewSetCreateRequestDataRelationshipsAppStoreVersionLocalizat
 		return Objects.equals(this.data, appPreviewSetCreateRequestDataRelationshipsAppStoreVersionLocalization.data);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public AppPreviewSetRelationshipsAppStoreVersionLocalizationData getData() {
 		return this.data;
 	}

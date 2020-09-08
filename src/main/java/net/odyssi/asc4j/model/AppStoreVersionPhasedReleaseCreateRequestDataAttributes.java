@@ -27,12 +27,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ AppStoreVersionPhasedReleaseCreateRequestDataAttributes.JSON_PROPERTY_PHASED_RELEASE_STATE })
 
 public class AppStoreVersionPhasedReleaseCreateRequestDataAttributes implements Serializable {
+	public static final String JSON_PROPERTY_PHASED_RELEASE_STATE = "phasedReleaseState";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -3570021529842124644L;
-
-	public static final String JSON_PROPERTY_PHASED_RELEASE_STATE = "phasedReleaseState";
 
 	private PhasedReleaseState phasedReleaseState;
 

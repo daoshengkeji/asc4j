@@ -34,11 +34,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class DeviceAttributes implements Serializable {
 	/**
-	 *
-	 */
-	private static final long serialVersionUID = 1285174670215477670L;
-
-	/**
 	 * Gets or Sets deviceClass
 	 */
 	public enum DeviceClassEnum {
@@ -119,14 +114,19 @@ public class DeviceAttributes implements Serializable {
 	public static final String JSON_PROPERTY_ADDED_DATE = "addedDate";
 
 	public static final String JSON_PROPERTY_DEVICE_CLASS = "deviceClass";
+
 	public static final String JSON_PROPERTY_MODEL = "model";
-
 	public static final String JSON_PROPERTY_NAME = "name";
-	public static final String JSON_PROPERTY_PLATFORM = "platform";
 
+	public static final String JSON_PROPERTY_PLATFORM = "platform";
 	public static final String JSON_PROPERTY_STATUS = "status";
 
 	public static final String JSON_PROPERTY_UDID = "udid";
+
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 1285174670215477670L;
 
 	private OffsetDateTime addedDate;
 

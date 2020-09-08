@@ -29,17 +29,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonPropertyOrder({ AppScreenshotSetResponse.JSON_PROPERTY_DATA, AppScreenshotSetResponse.JSON_PROPERTY_INCLUDED,
 		AppScreenshotSetResponse.JSON_PROPERTY_LINKS })
-
 public class AppScreenshotSetResponse implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 886266478892987987L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_INCLUDED = "included";
+
 	public static final String JSON_PROPERTY_LINKS = "links";
+	private static final long serialVersionUID = 886266478892987987L;
 
 	private AppScreenshotSet data;
 
@@ -74,47 +71,25 @@ public class AppScreenshotSetResponse implements Serializable {
 				&& Objects.equals(this.links, appScreenshotSetResponse.links);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public AppScreenshotSet getData() {
 		return this.data;
 	}
 
-	/**
-	 * Get included
-	 *
-	 * @return included
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_INCLUDED)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public List<AppScreenshot> getIncluded() {
 		return this.included;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public DocumentLinks getLinks() {
 		return this.links;
 	}
@@ -125,13 +100,11 @@ public class AppScreenshotSetResponse implements Serializable {
 	}
 
 	public AppScreenshotSetResponse included(List<AppScreenshot> included) {
-
 		this.included = included;
 		return this;
 	}
 
 	public AppScreenshotSetResponse links(DocumentLinks links) {
-
 		this.links = links;
 		return this;
 	}

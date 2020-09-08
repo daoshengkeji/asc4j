@@ -30,15 +30,15 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		ProfileCreateRequestDataRelationships.JSON_PROPERTY_CERTIFICATES })
 
 public class ProfileCreateRequestDataRelationships implements Serializable {
+	public static final String JSON_PROPERTY_BUNDLE_ID = "bundleId";
+
+	public static final String JSON_PROPERTY_CERTIFICATES = "certificates";
+
+	public static final String JSON_PROPERTY_DEVICES = "devices";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -2998100778619427860L;
-
-	public static final String JSON_PROPERTY_BUNDLE_ID = "bundleId";
-
-	public static final String JSON_PROPERTY_CERTIFICATES = "certificates";
-	public static final String JSON_PROPERTY_DEVICES = "devices";
 
 	private BundleIdCapabilityCreateRequestDataRelationshipsBundleId bundleId;
 

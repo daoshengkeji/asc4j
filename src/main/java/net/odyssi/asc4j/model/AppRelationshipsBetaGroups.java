@@ -28,17 +28,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonPropertyOrder({ AppRelationshipsBetaGroups.JSON_PROPERTY_LINKS, AppRelationshipsBetaGroups.JSON_PROPERTY_META,
 		AppRelationshipsBetaGroups.JSON_PROPERTY_DATA })
-
 public class AppRelationshipsBetaGroups implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -5789475147883269037L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_LINKS = "links";
+
 	public static final String JSON_PROPERTY_META = "meta";
+	private static final long serialVersionUID = -5789475147883269037L;
 
 	private List<AppRelationshipsBetaGroupsData> data = null;
 
@@ -54,7 +51,6 @@ public class AppRelationshipsBetaGroups implements Serializable {
 	}
 
 	public AppRelationshipsBetaGroups data(List<AppRelationshipsBetaGroupsData> data) {
-
 		this.data = data;
 		return this;
 	}
@@ -73,47 +69,23 @@ public class AppRelationshipsBetaGroups implements Serializable {
 				&& Objects.equals(this.data, appRelationshipsBetaGroups.data);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public List<AppRelationshipsBetaGroupsData> getData() {
 		return this.data;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppCategoryRelationshipsSubcategoriesLinks getLinks() {
 		return this.links;
 	}
 
-	/**
-	 * Get meta
-	 *
-	 * @return meta
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_META)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public PagingInformation getMeta() {
 		return this.meta;
 	}
@@ -124,13 +96,11 @@ public class AppRelationshipsBetaGroups implements Serializable {
 	}
 
 	public AppRelationshipsBetaGroups links(AppCategoryRelationshipsSubcategoriesLinks links) {
-
 		this.links = links;
 		return this;
 	}
 
 	public AppRelationshipsBetaGroups meta(PagingInformation meta) {
-
 		this.meta = meta;
 		return this;
 	}

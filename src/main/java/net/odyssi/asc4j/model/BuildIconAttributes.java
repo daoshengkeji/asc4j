@@ -27,14 +27,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ BuildIconAttributes.JSON_PROPERTY_ICON_ASSET, BuildIconAttributes.JSON_PROPERTY_ICON_TYPE })
 
 public class BuildIconAttributes implements Serializable {
+	public static final String JSON_PROPERTY_ICON_ASSET = "iconAsset";
+
+	public static final String JSON_PROPERTY_ICON_TYPE = "iconType";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 273432333446888525L;
-
-	public static final String JSON_PROPERTY_ICON_ASSET = "iconAsset";
-
-	public static final String JSON_PROPERTY_ICON_TYPE = "iconType";
 
 	private ImageAsset iconAsset;
 	private IconAssetType iconType;

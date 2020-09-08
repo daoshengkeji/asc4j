@@ -30,11 +30,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class CapabilityOption implements Serializable {
 	/**
-	 *
-	 */
-	private static final long serialVersionUID = -2439540113201241028L;
-
-	/**
 	 * Gets or Sets key
 	 */
 	public enum KeyEnum {
@@ -80,12 +75,17 @@ public class CapabilityOption implements Serializable {
 	public static final String JSON_PROPERTY_DESCRIPTION = "description";
 
 	public static final String JSON_PROPERTY_ENABLED = "enabled";
+
 	public static final String JSON_PROPERTY_ENABLED_BY_DEFAULT = "enabledByDefault";
-
 	public static final String JSON_PROPERTY_KEY = "key";
-	public static final String JSON_PROPERTY_NAME = "name";
 
+	public static final String JSON_PROPERTY_NAME = "name";
 	public static final String JSON_PROPERTY_SUPPORTS_WILDCARD = "supportsWildcard";
+
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = -2439540113201241028L;
 
 	private String description;
 	private Boolean enabled;

@@ -25,14 +25,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ UploadOperationHeader.JSON_PROPERTY_NAME, UploadOperationHeader.JSON_PROPERTY_VALUE })
 
 public class UploadOperationHeader implements Serializable {
+	public static final String JSON_PROPERTY_NAME = "name";
+
+	public static final String JSON_PROPERTY_VALUE = "value";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -3117776283687341069L;
-
-	public static final String JSON_PROPERTY_NAME = "name";
-
-	public static final String JSON_PROPERTY_VALUE = "value";
 
 	private String name;
 	private String value;

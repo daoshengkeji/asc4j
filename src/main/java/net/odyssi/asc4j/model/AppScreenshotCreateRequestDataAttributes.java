@@ -26,16 +26,13 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonPropertyOrder({ AppScreenshotCreateRequestDataAttributes.JSON_PROPERTY_FILE_SIZE,
 		AppScreenshotCreateRequestDataAttributes.JSON_PROPERTY_FILE_NAME })
-
 public class AppScreenshotCreateRequestDataAttributes implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 476642889349693610L;
 
 	public static final String JSON_PROPERTY_FILE_NAME = "fileName";
 
 	public static final String JSON_PROPERTY_FILE_SIZE = "fileSize";
+
+	private static final long serialVersionUID = 476642889349693610L;
 
 	private String fileName;
 	private Integer fileSize;
@@ -54,41 +51,25 @@ public class AppScreenshotCreateRequestDataAttributes implements Serializable {
 	}
 
 	public AppScreenshotCreateRequestDataAttributes fileName(String fileName) {
-
 		this.fileName = fileName;
 		return this;
 	}
 
 	public AppScreenshotCreateRequestDataAttributes fileSize(Integer fileSize) {
-
 		this.fileSize = fileSize;
 		return this;
 	}
 
-	/**
-	 * Get fileName
-	 *
-	 * @return fileName
-	 **/
 	@NotNull
-
 	@JsonProperty(JSON_PROPERTY_FILE_NAME)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public String getFileName() {
 		return this.fileName;
 	}
 
-	/**
-	 * Get fileSize
-	 *
-	 * @return fileSize
-	 **/
 	@NotNull
-
 	@JsonProperty(JSON_PROPERTY_FILE_SIZE)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public Integer getFileSize() {
 		return this.fileSize;
 	}

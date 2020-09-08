@@ -28,9 +28,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ AppPreOrderCreateRequestDataAttributes.JSON_PROPERTY_APP_RELEASE_DATE })
 public class AppPreOrderCreateRequestDataAttributes implements Serializable {
 
-	private static final long serialVersionUID = -5744187147089892176L;
-
 	public static final String JSON_PROPERTY_APP_RELEASE_DATE = "appReleaseDate";
+
+	private static final long serialVersionUID = -5744187147089892176L;
 
 	private LocalDate appReleaseDate;
 

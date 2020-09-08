@@ -30,12 +30,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 @JsonPropertyOrder({ AppScreenshot.JSON_PROPERTY_TYPE, AppScreenshot.JSON_PROPERTY_ID,
 		AppScreenshot.JSON_PROPERTY_ATTRIBUTES, AppScreenshot.JSON_PROPERTY_RELATIONSHIPS,
 		AppScreenshot.JSON_PROPERTY_LINKS })
-
 public class AppScreenshot implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -8571084426157540382L;
 
 	/**
 	 * Gets or Sets type
@@ -73,10 +68,12 @@ public class AppScreenshot implements Serializable {
 	public static final String JSON_PROPERTY_ATTRIBUTES = "attributes";
 
 	public static final String JSON_PROPERTY_ID = "id";
-	public static final String JSON_PROPERTY_LINKS = "links";
 
+	public static final String JSON_PROPERTY_LINKS = "links";
 	public static final String JSON_PROPERTY_RELATIONSHIPS = "relationships";
+
 	public static final String JSON_PROPERTY_TYPE = "type";
+	private static final long serialVersionUID = -8571084426157540382L;
 
 	private AppScreenshotAttributes attributes;
 
@@ -87,7 +84,6 @@ public class AppScreenshot implements Serializable {
 	private TypeEnum type;
 
 	public AppScreenshot attributes(AppScreenshotAttributes attributes) {
-
 		this.attributes = attributes;
 		return this;
 	}
@@ -107,75 +103,38 @@ public class AppScreenshot implements Serializable {
 				&& Objects.equals(this.links, appScreenshot.links);
 	}
 
-	/**
-	 * Get attributes
-	 *
-	 * @return attributes
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_ATTRIBUTES)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppScreenshotAttributes getAttributes() {
 		return this.attributes;
 	}
 
-	/**
-	 * Get id
-	 *
-	 * @return id
-	 **/
 	@NotNull
-
 	@JsonProperty(JSON_PROPERTY_ID)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public String getId() {
 		return this.id;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public ResourceLinks getLinks() {
 		return this.links;
 	}
 
-	/**
-	 * Get relationships
-	 *
-	 * @return relationships
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_RELATIONSHIPS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppScreenshotRelationships getRelationships() {
 		return this.relationships;
 	}
 
-	/**
-	 * Get type
-	 *
-	 * @return type
-	 **/
 	@NotNull
-
 	@JsonProperty(JSON_PROPERTY_TYPE)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public TypeEnum getType() {
 		return this.type;
 	}
@@ -186,19 +145,16 @@ public class AppScreenshot implements Serializable {
 	}
 
 	public AppScreenshot id(String id) {
-
 		this.id = id;
 		return this;
 	}
 
 	public AppScreenshot links(ResourceLinks links) {
-
 		this.links = links;
 		return this;
 	}
 
 	public AppScreenshot relationships(AppScreenshotRelationships relationships) {
-
 		this.relationships = relationships;
 		return this;
 	}
@@ -248,7 +204,6 @@ public class AppScreenshot implements Serializable {
 	}
 
 	public AppScreenshot type(TypeEnum type) {
-
 		this.type = type;
 		return this;
 	}

@@ -26,22 +26,18 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonPropertyOrder({ AppPricePointRelationshipsPriceTier.JSON_PROPERTY_LINKS,
 		AppPricePointRelationshipsPriceTier.JSON_PROPERTY_DATA })
-
 public class AppPricePointRelationshipsPriceTier implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -6943695366983769104L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_LINKS = "links";
 
+	private static final long serialVersionUID = -6943695366983769104L;
+
 	private AppPricePointRelationshipsPriceTierData data;
 	private AppCategoryRelationshipsSubcategoriesLinks links;
 
 	public AppPricePointRelationshipsPriceTier data(AppPricePointRelationshipsPriceTierData data) {
-
 		this.data = data;
 		return this;
 	}
@@ -59,32 +55,16 @@ public class AppPricePointRelationshipsPriceTier implements Serializable {
 				&& Objects.equals(this.data, appPricePointRelationshipsPriceTier.data);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppPricePointRelationshipsPriceTierData getData() {
 		return this.data;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppCategoryRelationshipsSubcategoriesLinks getLinks() {
 		return this.links;
 	}
@@ -95,7 +75,6 @@ public class AppPricePointRelationshipsPriceTier implements Serializable {
 	}
 
 	public AppPricePointRelationshipsPriceTier links(AppCategoryRelationshipsSubcategoriesLinks links) {
-
 		this.links = links;
 		return this;
 	}

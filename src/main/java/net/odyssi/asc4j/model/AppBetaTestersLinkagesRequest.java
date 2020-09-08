@@ -30,9 +30,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ AppBetaTestersLinkagesRequest.JSON_PROPERTY_DATA })
 public class AppBetaTestersLinkagesRequest implements Serializable {
 
-	private static final long serialVersionUID = -89228049849253531L;
-
 	public static final String JSON_PROPERTY_DATA = "data";
+
+	private static final long serialVersionUID = -89228049849253531L;
 
 	private List<BetaGroupRelationshipsBetaTestersData> data = new ArrayList<>();
 
@@ -47,7 +47,7 @@ public class AppBetaTestersLinkagesRequest implements Serializable {
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#equals(java.lang.Object)

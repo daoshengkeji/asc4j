@@ -32,11 +32,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 public class AppInfo implements Serializable, AppResponseIncludedOneOf, AppsResponseIncludedOneOf {
 
 	/**
-	 *
-	 */
-	private static final long serialVersionUID = -1749656768443478314L;
-
-	/**
 	 * Gets or Sets type
 	 */
 	public enum TypeEnum {
@@ -72,10 +67,15 @@ public class AppInfo implements Serializable, AppResponseIncludedOneOf, AppsResp
 	public static final String JSON_PROPERTY_ATTRIBUTES = "attributes";
 
 	public static final String JSON_PROPERTY_ID = "id";
-	public static final String JSON_PROPERTY_LINKS = "links";
 
+	public static final String JSON_PROPERTY_LINKS = "links";
 	public static final String JSON_PROPERTY_RELATIONSHIPS = "relationships";
+
 	public static final String JSON_PROPERTY_TYPE = "type";
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = -1749656768443478314L;
 
 	private AppInfoAttributes attributes;
 

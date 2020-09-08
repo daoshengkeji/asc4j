@@ -25,17 +25,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ AppPreviewUpdateRequestDataAttributes.JSON_PROPERTY_SOURCE_FILE_CHECKSUM,
 		AppPreviewUpdateRequestDataAttributes.JSON_PROPERTY_PREVIEW_FRAME_TIME_CODE,
 		AppPreviewUpdateRequestDataAttributes.JSON_PROPERTY_UPLOADED })
-
 public class AppPreviewUpdateRequestDataAttributes implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -847458795458821129L;
 
 	public static final String JSON_PROPERTY_PREVIEW_FRAME_TIME_CODE = "previewFrameTimeCode";
 
 	public static final String JSON_PROPERTY_SOURCE_FILE_CHECKSUM = "sourceFileChecksum";
+
 	public static final String JSON_PROPERTY_UPLOADED = "uploaded";
+	private static final long serialVersionUID = -847458795458821129L;
 
 	private String previewFrameTimeCode;
 
@@ -56,41 +53,20 @@ public class AppPreviewUpdateRequestDataAttributes implements Serializable {
 				&& Objects.equals(this.uploaded, appPreviewUpdateRequestDataAttributes.uploaded);
 	}
 
-	/**
-	 * Get previewFrameTimeCode
-	 *
-	 * @return previewFrameTimeCode
-	 **/
-
 	@JsonProperty(JSON_PROPERTY_PREVIEW_FRAME_TIME_CODE)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public String getPreviewFrameTimeCode() {
 		return this.previewFrameTimeCode;
 	}
 
-	/**
-	 * Get sourceFileChecksum
-	 *
-	 * @return sourceFileChecksum
-	 **/
-
 	@JsonProperty(JSON_PROPERTY_SOURCE_FILE_CHECKSUM)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public String getSourceFileChecksum() {
 		return this.sourceFileChecksum;
 	}
 
-	/**
-	 * Get uploaded
-	 *
-	 * @return uploaded
-	 **/
-
 	@JsonProperty(JSON_PROPERTY_UPLOADED)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public Boolean getUploaded() {
 		return this.uploaded;
 	}
@@ -101,7 +77,6 @@ public class AppPreviewUpdateRequestDataAttributes implements Serializable {
 	}
 
 	public AppPreviewUpdateRequestDataAttributes previewFrameTimeCode(String previewFrameTimeCode) {
-
 		this.previewFrameTimeCode = previewFrameTimeCode;
 		return this;
 	}
@@ -119,7 +94,6 @@ public class AppPreviewUpdateRequestDataAttributes implements Serializable {
 	}
 
 	public AppPreviewUpdateRequestDataAttributes sourceFileChecksum(String sourceFileChecksum) {
-
 		this.sourceFileChecksum = sourceFileChecksum;
 		return this;
 	}
@@ -147,7 +121,6 @@ public class AppPreviewUpdateRequestDataAttributes implements Serializable {
 	}
 
 	public AppPreviewUpdateRequestDataAttributes uploaded(Boolean uploaded) {
-
 		this.uploaded = uploaded;
 		return this;
 	}

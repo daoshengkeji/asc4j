@@ -30,20 +30,20 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		ErrorResponseErrors.JSON_PROPERTY_DETAIL, ErrorResponseErrors.JSON_PROPERTY_SOURCE })
 
 public class ErrorResponseErrors implements Serializable {
+	public static final String JSON_PROPERTY_CODE = "code";
+
+	public static final String JSON_PROPERTY_DETAIL = "detail";
+
+	public static final String JSON_PROPERTY_ID = "id";
+	public static final String JSON_PROPERTY_SOURCE = "source";
+
+	public static final String JSON_PROPERTY_STATUS = "status";
+	public static final String JSON_PROPERTY_TITLE = "title";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -3305417169948068257L;
-
-	public static final String JSON_PROPERTY_CODE = "code";
-
-	public static final String JSON_PROPERTY_DETAIL = "detail";
-	public static final String JSON_PROPERTY_ID = "id";
-
-	public static final String JSON_PROPERTY_SOURCE = "source";
-	public static final String JSON_PROPERTY_STATUS = "status";
-
-	public static final String JSON_PROPERTY_TITLE = "title";
 
 	private String code;
 	private String detail;

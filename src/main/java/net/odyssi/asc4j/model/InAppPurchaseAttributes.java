@@ -30,11 +30,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class InAppPurchaseAttributes implements Serializable {
 	/**
-	 *
-	 */
-	private static final long serialVersionUID = 6009263812997153033L;
-
-	/**
 	 * Gets or Sets inAppPurchaseType
 	 */
 	public enum InAppPurchaseTypeEnum {
@@ -147,9 +142,14 @@ public class InAppPurchaseAttributes implements Serializable {
 	public static final String JSON_PROPERTY_IN_APP_PURCHASE_TYPE = "inAppPurchaseType";
 
 	public static final String JSON_PROPERTY_PRODUCT_ID = "productId";
-	public static final String JSON_PROPERTY_REFERENCE_NAME = "referenceName";
 
+	public static final String JSON_PROPERTY_REFERENCE_NAME = "referenceName";
 	public static final String JSON_PROPERTY_STATE = "state";
+
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 6009263812997153033L;
 
 	private InAppPurchaseTypeEnum inAppPurchaseType;
 

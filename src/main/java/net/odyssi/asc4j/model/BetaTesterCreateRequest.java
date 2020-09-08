@@ -28,12 +28,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ BetaTesterCreateRequest.JSON_PROPERTY_DATA })
 
 public class BetaTesterCreateRequest implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 970707018488430523L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
 
 	private BetaTesterCreateRequestData data;
 

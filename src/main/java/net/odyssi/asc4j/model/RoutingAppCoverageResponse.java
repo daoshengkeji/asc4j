@@ -28,14 +28,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ RoutingAppCoverageResponse.JSON_PROPERTY_DATA, RoutingAppCoverageResponse.JSON_PROPERTY_LINKS })
 
 public class RoutingAppCoverageResponse implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
+	public static final String JSON_PROPERTY_LINKS = "links";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 7977153989193710341L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
-
-	public static final String JSON_PROPERTY_LINKS = "links";
 
 	private RoutingAppCoverage data;
 	private DocumentLinks links;

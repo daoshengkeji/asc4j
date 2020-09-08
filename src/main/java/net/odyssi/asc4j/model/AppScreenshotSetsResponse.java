@@ -29,19 +29,16 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonPropertyOrder({ AppScreenshotSetsResponse.JSON_PROPERTY_DATA, AppScreenshotSetsResponse.JSON_PROPERTY_INCLUDED,
 		AppScreenshotSetsResponse.JSON_PROPERTY_LINKS, AppScreenshotSetsResponse.JSON_PROPERTY_META })
-
 public class AppScreenshotSetsResponse implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 6912460485751438595L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_INCLUDED = "included";
-	public static final String JSON_PROPERTY_LINKS = "links";
 
+	public static final String JSON_PROPERTY_LINKS = "links";
 	public static final String JSON_PROPERTY_META = "meta";
+
+	private static final long serialVersionUID = 6912460485751438595L;
 
 	private List<AppScreenshotSet> data = new ArrayList<>();
 	private List<AppScreenshot> included = null;
@@ -63,7 +60,6 @@ public class AppScreenshotSetsResponse implements Serializable {
 	}
 
 	public AppScreenshotSetsResponse data(List<AppScreenshotSet> data) {
-
 		this.data = data;
 		return this;
 	}
@@ -83,62 +79,32 @@ public class AppScreenshotSetsResponse implements Serializable {
 				&& Objects.equals(this.meta, appScreenshotSetsResponse.meta);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public List<AppScreenshotSet> getData() {
 		return this.data;
 	}
 
-	/**
-	 * Get included
-	 *
-	 * @return included
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_INCLUDED)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public List<AppScreenshot> getIncluded() {
 		return this.included;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public PagedDocumentLinks getLinks() {
 		return this.links;
 	}
 
-	/**
-	 * Get meta
-	 *
-	 * @return meta
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_META)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public PagingInformation getMeta() {
 		return this.meta;
 	}
@@ -149,19 +115,16 @@ public class AppScreenshotSetsResponse implements Serializable {
 	}
 
 	public AppScreenshotSetsResponse included(List<AppScreenshot> included) {
-
 		this.included = included;
 		return this;
 	}
 
 	public AppScreenshotSetsResponse links(PagedDocumentLinks links) {
-
 		this.links = links;
 		return this;
 	}
 
 	public AppScreenshotSetsResponse meta(PagingInformation meta) {
-
 		this.meta = meta;
 		return this;
 	}

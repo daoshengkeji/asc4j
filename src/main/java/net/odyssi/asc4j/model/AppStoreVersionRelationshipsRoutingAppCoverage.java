@@ -28,14 +28,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		AppStoreVersionRelationshipsRoutingAppCoverage.JSON_PROPERTY_DATA })
 
 public class AppStoreVersionRelationshipsRoutingAppCoverage implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
+	public static final String JSON_PROPERTY_LINKS = "links";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -1879196198295729584L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
-
-	public static final String JSON_PROPERTY_LINKS = "links";
 
 	private AppStoreVersionRelationshipsRoutingAppCoverageData data;
 	private AppCategoryRelationshipsSubcategoriesLinks links;

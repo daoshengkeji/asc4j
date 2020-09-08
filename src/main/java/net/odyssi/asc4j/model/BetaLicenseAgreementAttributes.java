@@ -25,12 +25,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ BetaLicenseAgreementAttributes.JSON_PROPERTY_AGREEMENT_TEXT })
 
 public class BetaLicenseAgreementAttributes implements Serializable {
+	public static final String JSON_PROPERTY_AGREEMENT_TEXT = "agreementText";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 2365375914207225925L;
-
-	public static final String JSON_PROPERTY_AGREEMENT_TEXT = "agreementText";
 
 	private String agreementText;
 

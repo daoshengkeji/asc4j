@@ -31,17 +31,17 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		AppStoreVersionPhasedReleaseAttributes.JSON_PROPERTY_CURRENT_DAY_NUMBER })
 
 public class AppStoreVersionPhasedReleaseAttributes implements Serializable {
+	public static final String JSON_PROPERTY_CURRENT_DAY_NUMBER = "currentDayNumber";
+
+	public static final String JSON_PROPERTY_PHASED_RELEASE_STATE = "phasedReleaseState";
+
+	public static final String JSON_PROPERTY_START_DATE = "startDate";
+	public static final String JSON_PROPERTY_TOTAL_PAUSE_DURATION = "totalPauseDuration";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -6792222416907078594L;
-
-	public static final String JSON_PROPERTY_CURRENT_DAY_NUMBER = "currentDayNumber";
-
-	public static final String JSON_PROPERTY_PHASED_RELEASE_STATE = "phasedReleaseState";
-	public static final String JSON_PROPERTY_START_DATE = "startDate";
-
-	public static final String JSON_PROPERTY_TOTAL_PAUSE_DURATION = "totalPauseDuration";
 
 	private Integer currentDayNumber;
 	private PhasedReleaseState phasedReleaseState;

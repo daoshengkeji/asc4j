@@ -28,17 +28,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonPropertyOrder({ AppRelationshipsBuilds.JSON_PROPERTY_LINKS, AppRelationshipsBuilds.JSON_PROPERTY_META,
 		AppRelationshipsBuilds.JSON_PROPERTY_DATA })
-
 public class AppRelationshipsBuilds implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 5516151334204086697L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_LINKS = "links";
+
 	public static final String JSON_PROPERTY_META = "meta";
+	private static final long serialVersionUID = 5516151334204086697L;
 
 	private List<AppStoreVersionRelationshipsBuildData> data = null;
 
@@ -54,7 +51,6 @@ public class AppRelationshipsBuilds implements Serializable {
 	}
 
 	public AppRelationshipsBuilds data(List<AppStoreVersionRelationshipsBuildData> data) {
-
 		this.data = data;
 		return this;
 	}
@@ -73,47 +69,23 @@ public class AppRelationshipsBuilds implements Serializable {
 				&& Objects.equals(this.data, appRelationshipsBuilds.data);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public List<AppStoreVersionRelationshipsBuildData> getData() {
 		return this.data;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppCategoryRelationshipsSubcategoriesLinks getLinks() {
 		return this.links;
 	}
 
-	/**
-	 * Get meta
-	 *
-	 * @return meta
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_META)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public PagingInformation getMeta() {
 		return this.meta;
 	}
@@ -124,13 +96,11 @@ public class AppRelationshipsBuilds implements Serializable {
 	}
 
 	public AppRelationshipsBuilds links(AppCategoryRelationshipsSubcategoriesLinks links) {
-
 		this.links = links;
 		return this;
 	}
 
 	public AppRelationshipsBuilds meta(PagingInformation meta) {
-
 		this.meta = meta;
 		return this;
 	}

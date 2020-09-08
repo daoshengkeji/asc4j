@@ -31,14 +31,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		BundleIdCapabilityCreateRequestDataAttributes.JSON_PROPERTY_SETTINGS })
 
 public class BundleIdCapabilityCreateRequestDataAttributes implements Serializable {
+	public static final String JSON_PROPERTY_CAPABILITY_TYPE = "capabilityType";
+
+	public static final String JSON_PROPERTY_SETTINGS = "settings";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -3127285216730970746L;
-
-	public static final String JSON_PROPERTY_CAPABILITY_TYPE = "capabilityType";
-
-	public static final String JSON_PROPERTY_SETTINGS = "settings";
 
 	private CapabilityType capabilityType;
 	private List<CapabilitySetting> settings = null;

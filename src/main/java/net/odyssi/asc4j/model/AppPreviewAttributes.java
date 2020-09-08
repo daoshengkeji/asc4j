@@ -33,21 +33,21 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		AppPreviewAttributes.JSON_PROPERTY_UPLOAD_OPERATIONS, AppPreviewAttributes.JSON_PROPERTY_ASSET_DELIVERY_STATE })
 public class AppPreviewAttributes implements Serializable {
 
-	private static final long serialVersionUID = -1922395681603719002L;
-
 	public static final String JSON_PROPERTY_ASSET_DELIVERY_STATE = "assetDeliveryState";
 
 	public static final String JSON_PROPERTY_FILE_NAME = "fileName";
+
 	public static final String JSON_PROPERTY_FILE_SIZE = "fileSize";
-
 	public static final String JSON_PROPERTY_MIME_TYPE = "mimeType";
+
 	public static final String JSON_PROPERTY_PREVIEW_FRAME_TIME_CODE = "previewFrameTimeCode";
-
 	public static final String JSON_PROPERTY_PREVIEW_IMAGE = "previewImage";
-	public static final String JSON_PROPERTY_SOURCE_FILE_CHECKSUM = "sourceFileChecksum";
 
+	public static final String JSON_PROPERTY_SOURCE_FILE_CHECKSUM = "sourceFileChecksum";
 	public static final String JSON_PROPERTY_UPLOAD_OPERATIONS = "uploadOperations";
+
 	public static final String JSON_PROPERTY_VIDEO_URL = "videoUrl";
+	private static final long serialVersionUID = -1922395681603719002L;
 
 	private AppMediaAssetState assetDeliveryState;
 

@@ -28,17 +28,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonPropertyOrder({ AppRelationshipsAppInfos.JSON_PROPERTY_LINKS, AppRelationshipsAppInfos.JSON_PROPERTY_META,
 		AppRelationshipsAppInfos.JSON_PROPERTY_DATA })
-
 public class AppRelationshipsAppInfos implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -1740738819505259282L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_LINKS = "links";
+
 	public static final String JSON_PROPERTY_META = "meta";
+	private static final long serialVersionUID = -1740738819505259282L;
 
 	private List<AppInfoLocalizationRelationshipsAppInfoData> data = null;
 
@@ -54,7 +51,6 @@ public class AppRelationshipsAppInfos implements Serializable {
 	}
 
 	public AppRelationshipsAppInfos data(List<AppInfoLocalizationRelationshipsAppInfoData> data) {
-
 		this.data = data;
 		return this;
 	}
@@ -73,47 +69,23 @@ public class AppRelationshipsAppInfos implements Serializable {
 				&& Objects.equals(this.data, appRelationshipsAppInfos.data);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public List<AppInfoLocalizationRelationshipsAppInfoData> getData() {
 		return this.data;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppCategoryRelationshipsSubcategoriesLinks getLinks() {
 		return this.links;
 	}
 
-	/**
-	 * Get meta
-	 *
-	 * @return meta
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_META)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public PagingInformation getMeta() {
 		return this.meta;
 	}
@@ -124,13 +96,11 @@ public class AppRelationshipsAppInfos implements Serializable {
 	}
 
 	public AppRelationshipsAppInfos links(AppCategoryRelationshipsSubcategoriesLinks links) {
-
 		this.links = links;
 		return this;
 	}
 
 	public AppRelationshipsAppInfos meta(PagingInformation meta) {
-
 		this.meta = meta;
 		return this;
 	}

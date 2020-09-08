@@ -28,15 +28,15 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		BetaTesterRelationships.JSON_PROPERTY_BUILDS })
 
 public class BetaTesterRelationships implements Serializable {
+	public static final String JSON_PROPERTY_APPS = "apps";
+
+	public static final String JSON_PROPERTY_BETA_GROUPS = "betaGroups";
+
+	public static final String JSON_PROPERTY_BUILDS = "builds";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 2123465817615739943L;
-
-	public static final String JSON_PROPERTY_APPS = "apps";
-
-	public static final String JSON_PROPERTY_BETA_GROUPS = "betaGroups";
-	public static final String JSON_PROPERTY_BUILDS = "builds";
 
 	private BetaTesterRelationshipsApps apps;
 

@@ -33,11 +33,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 public class AppStoreVersionSubmission
 		implements Serializable, AppStoreVersionResponseIncludedOneOf, AppStoreVersionsResponseIncludedOneOf {
 	/**
-	 *
-	 */
-	private static final long serialVersionUID = -4429440149792219532L;
-
-	/**
 	 * Gets or Sets type
 	 */
 	public enum TypeEnum {
@@ -73,9 +68,14 @@ public class AppStoreVersionSubmission
 	public static final String JSON_PROPERTY_ID = "id";
 
 	public static final String JSON_PROPERTY_LINKS = "links";
-	public static final String JSON_PROPERTY_RELATIONSHIPS = "relationships";
 
+	public static final String JSON_PROPERTY_RELATIONSHIPS = "relationships";
 	public static final String JSON_PROPERTY_TYPE = "type";
+
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = -4429440149792219532L;
 
 	private String id;
 	private ResourceLinks links;

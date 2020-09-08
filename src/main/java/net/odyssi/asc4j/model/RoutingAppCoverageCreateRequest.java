@@ -28,12 +28,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ RoutingAppCoverageCreateRequest.JSON_PROPERTY_DATA })
 
 public class RoutingAppCoverageCreateRequest implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 840794794771004611L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
 
 	private RoutingAppCoverageCreateRequestData data;
 

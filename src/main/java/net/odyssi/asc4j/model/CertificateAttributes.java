@@ -31,21 +31,21 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		CertificateAttributes.JSON_PROPERTY_CERTIFICATE_CONTENT })
 
 public class CertificateAttributes implements Serializable {
+	public static final String JSON_PROPERTY_CERTIFICATE_CONTENT = "certificateContent";
+
+	public static final String JSON_PROPERTY_CERTIFICATE_TYPE = "certificateType";
+
+	public static final String JSON_PROPERTY_DISPLAY_NAME = "displayName";
+	public static final String JSON_PROPERTY_EXPIRATION_DATE = "expirationDate";
+
+	public static final String JSON_PROPERTY_NAME = "name";
+	public static final String JSON_PROPERTY_PLATFORM = "platform";
+
+	public static final String JSON_PROPERTY_SERIAL_NUMBER = "serialNumber";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 8514763450833284203L;
-
-	public static final String JSON_PROPERTY_CERTIFICATE_CONTENT = "certificateContent";
-
-	public static final String JSON_PROPERTY_CERTIFICATE_TYPE = "certificateType";
-	public static final String JSON_PROPERTY_DISPLAY_NAME = "displayName";
-
-	public static final String JSON_PROPERTY_EXPIRATION_DATE = "expirationDate";
-	public static final String JSON_PROPERTY_NAME = "name";
-
-	public static final String JSON_PROPERTY_PLATFORM = "platform";
-	public static final String JSON_PROPERTY_SERIAL_NUMBER = "serialNumber";
 
 	private String certificateContent;
 

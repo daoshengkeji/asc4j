@@ -30,12 +30,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 @JsonPropertyOrder({ AppScreenshotCreateRequestData.JSON_PROPERTY_TYPE,
 		AppScreenshotCreateRequestData.JSON_PROPERTY_ATTRIBUTES,
 		AppScreenshotCreateRequestData.JSON_PROPERTY_RELATIONSHIPS })
-
 public class AppScreenshotCreateRequestData implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -4966324979284842358L;
 
 	/**
 	 * Gets or Sets type
@@ -73,7 +68,9 @@ public class AppScreenshotCreateRequestData implements Serializable {
 	public static final String JSON_PROPERTY_ATTRIBUTES = "attributes";
 
 	public static final String JSON_PROPERTY_RELATIONSHIPS = "relationships";
+
 	public static final String JSON_PROPERTY_TYPE = "type";
+	private static final long serialVersionUID = -4966324979284842358L;
 
 	private AppScreenshotCreateRequestDataAttributes attributes;
 
@@ -81,7 +78,6 @@ public class AppScreenshotCreateRequestData implements Serializable {
 	private TypeEnum type;
 
 	public AppScreenshotCreateRequestData attributes(AppScreenshotCreateRequestDataAttributes attributes) {
-
 		this.attributes = attributes;
 		return this;
 	}
@@ -100,46 +96,25 @@ public class AppScreenshotCreateRequestData implements Serializable {
 				&& Objects.equals(this.relationships, appScreenshotCreateRequestData.relationships);
 	}
 
-	/**
-	 * Get attributes
-	 *
-	 * @return attributes
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_ATTRIBUTES)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public AppScreenshotCreateRequestDataAttributes getAttributes() {
 		return this.attributes;
 	}
 
-	/**
-	 * Get relationships
-	 *
-	 * @return relationships
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_RELATIONSHIPS)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public AppScreenshotCreateRequestDataRelationships getRelationships() {
 		return this.relationships;
 	}
 
-	/**
-	 * Get type
-	 *
-	 * @return type
-	 **/
 	@NotNull
-
 	@JsonProperty(JSON_PROPERTY_TYPE)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public TypeEnum getType() {
 		return this.type;
 	}
@@ -150,7 +125,6 @@ public class AppScreenshotCreateRequestData implements Serializable {
 	}
 
 	public AppScreenshotCreateRequestData relationships(AppScreenshotCreateRequestDataRelationships relationships) {
-
 		this.relationships = relationships;
 		return this;
 	}
@@ -190,7 +164,6 @@ public class AppScreenshotCreateRequestData implements Serializable {
 	}
 
 	public AppScreenshotCreateRequestData type(TypeEnum type) {
-
 		this.type = type;
 		return this;
 	}

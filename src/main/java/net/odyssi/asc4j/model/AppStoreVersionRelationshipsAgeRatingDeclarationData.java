@@ -31,11 +31,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class AppStoreVersionRelationshipsAgeRatingDeclarationData implements Serializable {
 	/**
-	 *
-	 */
-	private static final long serialVersionUID = -8655913044849905717L;
-
-	/**
 	 * Gets or Sets type
 	 */
 	public enum TypeEnum {
@@ -71,6 +66,11 @@ public class AppStoreVersionRelationshipsAgeRatingDeclarationData implements Ser
 	public static final String JSON_PROPERTY_ID = "id";
 
 	public static final String JSON_PROPERTY_TYPE = "type";
+
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = -8655913044849905717L;
 
 	private String id;
 	private TypeEnum type;

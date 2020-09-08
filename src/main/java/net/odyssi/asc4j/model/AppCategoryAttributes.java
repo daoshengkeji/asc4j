@@ -30,9 +30,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 public class AppCategoryAttributes implements Serializable {
 
-	private static final long serialVersionUID = 3771759234830305018L;
-
 	public static final String JSON_PROPERTY_PLATFORMS = "platforms";
+
+	private static final long serialVersionUID = 3771759234830305018L;
 
 	private List<Platform> platforms = null;
 
@@ -45,7 +45,7 @@ public class AppCategoryAttributes implements Serializable {
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#equals(java.lang.Object)
@@ -70,7 +70,7 @@ public class AppCategoryAttributes implements Serializable {
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#hashCode()
@@ -101,7 +101,7 @@ public class AppCategoryAttributes implements Serializable {
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#toString()

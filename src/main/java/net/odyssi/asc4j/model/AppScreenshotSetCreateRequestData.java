@@ -30,12 +30,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 @JsonPropertyOrder({ AppScreenshotSetCreateRequestData.JSON_PROPERTY_TYPE,
 		AppScreenshotSetCreateRequestData.JSON_PROPERTY_ATTRIBUTES,
 		AppScreenshotSetCreateRequestData.JSON_PROPERTY_RELATIONSHIPS })
-
 public class AppScreenshotSetCreateRequestData implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 1199457438394865859L;
 
 	/**
 	 * Gets or Sets type
@@ -73,7 +68,9 @@ public class AppScreenshotSetCreateRequestData implements Serializable {
 	public static final String JSON_PROPERTY_ATTRIBUTES = "attributes";
 
 	public static final String JSON_PROPERTY_RELATIONSHIPS = "relationships";
+
 	public static final String JSON_PROPERTY_TYPE = "type";
+	private static final long serialVersionUID = 1199457438394865859L;
 
 	private AppScreenshotSetCreateRequestDataAttributes attributes;
 
@@ -100,46 +97,25 @@ public class AppScreenshotSetCreateRequestData implements Serializable {
 				&& Objects.equals(this.relationships, appScreenshotSetCreateRequestData.relationships);
 	}
 
-	/**
-	 * Get attributes
-	 *
-	 * @return attributes
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_ATTRIBUTES)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public AppScreenshotSetCreateRequestDataAttributes getAttributes() {
 		return this.attributes;
 	}
 
-	/**
-	 * Get relationships
-	 *
-	 * @return relationships
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_RELATIONSHIPS)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public AppPreviewSetCreateRequestDataRelationships getRelationships() {
 		return this.relationships;
 	}
 
-	/**
-	 * Get type
-	 *
-	 * @return type
-	 **/
 	@NotNull
-
 	@JsonProperty(JSON_PROPERTY_TYPE)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public TypeEnum getType() {
 		return this.type;
 	}
@@ -150,7 +126,6 @@ public class AppScreenshotSetCreateRequestData implements Serializable {
 	}
 
 	public AppScreenshotSetCreateRequestData relationships(AppPreviewSetCreateRequestDataRelationships relationships) {
-
 		this.relationships = relationships;
 		return this;
 	}
@@ -190,7 +165,6 @@ public class AppScreenshotSetCreateRequestData implements Serializable {
 	}
 
 	public AppScreenshotSetCreateRequestData type(TypeEnum type) {
-
 		this.type = type;
 		return this;
 	}

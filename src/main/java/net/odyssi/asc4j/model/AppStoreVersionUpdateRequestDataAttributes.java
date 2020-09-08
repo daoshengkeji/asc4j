@@ -36,11 +36,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class AppStoreVersionUpdateRequestDataAttributes implements Serializable {
 	/**
-	 *
-	 */
-	private static final long serialVersionUID = -4314729602090302156L;
-
-	/**
 	 * Gets or Sets releaseType
 	 */
 	public enum ReleaseTypeEnum {
@@ -78,14 +73,19 @@ public class AppStoreVersionUpdateRequestDataAttributes implements Serializable 
 	}
 
 	public static final String JSON_PROPERTY_COPYRIGHT = "copyright";
+
 	public static final String JSON_PROPERTY_DOWNLOADABLE = "downloadable";
-
 	public static final String JSON_PROPERTY_EARLIEST_RELEASE_DATE = "earliestReleaseDate";
-	public static final String JSON_PROPERTY_RELEASE_TYPE = "releaseType";
 
+	public static final String JSON_PROPERTY_RELEASE_TYPE = "releaseType";
 	public static final String JSON_PROPERTY_USES_IDFA = "usesIdfa";
 
 	public static final String JSON_PROPERTY_VERSION_STRING = "versionString";
+
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = -4314729602090302156L;
 
 	private String copyright;
 	private Boolean downloadable;

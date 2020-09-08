@@ -30,17 +30,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ AppScreenshotSetAppScreenshotsLinkagesResponse.JSON_PROPERTY_DATA,
 		AppScreenshotSetAppScreenshotsLinkagesResponse.JSON_PROPERTY_LINKS,
 		AppScreenshotSetAppScreenshotsLinkagesResponse.JSON_PROPERTY_META })
-
 public class AppScreenshotSetAppScreenshotsLinkagesResponse implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -2514386863413003647L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_LINKS = "links";
+
 	public static final String JSON_PROPERTY_META = "meta";
+	private static final long serialVersionUID = -2514386863413003647L;
 
 	private List<AppScreenshotSetRelationshipsAppScreenshotsData> data = new ArrayList<>();
 
@@ -74,47 +71,25 @@ public class AppScreenshotSetAppScreenshotsLinkagesResponse implements Serializa
 				&& Objects.equals(this.meta, appScreenshotSetAppScreenshotsLinkagesResponse.meta);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public List<AppScreenshotSetRelationshipsAppScreenshotsData> getData() {
 		return this.data;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public PagedDocumentLinks getLinks() {
 		return this.links;
 	}
 
-	/**
-	 * Get meta
-	 *
-	 * @return meta
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_META)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public PagingInformation getMeta() {
 		return this.meta;
 	}
@@ -125,13 +100,11 @@ public class AppScreenshotSetAppScreenshotsLinkagesResponse implements Serializa
 	}
 
 	public AppScreenshotSetAppScreenshotsLinkagesResponse links(PagedDocumentLinks links) {
-
 		this.links = links;
 		return this;
 	}
 
 	public AppScreenshotSetAppScreenshotsLinkagesResponse meta(PagingInformation meta) {
-
 		this.meta = meta;
 		return this;
 	}

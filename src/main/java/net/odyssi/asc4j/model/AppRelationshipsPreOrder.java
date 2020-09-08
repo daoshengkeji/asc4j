@@ -25,16 +25,13 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  * AppRelationshipsPreOrder
  */
 @JsonPropertyOrder({ AppRelationshipsPreOrder.JSON_PROPERTY_LINKS, AppRelationshipsPreOrder.JSON_PROPERTY_DATA })
-
 public class AppRelationshipsPreOrder implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 2265863159062122412L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_LINKS = "links";
+
+	private static final long serialVersionUID = 2265863159062122412L;
 
 	private AppRelationshipsPreOrderData data;
 	private AppCategoryRelationshipsSubcategoriesLinks links;
@@ -58,32 +55,16 @@ public class AppRelationshipsPreOrder implements Serializable {
 				&& Objects.equals(this.data, appRelationshipsPreOrder.data);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppRelationshipsPreOrderData getData() {
 		return this.data;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppCategoryRelationshipsSubcategoriesLinks getLinks() {
 		return this.links;
 	}
@@ -94,7 +75,6 @@ public class AppRelationshipsPreOrder implements Serializable {
 	}
 
 	public AppRelationshipsPreOrder links(AppCategoryRelationshipsSubcategoriesLinks links) {
-
 		this.links = links;
 		return this;
 	}

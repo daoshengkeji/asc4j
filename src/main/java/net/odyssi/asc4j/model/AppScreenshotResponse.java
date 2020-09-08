@@ -26,22 +26,18 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  * AppScreenshotResponse
  */
 @JsonPropertyOrder({ AppScreenshotResponse.JSON_PROPERTY_DATA, AppScreenshotResponse.JSON_PROPERTY_LINKS })
-
 public class AppScreenshotResponse implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -8180765826899716835L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_LINKS = "links";
 
+	private static final long serialVersionUID = -8180765826899716835L;
+
 	private AppScreenshot data;
 	private DocumentLinks links;
 
 	public AppScreenshotResponse data(AppScreenshot data) {
-
 		this.data = data;
 		return this;
 	}
@@ -59,32 +55,18 @@ public class AppScreenshotResponse implements Serializable {
 				&& Objects.equals(this.links, appScreenshotResponse.links);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public AppScreenshot getData() {
 		return this.data;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public DocumentLinks getLinks() {
 		return this.links;
 	}
@@ -95,7 +77,6 @@ public class AppScreenshotResponse implements Serializable {
 	}
 
 	public AppScreenshotResponse links(DocumentLinks links) {
-
 		this.links = links;
 		return this;
 	}

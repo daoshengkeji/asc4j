@@ -31,15 +31,15 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		UserUpdateRequestDataAttributes.JSON_PROPERTY_PROVISIONING_ALLOWED })
 
 public class UserUpdateRequestDataAttributes implements Serializable {
+	public static final String JSON_PROPERTY_ALL_APPS_VISIBLE = "allAppsVisible";
+
+	public static final String JSON_PROPERTY_PROVISIONING_ALLOWED = "provisioningAllowed";
+
+	public static final String JSON_PROPERTY_ROLES = "roles";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 6856114446533530988L;
-
-	public static final String JSON_PROPERTY_ALL_APPS_VISIBLE = "allAppsVisible";
-
-	public static final String JSON_PROPERTY_PROVISIONING_ALLOWED = "provisioningAllowed";
-	public static final String JSON_PROPERTY_ROLES = "roles";
 
 	private Boolean allAppsVisible;
 

@@ -29,17 +29,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonPropertyOrder({ AppResponse.JSON_PROPERTY_DATA, AppResponse.JSON_PROPERTY_INCLUDED,
 		AppResponse.JSON_PROPERTY_LINKS })
-
 public class AppResponse implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 7175088891555710296L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_INCLUDED = "included";
+
 	public static final String JSON_PROPERTY_LINKS = "links";
+	private static final long serialVersionUID = 7175088891555710296L;
 
 	private App data;
 
@@ -73,47 +70,25 @@ public class AppResponse implements Serializable {
 				&& Objects.equals(this.links, appResponse.links);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public App getData() {
 		return this.data;
 	}
 
-	/**
-	 * Get included
-	 *
-	 * @return included
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_INCLUDED)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public List<AppResponseIncludedOneOf> getIncluded() {
 		return this.included;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public DocumentLinks getLinks() {
 		return this.links;
 	}
@@ -124,13 +99,11 @@ public class AppResponse implements Serializable {
 	}
 
 	public AppResponse included(List<AppResponseIncludedOneOf> included) {
-
 		this.included = included;
 		return this;
 	}
 
 	public AppResponse links(DocumentLinks links) {
-
 		this.links = links;
 		return this;
 	}

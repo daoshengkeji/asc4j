@@ -27,14 +27,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ PagingInformationPaging.JSON_PROPERTY_TOTAL, PagingInformationPaging.JSON_PROPERTY_LIMIT })
 
 public class PagingInformationPaging implements Serializable {
+	public static final String JSON_PROPERTY_LIMIT = "limit";
+
+	public static final String JSON_PROPERTY_TOTAL = "total";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -94674350193425312L;
-
-	public static final String JSON_PROPERTY_LIMIT = "limit";
-
-	public static final String JSON_PROPERTY_TOTAL = "total";
 
 	private Integer limit;
 	private Integer total;

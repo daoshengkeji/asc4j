@@ -28,14 +28,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		BetaBuildLocalizationCreateRequestDataAttributes.JSON_PROPERTY_LOCALE })
 
 public class BetaBuildLocalizationCreateRequestDataAttributes implements Serializable {
+	public static final String JSON_PROPERTY_LOCALE = "locale";
+
+	public static final String JSON_PROPERTY_WHATS_NEW = "whatsNew";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 7508319994842656664L;
-
-	public static final String JSON_PROPERTY_LOCALE = "locale";
-
-	public static final String JSON_PROPERTY_WHATS_NEW = "whatsNew";
 
 	private String locale;
 	private String whatsNew;

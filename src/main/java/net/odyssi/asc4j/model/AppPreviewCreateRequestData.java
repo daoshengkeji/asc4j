@@ -31,8 +31,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 		AppPreviewCreateRequestData.JSON_PROPERTY_ATTRIBUTES, AppPreviewCreateRequestData.JSON_PROPERTY_RELATIONSHIPS })
 public class AppPreviewCreateRequestData implements Serializable {
 
-	private static final long serialVersionUID = -1209402542622008053L;
-
 	/**
 	 * Gets or Sets type
 	 */
@@ -69,7 +67,9 @@ public class AppPreviewCreateRequestData implements Serializable {
 	public static final String JSON_PROPERTY_ATTRIBUTES = "attributes";
 
 	public static final String JSON_PROPERTY_RELATIONSHIPS = "relationships";
+
 	public static final String JSON_PROPERTY_TYPE = "type";
+	private static final long serialVersionUID = -1209402542622008053L;
 
 	private AppPreviewCreateRequestDataAttributes attributes;
 

@@ -28,12 +28,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ IdfaDeclarationUpdateRequest.JSON_PROPERTY_DATA })
 
 public class IdfaDeclarationUpdateRequest implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -5648244658593142304L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
 
 	private IdfaDeclarationUpdateRequestData data;
 

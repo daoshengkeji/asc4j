@@ -32,20 +32,20 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		BetaAppLocalizationCreateRequestDataAttributes.JSON_PROPERTY_LOCALE })
 
 public class BetaAppLocalizationCreateRequestDataAttributes implements Serializable {
+	public static final String JSON_PROPERTY_DESCRIPTION = "description";
+
+	public static final String JSON_PROPERTY_FEEDBACK_EMAIL = "feedbackEmail";
+
+	public static final String JSON_PROPERTY_LOCALE = "locale";
+	public static final String JSON_PROPERTY_MARKETING_URL = "marketingUrl";
+
+	public static final String JSON_PROPERTY_PRIVACY_POLICY_URL = "privacyPolicyUrl";
+	public static final String JSON_PROPERTY_TV_OS_PRIVACY_POLICY = "tvOsPrivacyPolicy";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 1527429677363324416L;
-
-	public static final String JSON_PROPERTY_DESCRIPTION = "description";
-
-	public static final String JSON_PROPERTY_FEEDBACK_EMAIL = "feedbackEmail";
-	public static final String JSON_PROPERTY_LOCALE = "locale";
-
-	public static final String JSON_PROPERTY_MARKETING_URL = "marketingUrl";
-	public static final String JSON_PROPERTY_PRIVACY_POLICY_URL = "privacyPolicyUrl";
-
-	public static final String JSON_PROPERTY_TV_OS_PRIVACY_POLICY = "tvOsPrivacyPolicy";
 
 	private String description;
 	private String feedbackEmail;

@@ -28,12 +28,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
  */
 @JsonPropertyOrder({ AppRelationshipsBetaGroupsData.JSON_PROPERTY_TYPE,
 		AppRelationshipsBetaGroupsData.JSON_PROPERTY_ID })
-
 public class AppRelationshipsBetaGroupsData implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -6025352229814461271L;
 
 	/**
 	 * Gets or Sets type
@@ -72,6 +67,8 @@ public class AppRelationshipsBetaGroupsData implements Serializable {
 
 	public static final String JSON_PROPERTY_TYPE = "type";
 
+	private static final long serialVersionUID = -6025352229814461271L;
+
 	private String id;
 	private TypeEnum type;
 
@@ -88,30 +85,16 @@ public class AppRelationshipsBetaGroupsData implements Serializable {
 				&& Objects.equals(this.id, appRelationshipsBetaGroupsData.id);
 	}
 
-	/**
-	 * Get id
-	 *
-	 * @return id
-	 **/
 	@NotNull
-
 	@JsonProperty(JSON_PROPERTY_ID)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public String getId() {
 		return this.id;
 	}
 
-	/**
-	 * Get type
-	 *
-	 * @return type
-	 **/
 	@NotNull
-
 	@JsonProperty(JSON_PROPERTY_TYPE)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public TypeEnum getType() {
 		return this.type;
 	}
@@ -122,7 +105,6 @@ public class AppRelationshipsBetaGroupsData implements Serializable {
 	}
 
 	public AppRelationshipsBetaGroupsData id(String id) {
-
 		this.id = id;
 		return this;
 	}
@@ -157,7 +139,6 @@ public class AppRelationshipsBetaGroupsData implements Serializable {
 	}
 
 	public AppRelationshipsBetaGroupsData type(TypeEnum type) {
-
 		this.type = type;
 		return this;
 	}

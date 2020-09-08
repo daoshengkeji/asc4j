@@ -28,14 +28,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ IdfaDeclarationResponse.JSON_PROPERTY_DATA, IdfaDeclarationResponse.JSON_PROPERTY_LINKS })
 
 public class IdfaDeclarationResponse implements Serializable {
+	public static final String JSON_PROPERTY_DATA = "data";
+
+	public static final String JSON_PROPERTY_LINKS = "links";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 7859412741586081208L;
-
-	public static final String JSON_PROPERTY_DATA = "data";
-
-	public static final String JSON_PROPERTY_LINKS = "links";
 
 	private IdfaDeclaration data;
 	private DocumentLinks links;

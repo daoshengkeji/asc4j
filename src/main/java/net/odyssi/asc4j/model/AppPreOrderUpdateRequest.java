@@ -28,9 +28,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ AppPreOrderUpdateRequest.JSON_PROPERTY_DATA })
 public class AppPreOrderUpdateRequest implements Serializable {
 
-	private static final long serialVersionUID = 5202298716170367202L;
-
 	public static final String JSON_PROPERTY_DATA = "data";
+
+	private static final long serialVersionUID = 5202298716170367202L;
 
 	private AppPreOrderUpdateRequestData data;
 

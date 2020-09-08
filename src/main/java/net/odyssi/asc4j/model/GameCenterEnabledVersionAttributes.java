@@ -29,15 +29,15 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		GameCenterEnabledVersionAttributes.JSON_PROPERTY_ICON_ASSET })
 
 public class GameCenterEnabledVersionAttributes implements Serializable {
+	public static final String JSON_PROPERTY_ICON_ASSET = "iconAsset";
+
+	public static final String JSON_PROPERTY_PLATFORM = "platform";
+
+	public static final String JSON_PROPERTY_VERSION_STRING = "versionString";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 2787710608029263151L;
-
-	public static final String JSON_PROPERTY_ICON_ASSET = "iconAsset";
-
-	public static final String JSON_PROPERTY_PLATFORM = "platform";
-	public static final String JSON_PROPERTY_VERSION_STRING = "versionString";
 
 	private ImageAsset iconAsset;
 

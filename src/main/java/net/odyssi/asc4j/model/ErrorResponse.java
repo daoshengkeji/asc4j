@@ -29,12 +29,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ ErrorResponse.JSON_PROPERTY_ERRORS })
 
 public class ErrorResponse implements Serializable {
+	public static final String JSON_PROPERTY_ERRORS = "errors";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -6781762636852977912L;
-
-	public static final String JSON_PROPERTY_ERRORS = "errors";
 
 	private List<ErrorResponseErrors> errors = null;
 

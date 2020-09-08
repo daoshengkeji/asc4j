@@ -28,12 +28,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ PagingInformation.JSON_PROPERTY_PAGING })
 
 public class PagingInformation implements Serializable {
+	public static final String JSON_PROPERTY_PAGING = "paging";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 3850033708483009314L;
-
-	public static final String JSON_PROPERTY_PAGING = "paging";
 
 	private PagingInformationPaging paging;
 

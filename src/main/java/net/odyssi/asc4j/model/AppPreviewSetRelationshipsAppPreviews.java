@@ -29,17 +29,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ AppPreviewSetRelationshipsAppPreviews.JSON_PROPERTY_LINKS,
 		AppPreviewSetRelationshipsAppPreviews.JSON_PROPERTY_META,
 		AppPreviewSetRelationshipsAppPreviews.JSON_PROPERTY_DATA })
-
 public class AppPreviewSetRelationshipsAppPreviews implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -1580633950361345690L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_LINKS = "links";
+
 	public static final String JSON_PROPERTY_META = "meta";
+	private static final long serialVersionUID = -1580633950361345690L;
 
 	private List<AppPreviewSetRelationshipsAppPreviewsData> data = null;
 
@@ -74,47 +71,23 @@ public class AppPreviewSetRelationshipsAppPreviews implements Serializable {
 				&& Objects.equals(this.data, appPreviewSetRelationshipsAppPreviews.data);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public List<AppPreviewSetRelationshipsAppPreviewsData> getData() {
 		return this.data;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppCategoryRelationshipsSubcategoriesLinks getLinks() {
 		return this.links;
 	}
 
-	/**
-	 * Get meta
-	 *
-	 * @return meta
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_META)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public PagingInformation getMeta() {
 		return this.meta;
 	}
@@ -125,13 +98,11 @@ public class AppPreviewSetRelationshipsAppPreviews implements Serializable {
 	}
 
 	public AppPreviewSetRelationshipsAppPreviews links(AppCategoryRelationshipsSubcategoriesLinks links) {
-
 		this.links = links;
 		return this;
 	}
 
 	public AppPreviewSetRelationshipsAppPreviews meta(PagingInformation meta) {
-
 		this.meta = meta;
 		return this;
 	}

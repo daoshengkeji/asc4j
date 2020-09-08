@@ -28,17 +28,17 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		IdfaDeclarationAttributes.JSON_PROPERTY_HONORS_LIMITED_AD_TRACKING })
 
 public class IdfaDeclarationAttributes implements Serializable {
+	public static final String JSON_PROPERTY_ATTRIBUTES_ACTION_WITH_PREVIOUS_AD = "attributesActionWithPreviousAd";
+
+	public static final String JSON_PROPERTY_ATTRIBUTES_APP_INSTALLATION_TO_PREVIOUS_AD = "attributesAppInstallationToPreviousAd";
+
+	public static final String JSON_PROPERTY_HONORS_LIMITED_AD_TRACKING = "honorsLimitedAdTracking";
+	public static final String JSON_PROPERTY_SERVES_ADS = "servesAds";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 5176418464453201816L;
-
-	public static final String JSON_PROPERTY_ATTRIBUTES_ACTION_WITH_PREVIOUS_AD = "attributesActionWithPreviousAd";
-
-	public static final String JSON_PROPERTY_ATTRIBUTES_APP_INSTALLATION_TO_PREVIOUS_AD = "attributesAppInstallationToPreviousAd";
-	public static final String JSON_PROPERTY_HONORS_LIMITED_AD_TRACKING = "honorsLimitedAdTracking";
-
-	public static final String JSON_PROPERTY_SERVES_ADS = "servesAds";
 
 	private Boolean attributesActionWithPreviousAd;
 	private Boolean attributesAppInstallationToPreviousAd;

@@ -31,12 +31,12 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		AppCategoryResponse.JSON_PROPERTY_LINKS })
 public class AppCategoryResponse implements Serializable {
 
-	private static final long serialVersionUID = 4145449550742614887L;
-
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_INCLUDED = "included";
+
 	public static final String JSON_PROPERTY_LINKS = "links";
+	private static final long serialVersionUID = 4145449550742614887L;
 
 	private AppCategory data;
 
@@ -57,7 +57,7 @@ public class AppCategoryResponse implements Serializable {
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#equals(java.lang.Object)
@@ -100,7 +100,7 @@ public class AppCategoryResponse implements Serializable {
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#hashCode()
@@ -144,7 +144,7 @@ public class AppCategoryResponse implements Serializable {
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#toString()

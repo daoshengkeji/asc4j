@@ -28,17 +28,14 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  */
 @JsonPropertyOrder({ AppRelationshipsAppStoreVersions.JSON_PROPERTY_LINKS,
 		AppRelationshipsAppStoreVersions.JSON_PROPERTY_META, AppRelationshipsAppStoreVersions.JSON_PROPERTY_DATA })
-
 public class AppRelationshipsAppStoreVersions implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 4063660889556063423L;
 
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_LINKS = "links";
+
 	public static final String JSON_PROPERTY_META = "meta";
+	private static final long serialVersionUID = 4063660889556063423L;
 
 	private List<AppStoreReviewDetailRelationshipsAppStoreVersionData> data = null;
 
@@ -54,7 +51,6 @@ public class AppRelationshipsAppStoreVersions implements Serializable {
 	}
 
 	public AppRelationshipsAppStoreVersions data(List<AppStoreReviewDetailRelationshipsAppStoreVersionData> data) {
-
 		this.data = data;
 		return this;
 	}
@@ -73,47 +69,23 @@ public class AppRelationshipsAppStoreVersions implements Serializable {
 				&& Objects.equals(this.data, appRelationshipsAppStoreVersions.data);
 	}
 
-	/**
-	 * Get data
-	 *
-	 * @return data
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_DATA)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public List<AppStoreReviewDetailRelationshipsAppStoreVersionData> getData() {
 		return this.data;
 	}
 
-	/**
-	 * Get links
-	 *
-	 * @return links
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_LINKS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppCategoryRelationshipsSubcategoriesLinks getLinks() {
 		return this.links;
 	}
 
-	/**
-	 * Get meta
-	 *
-	 * @return meta
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_META)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public PagingInformation getMeta() {
 		return this.meta;
 	}
@@ -124,13 +96,11 @@ public class AppRelationshipsAppStoreVersions implements Serializable {
 	}
 
 	public AppRelationshipsAppStoreVersions links(AppCategoryRelationshipsSubcategoriesLinks links) {
-
 		this.links = links;
 		return this;
 	}
 
 	public AppRelationshipsAppStoreVersions meta(PagingInformation meta) {
-
 		this.meta = meta;
 		return this;
 	}

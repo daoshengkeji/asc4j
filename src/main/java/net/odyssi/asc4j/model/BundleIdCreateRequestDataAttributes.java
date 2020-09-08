@@ -31,17 +31,17 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		BundleIdCreateRequestDataAttributes.JSON_PROPERTY_SEED_ID })
 
 public class BundleIdCreateRequestDataAttributes implements Serializable {
+	public static final String JSON_PROPERTY_IDENTIFIER = "identifier";
+
+	public static final String JSON_PROPERTY_NAME = "name";
+
+	public static final String JSON_PROPERTY_PLATFORM = "platform";
+	public static final String JSON_PROPERTY_SEED_ID = "seedId";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -5426905370542421614L;
-
-	public static final String JSON_PROPERTY_IDENTIFIER = "identifier";
-
-	public static final String JSON_PROPERTY_NAME = "name";
-	public static final String JSON_PROPERTY_PLATFORM = "platform";
-
-	public static final String JSON_PROPERTY_SEED_ID = "seedId";
 
 	private String identifier;
 	private String name;

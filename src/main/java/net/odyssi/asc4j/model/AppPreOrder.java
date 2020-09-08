@@ -31,8 +31,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 		AppPreOrder.JSON_PROPERTY_RELATIONSHIPS, AppPreOrder.JSON_PROPERTY_LINKS })
 public class AppPreOrder implements Serializable, AppResponseIncludedOneOf, AppsResponseIncludedOneOf {
 
-	private static final long serialVersionUID = 8123549078312080706L;
-
 	/**
 	 * Gets or Sets type
 	 */
@@ -69,10 +67,12 @@ public class AppPreOrder implements Serializable, AppResponseIncludedOneOf, Apps
 	public static final String JSON_PROPERTY_ATTRIBUTES = "attributes";
 
 	public static final String JSON_PROPERTY_ID = "id";
-	public static final String JSON_PROPERTY_LINKS = "links";
 
+	public static final String JSON_PROPERTY_LINKS = "links";
 	public static final String JSON_PROPERTY_RELATIONSHIPS = "relationships";
+
 	public static final String JSON_PROPERTY_TYPE = "type";
+	private static final long serialVersionUID = 8123549078312080706L;
 
 	private AppPreOrderAttributes attributes;
 

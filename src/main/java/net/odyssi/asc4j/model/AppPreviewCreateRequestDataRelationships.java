@@ -28,9 +28,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ AppPreviewCreateRequestDataRelationships.JSON_PROPERTY_APP_PREVIEW_SET })
 public class AppPreviewCreateRequestDataRelationships implements Serializable {
 
-	private static final long serialVersionUID = 5255741825468134479L;
-
 	public static final String JSON_PROPERTY_APP_PREVIEW_SET = "appPreviewSet";
+
+	private static final long serialVersionUID = 5255741825468134479L;
 
 	private AppPreviewCreateRequestDataRelationshipsAppPreviewSet appPreviewSet;
 

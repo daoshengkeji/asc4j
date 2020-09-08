@@ -33,8 +33,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class AppEncryptionDeclaration implements Serializable, BuildResponseIncludedOneOf, BuildsResponseIncludedOneOf {
 
-	private static final long serialVersionUID = 2584321964485817488L;
-
 	/**
 	 * Gets or Sets type
 	 */
@@ -71,10 +69,12 @@ public class AppEncryptionDeclaration implements Serializable, BuildResponseIncl
 	public static final String JSON_PROPERTY_ATTRIBUTES = "attributes";
 
 	public static final String JSON_PROPERTY_ID = "id";
-	public static final String JSON_PROPERTY_LINKS = "links";
 
+	public static final String JSON_PROPERTY_LINKS = "links";
 	public static final String JSON_PROPERTY_RELATIONSHIPS = "relationships";
+
 	public static final String JSON_PROPERTY_TYPE = "type";
+	private static final long serialVersionUID = 2584321964485817488L;
 
 	private AppEncryptionDeclarationAttributes attributes;
 
@@ -90,7 +90,7 @@ public class AppEncryptionDeclaration implements Serializable, BuildResponseIncl
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#equals(java.lang.Object)
@@ -148,7 +148,7 @@ public class AppEncryptionDeclaration implements Serializable, BuildResponseIncl
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#hashCode()
@@ -205,7 +205,7 @@ public class AppEncryptionDeclaration implements Serializable, BuildResponseIncl
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#toString()

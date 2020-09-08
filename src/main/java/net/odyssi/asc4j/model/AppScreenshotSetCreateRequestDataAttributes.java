@@ -26,14 +26,11 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  * AppScreenshotSetCreateRequestDataAttributes
  */
 @JsonPropertyOrder({ AppScreenshotSetCreateRequestDataAttributes.JSON_PROPERTY_SCREENSHOT_DISPLAY_TYPE })
-
 public class AppScreenshotSetCreateRequestDataAttributes implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = -8081803176825460237L;
 
 	public static final String JSON_PROPERTY_SCREENSHOT_DISPLAY_TYPE = "screenshotDisplayType";
+
+	private static final long serialVersionUID = -8081803176825460237L;
 
 	private ScreenshotDisplayType screenshotDisplayType;
 
@@ -50,17 +47,10 @@ public class AppScreenshotSetCreateRequestDataAttributes implements Serializable
 				appScreenshotSetCreateRequestDataAttributes.screenshotDisplayType);
 	}
 
-	/**
-	 * Get screenshotDisplayType
-	 *
-	 * @return screenshotDisplayType
-	 **/
 	@NotNull
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_SCREENSHOT_DISPLAY_TYPE)
 	@JsonInclude(value = JsonInclude.Include.ALWAYS)
-
 	public ScreenshotDisplayType getScreenshotDisplayType() {
 		return this.screenshotDisplayType;
 	}
@@ -72,7 +62,6 @@ public class AppScreenshotSetCreateRequestDataAttributes implements Serializable
 
 	public AppScreenshotSetCreateRequestDataAttributes screenshotDisplayType(
 			ScreenshotDisplayType screenshotDisplayType) {
-
 		this.screenshotDisplayType = screenshotDisplayType;
 		return this;
 	}

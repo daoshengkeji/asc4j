@@ -25,14 +25,11 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
  * AppPreviewSetAttributes
  */
 @JsonPropertyOrder({ AppPreviewSetAttributes.JSON_PROPERTY_PREVIEW_TYPE })
-
 public class AppPreviewSetAttributes implements Serializable {
-	/**
-	 *
-	 */
-	private static final long serialVersionUID = 178312473844342180L;
 
 	public static final String JSON_PROPERTY_PREVIEW_TYPE = "previewType";
+
+	private static final long serialVersionUID = 178312473844342180L;
 
 	private PreviewType previewType;
 
@@ -48,17 +45,9 @@ public class AppPreviewSetAttributes implements Serializable {
 		return Objects.equals(this.previewType, appPreviewSetAttributes.previewType);
 	}
 
-	/**
-	 * Get previewType
-	 *
-	 * @return previewType
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_PREVIEW_TYPE)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public PreviewType getPreviewType() {
 		return this.previewType;
 	}
@@ -69,7 +58,6 @@ public class AppPreviewSetAttributes implements Serializable {
 	}
 
 	public AppPreviewSetAttributes previewType(PreviewType previewType) {
-
 		this.previewType = previewType;
 		return this;
 	}

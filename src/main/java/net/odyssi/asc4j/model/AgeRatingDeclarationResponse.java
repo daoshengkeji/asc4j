@@ -29,11 +29,11 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		AgeRatingDeclarationResponse.JSON_PROPERTY_LINKS })
 public class AgeRatingDeclarationResponse implements Serializable {
 
-	private static final long serialVersionUID = -4580198445162661170L;
-
 	public static final String JSON_PROPERTY_DATA = "data";
 
 	public static final String JSON_PROPERTY_LINKS = "links";
+
+	private static final long serialVersionUID = -4580198445162661170L;
 
 	private AgeRatingDeclaration data;
 	private DocumentLinks links;

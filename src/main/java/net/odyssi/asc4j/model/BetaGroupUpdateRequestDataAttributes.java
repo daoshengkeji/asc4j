@@ -29,18 +29,18 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		BetaGroupUpdateRequestDataAttributes.JSON_PROPERTY_FEEDBACK_ENABLED })
 
 public class BetaGroupUpdateRequestDataAttributes implements Serializable {
+	public static final String JSON_PROPERTY_FEEDBACK_ENABLED = "feedbackEnabled";
+
+	public static final String JSON_PROPERTY_NAME = "name";
+
+	public static final String JSON_PROPERTY_PUBLIC_LINK_ENABLED = "publicLinkEnabled";
+	public static final String JSON_PROPERTY_PUBLIC_LINK_LIMIT = "publicLinkLimit";
+
+	public static final String JSON_PROPERTY_PUBLIC_LINK_LIMIT_ENABLED = "publicLinkLimitEnabled";
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = -9062152948593346305L;
-
-	public static final String JSON_PROPERTY_FEEDBACK_ENABLED = "feedbackEnabled";
-
-	public static final String JSON_PROPERTY_NAME = "name";
-	public static final String JSON_PROPERTY_PUBLIC_LINK_ENABLED = "publicLinkEnabled";
-
-	public static final String JSON_PROPERTY_PUBLIC_LINK_LIMIT = "publicLinkLimit";
-	public static final String JSON_PROPERTY_PUBLIC_LINK_LIMIT_ENABLED = "publicLinkLimitEnabled";
 
 	private Boolean feedbackEnabled;
 

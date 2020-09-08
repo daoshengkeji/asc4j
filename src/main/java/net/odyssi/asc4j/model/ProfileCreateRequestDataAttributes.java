@@ -31,11 +31,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public class ProfileCreateRequestDataAttributes implements Serializable {
 	/**
-	 *
-	 */
-	private static final long serialVersionUID = 1956082677379033974L;
-
-	/**
 	 * Gets or Sets profileType
 	 */
 	public enum ProfileTypeEnum {
@@ -95,7 +90,12 @@ public class ProfileCreateRequestDataAttributes implements Serializable {
 	}
 
 	public static final String JSON_PROPERTY_NAME = "name";
+
 	public static final String JSON_PROPERTY_PROFILE_TYPE = "profileType";
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 1956082677379033974L;
 
 	private String name;
 	private ProfileTypeEnum profileType;

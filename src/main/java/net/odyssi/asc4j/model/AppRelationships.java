@@ -31,34 +31,33 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 		AppRelationships.JSON_PROPERTY_END_USER_LICENSE_AGREEMENT, AppRelationships.JSON_PROPERTY_PRE_ORDER,
 		AppRelationships.JSON_PROPERTY_PRICES, AppRelationships.JSON_PROPERTY_AVAILABLE_TERRITORIES,
 		AppRelationships.JSON_PROPERTY_IN_APP_PURCHASES, AppRelationships.JSON_PROPERTY_GAME_CENTER_ENABLED_VERSIONS })
-
 public class AppRelationships implements Serializable {
+	public static final String JSON_PROPERTY_APP_INFOS = "appInfos";
+
+	public static final String JSON_PROPERTY_APP_STORE_VERSIONS = "appStoreVersions";
+
+	public static final String JSON_PROPERTY_AVAILABLE_TERRITORIES = "availableTerritories";
+	public static final String JSON_PROPERTY_BETA_APP_LOCALIZATIONS = "betaAppLocalizations";
+
+	public static final String JSON_PROPERTY_BETA_APP_REVIEW_DETAIL = "betaAppReviewDetail";
+	public static final String JSON_PROPERTY_BETA_GROUPS = "betaGroups";
+
+	public static final String JSON_PROPERTY_BETA_LICENSE_AGREEMENT = "betaLicenseAgreement";
+	public static final String JSON_PROPERTY_BUILDS = "builds";
+
+	public static final String JSON_PROPERTY_END_USER_LICENSE_AGREEMENT = "endUserLicenseAgreement";
+	public static final String JSON_PROPERTY_GAME_CENTER_ENABLED_VERSIONS = "gameCenterEnabledVersions";
+
+	public static final String JSON_PROPERTY_IN_APP_PURCHASES = "inAppPurchases";
+	public static final String JSON_PROPERTY_PRE_ORDER = "preOrder";
+
+	public static final String JSON_PROPERTY_PRE_RELEASE_VERSIONS = "preReleaseVersions";
+	public static final String JSON_PROPERTY_PRICES = "prices";
+
 	/**
 	 *
 	 */
 	private static final long serialVersionUID = 8843421268668531595L;
-
-	public static final String JSON_PROPERTY_APP_INFOS = "appInfos";
-
-	public static final String JSON_PROPERTY_APP_STORE_VERSIONS = "appStoreVersions";
-	public static final String JSON_PROPERTY_AVAILABLE_TERRITORIES = "availableTerritories";
-
-	public static final String JSON_PROPERTY_BETA_APP_LOCALIZATIONS = "betaAppLocalizations";
-	public static final String JSON_PROPERTY_BETA_APP_REVIEW_DETAIL = "betaAppReviewDetail";
-
-	public static final String JSON_PROPERTY_BETA_GROUPS = "betaGroups";
-	public static final String JSON_PROPERTY_BETA_LICENSE_AGREEMENT = "betaLicenseAgreement";
-
-	public static final String JSON_PROPERTY_BUILDS = "builds";
-	public static final String JSON_PROPERTY_END_USER_LICENSE_AGREEMENT = "endUserLicenseAgreement";
-
-	public static final String JSON_PROPERTY_GAME_CENTER_ENABLED_VERSIONS = "gameCenterEnabledVersions";
-	public static final String JSON_PROPERTY_IN_APP_PURCHASES = "inAppPurchases";
-
-	public static final String JSON_PROPERTY_PRE_ORDER = "preOrder";
-	public static final String JSON_PROPERTY_PRE_RELEASE_VERSIONS = "preReleaseVersions";
-
-	public static final String JSON_PROPERTY_PRICES = "prices";
 
 	private AppRelationshipsAppInfos appInfos;
 	private AppRelationshipsAppStoreVersions appStoreVersions;
@@ -82,55 +81,46 @@ public class AppRelationships implements Serializable {
 	private AppRelationshipsPrices prices;
 
 	public AppRelationships appInfos(AppRelationshipsAppInfos appInfos) {
-
 		this.appInfos = appInfos;
 		return this;
 	}
 
 	public AppRelationships appStoreVersions(AppRelationshipsAppStoreVersions appStoreVersions) {
-
 		this.appStoreVersions = appStoreVersions;
 		return this;
 	}
 
 	public AppRelationships availableTerritories(AppRelationshipsAvailableTerritories availableTerritories) {
-
 		this.availableTerritories = availableTerritories;
 		return this;
 	}
 
 	public AppRelationships betaAppLocalizations(AppRelationshipsBetaAppLocalizations betaAppLocalizations) {
-
 		this.betaAppLocalizations = betaAppLocalizations;
 		return this;
 	}
 
 	public AppRelationships betaAppReviewDetail(AppRelationshipsBetaAppReviewDetail betaAppReviewDetail) {
-
 		this.betaAppReviewDetail = betaAppReviewDetail;
 		return this;
 	}
 
 	public AppRelationships betaGroups(AppRelationshipsBetaGroups betaGroups) {
-
 		this.betaGroups = betaGroups;
 		return this;
 	}
 
 	public AppRelationships betaLicenseAgreement(AppRelationshipsBetaLicenseAgreement betaLicenseAgreement) {
-
 		this.betaLicenseAgreement = betaLicenseAgreement;
 		return this;
 	}
 
 	public AppRelationships builds(AppRelationshipsBuilds builds) {
-
 		this.builds = builds;
 		return this;
 	}
 
 	public AppRelationships endUserLicenseAgreement(AppRelationshipsEndUserLicenseAgreement endUserLicenseAgreement) {
-
 		this.endUserLicenseAgreement = endUserLicenseAgreement;
 		return this;
 	}
@@ -162,217 +152,104 @@ public class AppRelationships implements Serializable {
 
 	public AppRelationships gameCenterEnabledVersions(
 			AppRelationshipsGameCenterEnabledVersions gameCenterEnabledVersions) {
-
 		this.gameCenterEnabledVersions = gameCenterEnabledVersions;
 		return this;
 	}
 
-	/**
-	 * Get appInfos
-	 *
-	 * @return appInfos
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_APP_INFOS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppRelationshipsAppInfos getAppInfos() {
 		return this.appInfos;
 	}
 
-	/**
-	 * Get appStoreVersions
-	 *
-	 * @return appStoreVersions
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_APP_STORE_VERSIONS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppRelationshipsAppStoreVersions getAppStoreVersions() {
 		return this.appStoreVersions;
 	}
 
-	/**
-	 * Get availableTerritories
-	 *
-	 * @return availableTerritories
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_AVAILABLE_TERRITORIES)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppRelationshipsAvailableTerritories getAvailableTerritories() {
 		return this.availableTerritories;
 	}
 
-	/**
-	 * Get betaAppLocalizations
-	 *
-	 * @return betaAppLocalizations
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_BETA_APP_LOCALIZATIONS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppRelationshipsBetaAppLocalizations getBetaAppLocalizations() {
 		return this.betaAppLocalizations;
 	}
 
-	/**
-	 * Get betaAppReviewDetail
-	 *
-	 * @return betaAppReviewDetail
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_BETA_APP_REVIEW_DETAIL)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppRelationshipsBetaAppReviewDetail getBetaAppReviewDetail() {
 		return this.betaAppReviewDetail;
 	}
 
-	/**
-	 * Get betaGroups
-	 *
-	 * @return betaGroups
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_BETA_GROUPS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppRelationshipsBetaGroups getBetaGroups() {
 		return this.betaGroups;
 	}
 
-	/**
-	 * Get betaLicenseAgreement
-	 *
-	 * @return betaLicenseAgreement
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_BETA_LICENSE_AGREEMENT)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppRelationshipsBetaLicenseAgreement getBetaLicenseAgreement() {
 		return this.betaLicenseAgreement;
 	}
 
-	/**
-	 * Get builds
-	 *
-	 * @return builds
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_BUILDS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppRelationshipsBuilds getBuilds() {
 		return this.builds;
 	}
 
-	/**
-	 * Get endUserLicenseAgreement
-	 *
-	 * @return endUserLicenseAgreement
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_END_USER_LICENSE_AGREEMENT)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppRelationshipsEndUserLicenseAgreement getEndUserLicenseAgreement() {
 		return this.endUserLicenseAgreement;
 	}
 
-	/**
-	 * Get gameCenterEnabledVersions
-	 *
-	 * @return gameCenterEnabledVersions
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_GAME_CENTER_ENABLED_VERSIONS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppRelationshipsGameCenterEnabledVersions getGameCenterEnabledVersions() {
 		return this.gameCenterEnabledVersions;
 	}
 
-	/**
-	 * Get inAppPurchases
-	 *
-	 * @return inAppPurchases
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_IN_APP_PURCHASES)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppRelationshipsInAppPurchases getInAppPurchases() {
 		return this.inAppPurchases;
 	}
 
-	/**
-	 * Get preOrder
-	 *
-	 * @return preOrder
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_PRE_ORDER)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppRelationshipsPreOrder getPreOrder() {
 		return this.preOrder;
 	}
 
-	/**
-	 * Get preReleaseVersions
-	 *
-	 * @return preReleaseVersions
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_PRE_RELEASE_VERSIONS)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppRelationshipsPreReleaseVersions getPreReleaseVersions() {
 		return this.preReleaseVersions;
 	}
 
-	/**
-	 * Get prices
-	 *
-	 * @return prices
-	 **/
-
 	@Valid
-
 	@JsonProperty(JSON_PROPERTY_PRICES)
 	@JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-
 	public AppRelationshipsPrices getPrices() {
 		return this.prices;
 	}
@@ -386,25 +263,21 @@ public class AppRelationships implements Serializable {
 	}
 
 	public AppRelationships inAppPurchases(AppRelationshipsInAppPurchases inAppPurchases) {
-
 		this.inAppPurchases = inAppPurchases;
 		return this;
 	}
 
 	public AppRelationships preOrder(AppRelationshipsPreOrder preOrder) {
-
 		this.preOrder = preOrder;
 		return this;
 	}
 
 	public AppRelationships preReleaseVersions(AppRelationshipsPreReleaseVersions preReleaseVersions) {
-
 		this.preReleaseVersions = preReleaseVersions;
 		return this;
 	}
 
 	public AppRelationships prices(AppRelationshipsPrices prices) {
-
 		this.prices = prices;
 		return this;
 	}

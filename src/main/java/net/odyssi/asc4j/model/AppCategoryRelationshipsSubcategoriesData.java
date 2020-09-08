@@ -30,8 +30,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 		AppCategoryRelationshipsSubcategoriesData.JSON_PROPERTY_ID })
 public class AppCategoryRelationshipsSubcategoriesData implements Serializable {
 
-	private static final long serialVersionUID = 3012399341955816482L;
-
 	/**
 	 * Gets or Sets type
 	 */
@@ -69,11 +67,13 @@ public class AppCategoryRelationshipsSubcategoriesData implements Serializable {
 
 	public static final String JSON_PROPERTY_TYPE = "type";
 
+	private static final long serialVersionUID = 3012399341955816482L;
+
 	private String id;
 	private TypeEnum type;
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#equals(java.lang.Object)
@@ -107,7 +107,7 @@ public class AppCategoryRelationshipsSubcategoriesData implements Serializable {
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#hashCode()
@@ -142,7 +142,7 @@ public class AppCategoryRelationshipsSubcategoriesData implements Serializable {
 	}
 
 	/*
-	 * 
+	 *
 	 * (non-Javadoc)
 	 *
 	 * @see java.lang.Object#toString()
